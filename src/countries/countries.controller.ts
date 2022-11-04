@@ -20,8 +20,11 @@ export class CountriesController {
   constructor(private readonly countriesService: CountriesService) {}
 
   @Post()
-  create(@Body() createCountryDto: CreateCountryDto, @Request() req) {
-    createCountryDto['user'] = req.user.userId;
+  create(
+    @Body() createCountryDto: CreateCountryDto,
+    @Request() req,
+  ): Promise<Country> {
+    createCountryDto['usuario'] = req.user.id;
     return this.countriesService.create(createCountryDto);
   }
 

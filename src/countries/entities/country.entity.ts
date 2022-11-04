@@ -13,7 +13,7 @@ export class Country {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @Column({ length: 10 })
+  @Column({ length: 10, unique: true })
   codigo: string;
 
   @Column({ length: 60 })
