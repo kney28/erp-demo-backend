@@ -7,6 +7,6 @@ import { Complement } from './entities/complement.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Complement])],
   controllers: [ComplementsController],
-  providers: [ComplementsService]
+  providers: [ComplementsService],
 })
 export class ComplementsModule {}

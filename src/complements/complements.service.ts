@@ -13,7 +13,8 @@ export class ComplementsService {
   ) {}
 
   async create(createComplementDto: CreateComplementDto): Promise<Complement> {
-    const complement = this.complementsRepository.create(createComplementDto);
+    const complement: Complement =
+      this.complementsRepository.create(createComplementDto);
     return await this.complementsRepository.save(complement);
   }
 
@@ -21,17 +22,25 @@ export class ComplementsService {
     return this.complementsRepository.find();
   }
 
-  findOne(id: string) {
+  findOne(id: string): Promise<Complement> {
     return this.complementsRepository.findOneBy({ id });
   }
 
-  async update(id: string, updateComplementDto: UpdateComplementDto) {
-    const complement = await this.complementsRepository.findOneBy({ id });
-    const editedComplement = Object.assign(complement, updateComplementDto);
+  async update(
+    id: string,
+    updateComplementDto: UpdateComplementDto,
+  ): Promise<Complement> {
+    const complement: Complement = await this.complementsRepository.findOneBy({
+      id,
+    });
+    const editedComplement: Complement = Object.assign(
+      complement,
+      updateComplementDto,
+    );
     return await this.complementsRepository.save(editedComplement);
   }
 
-  async remove(id: string) {
+  async remove(id: string): Promise<Complement> {
     const user = await this.complementsRepository.findOneBy({ id });
     return await this.complementsRepository.softRemove(user);
   }
