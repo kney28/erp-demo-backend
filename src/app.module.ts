@@ -7,6 +7,7 @@ import { DataSource } from 'typeorm';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { ComplementsModule } from './complements/complements.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { UsersModule } from './users/users.module';
     }),
     AuthModule,
     UsersModule,
+    ComplementsModule,
   ],
 })
 export class AppModule {
