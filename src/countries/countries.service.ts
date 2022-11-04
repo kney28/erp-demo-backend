@@ -25,7 +25,10 @@ export class CountriesService {
     return this.countriesRepository.findOneBy({ id });
   }
 
-  async update(id: string, updateCountryDto: UpdateCountryDto): Promise<Country> {
+  async update(
+    id: string,
+    updateCountryDto: UpdateCountryDto,
+  ): Promise<Country> {
     const country = await this.countriesRepository.findOneBy({ id });
     const editedCountry = Object.assign(country, updateCountryDto);
     return this.countriesRepository.save(editedCountry);

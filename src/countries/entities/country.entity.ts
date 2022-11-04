@@ -6,8 +6,7 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
 } from 'typeorm';
-import { User } from "../../users/entities/user.entity";
-
+import { User } from '../../users/entities/user.entity';
 
 @Entity()
 export class Country {
@@ -30,5 +29,5 @@ export class Country {
   deleted_at: Date;
 
   @ManyToOne(() => User, (user: User) => user)
-  public user: User
+  public usuario: User;
 }
