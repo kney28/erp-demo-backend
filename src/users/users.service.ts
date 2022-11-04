@@ -13,7 +13,7 @@ export class UsersService {
   ) {}
 
   async create(createUserDto: CreateUserDto): Promise<User> {
-    const user = this.usersRepository.create(createUserDto);
+    const user: User = this.usersRepository.create(createUserDto);
     return await this.usersRepository.save(user);
   }
 
@@ -30,13 +30,13 @@ export class UsersService {
   }
 
   async update(id: string, updateUserDto: UpdateUserDto): Promise<User> {
-    const user = await this.usersRepository.findOneBy({ id });
-    const editedUser = Object.assign(user, updateUserDto);
+    const user: User = await this.usersRepository.findOneBy({ id });
+    const editedUser: User = Object.assign(user, updateUserDto);
     return await this.usersRepository.save(editedUser);
   }
 
   async remove(id: string): Promise<User> {
-    const user = await this.usersRepository.findOneBy({ id });
+    const user: User = await this.usersRepository.findOneBy({ id });
     return await this.usersRepository.softRemove(user);
   }
 }

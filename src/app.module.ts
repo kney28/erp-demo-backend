@@ -8,6 +8,8 @@ import { DataSource } from 'typeorm';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ComplementsModule } from './complements/complements.module';
+import { CountriesModule } from './countries/countries.module';
+import { SocialsModule } from './socials/socials.module';
 
 @Module({
   imports: [
@@ -31,6 +33,8 @@ import { ComplementsModule } from './complements/complements.module';
     AuthModule,
     UsersModule,
     ComplementsModule,
+    CountriesModule,
+    SocialsModule,
   ],
 })
 export class AppModule {
