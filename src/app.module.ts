@@ -7,8 +7,10 @@ import { DataSource } from 'typeorm';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
+import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 
 @Module({
   imports: [
@@ -31,8 +33,10 @@ import { ContactTypeModule } from './contactType/contactType.module';
     }),
     AuthModule,
     UsersModule,
+    CountriesModule,
     SocialsModule,
     ContactTypeModule,
+    RegisterStatusModule,
   ],
 })
 export class AppModule {
