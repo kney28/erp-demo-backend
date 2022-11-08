@@ -33,7 +33,6 @@ import { ContactTypeModule } from './contact-type/contact-type.module';
     UsersModule,
     SocialsModule,
     ContactTypeModule,
-    ContactTypeModule,
   ],
 })
 export class AppModule {

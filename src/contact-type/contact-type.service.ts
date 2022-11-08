@@ -12,21 +12,26 @@ export class ContactTypeService {
     private ContactTypeRepository: Repository<ContactType>,
   ) {}
 
-  async create(createContactTypeDto: CreateContactTypeDto) {
+  async create(
+    createContactTypeDto: CreateContactTypeDto,
+  ): Promise<ContactType> {
     const ContactType: ContactType =
       this.ContactTypeRepository.create(createContactTypeDto);
     return await this.ContactTypeRepository.save(ContactType);
   }
 
-  findAll() {
+  findAll(): Promise<ContactType[]> {
     return this.ContactTypeRepository.find();
   }
 
-  findOne(id: string) {
+  findOne(id: string): Promise<ContactType> {
     return this.ContactTypeRepository.findOneBy({ id });
   }
 
-  async update(id: string, updateContactTypeDto: UpdateContactTypeDto) {
+  async update(
+    id: string,
+    updateContactTypeDto: UpdateContactTypeDto,
+  ): Promise<ContactType> {
     const contactType: ContactType = await this.ContactTypeRepository.findOneBy(
       { id },
     );
@@ -37,7 +42,7 @@ export class ContactTypeService {
     return await this.ContactTypeRepository.save(editedContactType);
   }
 
-  async remove(id: string) {
+  async remove(id: string): Promise<ContactType> {
     const contactType: ContactType = await this.ContactTypeRepository.findOneBy(
       { id },
     );

@@ -20,7 +20,9 @@ export class ContactTypeController {
   constructor(private readonly contactTypeService: ContactTypeService) {}
 
   @Post()
-  create(@Body() createContactTypeDto: CreateContactTypeDto) {
+  create(
+    @Body() createContactTypeDto: CreateContactTypeDto,
+  ): Promise<ContactType> {
     return this.contactTypeService.create(createContactTypeDto);
   }
 
