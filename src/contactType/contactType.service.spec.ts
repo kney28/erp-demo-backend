@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ContactTypeService } from './contact-type.service';
+import { ContactTypeService } from './contactType.service';
 
 describe('ContactTypeService', () => {
   let service: ContactTypeService;

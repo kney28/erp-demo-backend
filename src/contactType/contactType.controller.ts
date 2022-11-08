@@ -8,13 +8,13 @@ import {
   Delete,
   UseGuards,
 } from '@nestjs/common';
-import { ContactTypeService } from './contact-type.service';
-import { CreateContactTypeDto } from './dto/create-contact-type.dto';
-import { UpdateContactTypeDto } from './dto/update-contact-type.dto';
-import { ContactType } from './entities/contact-type.entity';
+import { ContactTypeService } from './contactType.service';
+import { CreateContactTypeDto } from './dto/create-contactType.dto';
+import { UpdateContactTypeDto } from './dto/update-contactType.dto';
+import { ContactType } from './entities/contactType.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('contact-type')
+@Controller('contacttype')
 @UseGuards(JwtAuthGuard)
 export class ContactTypeController {
   constructor(private readonly contactTypeService: ContactTypeService) {}

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateContactTypeDto } from './dto/create-contact-type.dto';
-import { UpdateContactTypeDto } from './dto/update-contact-type.dto';
-import { ContactType } from './entities/contact-type.entity';
+import { CreateContactTypeDto } from './dto/create-contactType.dto';
+import { UpdateContactTypeDto } from './dto/update-contactType.dto';
+import { ContactType } from './entities/contactType.entity';
 
 @Injectable()
 export class ContactTypeService {

@@ -8,7 +8,7 @@ import { DataSource } from 'typeorm';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { SocialsModule } from './socials/socials.module';
-import { ContactTypeModule } from './contact-type/contact-type.module';
+import { ContactTypeModule } from './contactType/contactType.module';
 
 @Module({
   imports: [
