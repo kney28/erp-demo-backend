@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { RegisterStatusController } from './register-status.controller';
-import { RegisterStatusService } from './register-status.service';
+import { RegisterStatusController } from './registerStatus.controller';
+import { RegisterStatusService } from './registerStatus.service';
 
 describe('RegisterStatusController', () => {
   let controller: RegisterStatusController;

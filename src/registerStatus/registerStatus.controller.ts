@@ -8,13 +8,13 @@ import {
   Delete,
   UseGuards,
 } from '@nestjs/common';
-import { RegisterStatusService } from './register-status.service';
-import { CreateRegisterStatusDto } from './dto/create-register-status.dto';
-import { UpdateRegisterStatusDto } from './dto/update-register-status.dto';
-import { RegisterStatus } from './entities/register-status.entity';
+import { RegisterStatusService } from './registerStatus.service';
+import { CreateRegisterStatusDto } from './dto/create-registerStatus.dto';
+import { UpdateRegisterStatusDto } from './dto/update-registerStatus.dto';
+import { RegisterStatus } from './entities/registerStatus.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('register-status')
+@Controller('registerstatus')
 export class RegisterStatusController {
   constructor(private readonly registerStatusService: RegisterStatusService) {}
 

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateRegisterStatusDto } from './dto/create-register-status.dto';
-import { UpdateRegisterStatusDto } from './dto/update-register-status.dto';
-import { RegisterStatus } from './entities/register-status.entity';
+import { CreateRegisterStatusDto } from './dto/create-registerStatus.dto';
+import { UpdateRegisterStatusDto } from './dto/update-registerStatus.dto';
+import { RegisterStatus } from './entities/registerStatus.entity';
 
 @Injectable()
 export class RegisterStatusService {

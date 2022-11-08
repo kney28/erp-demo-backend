@@ -3,15 +3,13 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
-  PrimaryColumn,
-  Unique,
+  PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 @Entity()
-@Unique(['id'])
 export class RegisterStatus {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn()
   id: string;
 
   @Column()

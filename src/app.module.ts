@@ -9,7 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
-import { RegisterStatusModule } from './register-status/register-status.module';
+import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 
 @Module({
   imports: [
