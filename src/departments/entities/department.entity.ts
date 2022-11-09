@@ -1,4 +1,3 @@
-import { Department } from 'src/departments/entities/department.entity';
 import {
   Column,
   Entity,
@@ -10,15 +9,12 @@ import {
 import { User } from '../../users/entities/user.entity';
 
 @Entity()
-export class Municipality {
+export class Department {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @Column({ length: 5, unique: true })
+  @Column({ length: 2, unique: true })
   codigo: string;
-
-  @Column({ length: 3 })
-  subcodigo: string;
 
   @Column({ length: 60 })
   descripcion: string;
@@ -34,7 +30,4 @@ export class Municipality {
 
   @ManyToOne(() => User, (user: User) => user)
   public usuario: User;
-
-  @ManyToOne(() => Department, (department: Department) => department)
-  public department: Department;
 }

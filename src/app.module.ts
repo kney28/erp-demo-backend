@@ -12,6 +12,7 @@ import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { MunicipalitiesModule } from './municipalities/municipalities.module';
+import { DepartmentsModule } from './departments/departments.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { MunicipalitiesModule } from './municipalities/municipalities.module';
     ContactTypeModule,
     RegisterStatusModule,
     MunicipalitiesModule,
+    DepartmentsModule,
   ],
 })
 export class AppModule {
