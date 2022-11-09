@@ -35,7 +35,7 @@ export class DepartmentsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: string): Promise<Department> {
     return this.departmentsService.findOne(id);
   }
 
@@ -43,12 +43,12 @@ export class DepartmentsController {
   update(
     @Param('id') id: string,
     @Body() updateDepartmentDto: UpdateDepartmentDto,
-  ) {
+  ): Promise<Department> {
     return this.departmentsService.update(id, updateDepartmentDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: string): Promise<Department> {
     return this.departmentsService.remove(id);
   }
 }
