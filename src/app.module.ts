@@ -11,6 +11,7 @@ import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
+import { DepartmentsModule } from './departments/departments.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { RegisterStatusModule } from './registerStatus/registerStatus.module';
     SocialsModule,
     ContactTypeModule,
     RegisterStatusModule,
+    DepartmentsModule,
   ],
 })
 export class AppModule {
