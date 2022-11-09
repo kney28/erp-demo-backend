@@ -30,7 +30,7 @@ export class DepartmentsController {
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Department[]> {
     return this.departmentsService.findAll();
   }
 
