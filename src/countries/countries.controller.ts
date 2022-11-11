@@ -6,7 +6,6 @@ import {
   Patch,
   Param,
   Delete,
-  Request,
   UseGuards,
 } from '@nestjs/common';
 import { CountriesService } from './countries.service';
@@ -20,11 +19,7 @@ export class CountriesController {
   constructor(private readonly countriesService: CountriesService) {}
 
   @Post()
-  create(
-    @Body() createCountryDto: CreateCountryDto,
-    @Request() req,
-  ): Promise<Country> {
-    createCountryDto['usuario'] = req.user.id;
+  create(@Body() createCountryDto: CreateCountryDto): Promise<Country> {
     return this.countriesService.create(createCountryDto);
   }
 

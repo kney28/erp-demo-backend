@@ -4,12 +4,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 
 import { DataSource } from 'typeorm';
+import { ClsModule } from 'nestjs-cls';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
-import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
+import { ContactTypeModule } from './contactType/contactType.module';
+import { RegisterStatusModule } from './registerStatus/registerStatus.module';
+import { DepartmentsModule } from './departments/departments.module';
+import { UserInterceptor } from './interceptors/user.interceptor';
 
 @Module({
   imports: [
@@ -30,11 +34,23 @@ import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
       autoLoadEntities: process.env.AUTOLOADENTITIES === 'true',
       synchronize: process.env.SYNCHRONIZE === 'true',
     }),
+    ClsModule.forRoot({
+      global: true,
+      middleware: { mount: true },
+    }),
     AuthModule,
     UsersModule,
     CountriesModule,
     SocialsModule,
-    ThirdPersonsModule,
+    ContactTypeModule,
+    RegisterStatusModule,
+    DepartmentsModule,
+  ],
+  providers: [
+    {
+      provide: 'APP_INTERCEPTOR',
+      useClass: UserInterceptor,
+    },
   ],
 })
 export class AppModule {
