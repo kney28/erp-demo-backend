@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
+import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { SocialsModule } from './socials/socials.module';
     UsersModule,
     CountriesModule,
     SocialsModule,
+    ThirdPersonsModule,
   ],
 })
 export class AppModule {
