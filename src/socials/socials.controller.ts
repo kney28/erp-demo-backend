@@ -12,7 +12,7 @@ import { SocialsService } from './socials.service';
 import { CreateSocialDto } from './dto/create-social.dto';
 import { UpdateSocialDto } from './dto/update-social.dto';
 import { Social } from './entities/social.entity';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('socials')
 @UseGuards(JwtAuthGuard)
