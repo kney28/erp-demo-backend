@@ -6,7 +6,6 @@ import {
   Patch,
   Param,
   Delete,
-  Request,
   BadRequestException,
   UseGuards,
 } from '@nestjs/common';
@@ -28,11 +27,7 @@ export class MunicipalitiesController {
   @Post()
   async create(
     @Body() createMunicipalityDto: CreateMunicipalityDto,
-    @Request() req,
   ): Promise<Municipality> {
-    createMunicipalityDto['codigo'] = createMunicipalityDto['subcodigo'];
-    createMunicipalityDto['usuario'] = req.user.id;
-
     if (createMunicipalityDto['department']) {
       const department: Department = await this.departmentsService.findOne(
         String(createMunicipalityDto['department']),
@@ -45,8 +40,8 @@ export class MunicipalitiesController {
       }
 
       createMunicipalityDto[
-        'codigo'
-      ] = `${department.codigo}${createMunicipalityDto['subcodigo']}`;
+        'code'
+      ] = `${department.codigo}${createMunicipalityDto['subcode']}`;
     }
 
     return this.municipalitiesService.create(createMunicipalityDto);

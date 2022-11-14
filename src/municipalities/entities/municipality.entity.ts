@@ -1,40 +1,59 @@
+import { BaseEntity } from '../../base/baseEntity';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
 import { Department } from 'src/departments/entities/department.entity';
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  DeleteDateColumn,
-} from 'typeorm';
-import { User } from '../../users/entities/user.entity';
 
 @Entity()
-export class Municipality {
-  @PrimaryGeneratedColumn()
-  id: string;
+@Unique(['code', 'deleted_at'])
+export class Municipality extends BaseEntity {
+  @Column({ length: 5 })
+  code: string;
 
-  @Column({ length: 5, unique: true })
-  codigo: string;
-
-  @Column({ length: 3 })
-  subcodigo: string;
+  @Column()
+  subcode: string;
 
   @Column({ length: 60 })
-  descripcion: string;
-
-  @Column('int')
-  estado: number;
-
-  @CreateDateColumn()
-  fecha: Date;
-
-  @DeleteDateColumn()
-  deleted_at: Date;
-
-  @ManyToOne(() => User, (user: User) => user)
-  public usuario: User;
+  description: string;
 
   @ManyToOne(() => Department, (department: Department) => department)
   public department: Department;
+
+  @Column()
+  status: number;
+
+  constructor(
+    subcode: string,
+    department: Department,
+    description?: string,
+    status?: number,
+  );
+  constructor(
+    subcode: string,
+    department: Department,
+    description: string,
+    status?: number,
+  );
+  constructor(
+    subcode: string,
+    department: Department,
+    description: string,
+    status: number,
+  );
+  constructor(
+    subcode?: string,
+    department?: Department,
+    description?: string,
+    status?: number,
+  );
+  constructor(
+    subcode?: string,
+    department?: Department,
+    description?: string,
+    status?: number,
+  ) {
+    super();
+    this.subcode = subcode || '';
+    this.description = description || '';
+    this.department = department || null;
+    this.status = status || NaN;
+  }
 }

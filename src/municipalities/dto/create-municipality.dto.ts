@@ -2,21 +2,17 @@ import { IsNotEmpty } from 'class-validator';
 import { Department } from 'src/departments/entities/department.entity';
 
 export class CreateMunicipalityDto {
-  @IsNotEmpty()
-  codigo: string;
+  code: string;
 
   @IsNotEmpty()
-  subcodigo: string;
+  subcode: string;
 
   @IsNotEmpty()
   department: Department;
 
   @IsNotEmpty()
-  descripcion: string;
+  description: string;
 
   @IsNotEmpty()
-  estado: number;
-
-  @IsNotEmpty()
-  fecha: Date;
+  status: number;
 }
