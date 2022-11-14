@@ -1,33 +1,26 @@
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  DeleteDateColumn,
-} from 'typeorm';
-import { User } from '../../users/entities/user.entity';
+import { BaseEntity } from '../../base/baseEntity';
+import { Column, Entity, Unique } from 'typeorm';
 
 @Entity()
-export class Country {
-  @PrimaryGeneratedColumn()
-  id: string;
-
-  @Column({ length: 10, unique: true })
-  codigo: string;
+@Unique(['code', 'deleted_at'])
+export class Country extends BaseEntity {
+  @Column()
+  code: string;
 
   @Column({ length: 60 })
-  descripcion: string;
+  description: string;
 
-  @Column('int')
-  estado: number;
+  @Column()
+  status: number;
 
-  @CreateDateColumn()
-  fecha: Date;
-
-  @DeleteDateColumn()
-  deleted_at: Date;
-
-  @ManyToOne(() => User, (user: User) => user)
-  public usuario: User;
+  constructor(code: string, description?: string, status?: number);
+  constructor(code: string, description: string, status?: number);
+  constructor(code: string, description: string, status: number);
+  constructor(code?: string, description?: string, status?: number);
+  constructor(code?: string, description?: string, status?: number) {
+    super();
+    this.code = code || '';
+    this.description = description || '';
+    this.status = status || NaN;
+  }
 }

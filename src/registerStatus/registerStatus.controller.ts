@@ -12,7 +12,7 @@ import { RegisterStatusService } from './registerStatus.service';
 import { CreateRegisterStatusDto } from './dto/create-registerStatus.dto';
 import { UpdateRegisterStatusDto } from './dto/update-registerStatus.dto';
 import { RegisterStatus } from './entities/registerStatus.entity';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('registerstatus')
 export class RegisterStatusController {
