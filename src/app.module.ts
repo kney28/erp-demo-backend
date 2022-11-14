@@ -14,6 +14,7 @@ import { ContactTypeModule } from './contactType/contactType.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
+import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
     ContactTypeModule,
     RegisterStatusModule,
     DepartmentsModule,
+    NeighborhoodsModule,
   ],
   providers: [
     {
