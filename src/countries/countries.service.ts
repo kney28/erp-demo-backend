@@ -14,7 +14,8 @@ export class CountriesService {
 
   async create(createCountryDto: CreateCountryDto): Promise<Country> {
     const country: Country = this.countriesRepository.create(createCountryDto);
-    return this.countriesRepository.save(country);
+    await this.countriesRepository.save(country);
+    return country;
   }
 
   findAll(): Promise<Country[]> {
@@ -29,13 +30,13 @@ export class CountriesService {
     id: string,
     updateCountryDto: UpdateCountryDto,
   ): Promise<Country> {
-    const country: Country = await this.countriesRepository.findOneBy({ id });
-    const editedCountry: Country = Object.assign(country, updateCountryDto);
-    return this.countriesRepository.save(editedCountry);
+    await this.countriesRepository.update(id, updateCountryDto);
+    return this.findOne(id);
   }
 
   async remove(id: string): Promise<Country> {
-    const country: Country = await this.countriesRepository.findOneBy({ id });
-    return this.countriesRepository.softRemove(country);
+    const country: Country = await this.findOne(id);
+    await this.countriesRepository.softRemove(country);
+    return country;
   }
 }

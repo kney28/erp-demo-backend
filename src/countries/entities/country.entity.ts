@@ -1,4 +1,4 @@
-import { BaseEntity } from 'src/base/baseEntity';
+import { BaseEntity } from '../../base/baseEntity';
 import { Column, Entity, Unique } from 'typeorm';
 
 @Entity()
@@ -12,4 +12,15 @@ export class Country extends BaseEntity {
 
   @Column()
   status: number;
+
+  constructor(code: string, description?: string, status?: number);
+  constructor(code: string, description: string, status?: number);
+  constructor(code: string, description: string, status: number);
+  constructor(code?: string, description?: string, status?: number);
+  constructor(code?: string, description?: string, status?: number) {
+    super();
+    this.code = code || '';
+    this.description = description || '';
+    this.status = status || NaN;
+  }
 }

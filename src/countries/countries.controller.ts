@@ -11,7 +11,7 @@ import {
 import { CountriesService } from './countries.service';
 import { CreateCountryDto } from './dto/create-country.dto';
 import { UpdateCountryDto } from './dto/update-country.dto';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { Country } from './entities/country.entity';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
