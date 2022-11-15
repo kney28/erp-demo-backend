@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateThirdPersonDto } from './dto/create-thirdPerson.dto';
 import { UpdateThirdPersonDto } from './dto/update-thirdPerson.dto';
-import { ThirdPerson } from './entities/thirdPersonEntity';
+import { ThirdPerson } from './entities/thirdPerson.entity';
 
 @Injectable()
 export class ThirdPersonsService {

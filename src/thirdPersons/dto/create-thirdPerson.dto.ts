@@ -1,11 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-
 export class CreateThirdPersonDto {
   @IsNotEmpty()
   socialreason: string;
-
-  @IsNotEmpty()
-  documenttype: string;
 
   @IsNotEmpty()
   document: string;
@@ -13,7 +9,6 @@ export class CreateThirdPersonDto {
   @IsNotEmpty()
   firstname: string;
 
-  @IsNotEmpty()
   secondname: string;
 
   @IsNotEmpty()
@@ -21,16 +16,4 @@ export class CreateThirdPersonDto {
 
   @IsNotEmpty()
   secondsurname: string;
-
-  @IsNotEmpty()
-  legalnature: string;
-
-  @IsNotEmpty()
-  status: string;
-
-  @IsNotEmpty()
-  date: Date;
-
-  @IsNotEmpty()
-  user: string;
 }

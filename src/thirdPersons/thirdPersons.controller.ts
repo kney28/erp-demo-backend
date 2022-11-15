@@ -14,7 +14,7 @@ import { ThirdPersonsService } from './thirdPersons.service';
 import { CreateThirdPersonDto } from './dto/create-thirdPerson.dto';
 import { UpdateThirdPersonDto } from './dto/update-thirdPerson.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { ThirdPerson } from './entities/thirdPersonEntity';
+import { ThirdPerson } from './entities/thirdPerson.entity';
 
 @Controller('thirdpersons')
 @UseInterceptors(ClassSerializerInterceptor)
