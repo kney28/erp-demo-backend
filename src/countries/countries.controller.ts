@@ -6,25 +6,24 @@ import {
   Patch,
   Param,
   Delete,
-  Request,
   UseGuards,
 } from '@nestjs/common';
 import { CountriesService } from './countries.service';
 import { CreateCountryDto } from './dto/create-country.dto';
 import { UpdateCountryDto } from './dto/update-country.dto';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { Country } from './entities/country.entity';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+
+@ApiTags('Paises')
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('countries')
 export class CountriesController {
   constructor(private readonly countriesService: CountriesService) {}
 
   @Post()
-  create(
-    @Body() createCountryDto: CreateCountryDto,
-    @Request() req,
-  ): Promise<Country> {
-    createCountryDto['usuario'] = req.user.id;
+  create(@Body() createCountryDto: CreateCountryDto): Promise<Country> {
     return this.countriesService.create(createCountryDto);
   }
 

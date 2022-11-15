@@ -12,7 +12,7 @@ import { ContactTypeService } from './contactType.service';
 import { CreateContactTypeDto } from './dto/create-contactType.dto';
 import { UpdateContactTypeDto } from './dto/update-contactType.dto';
 import { ContactType } from './entities/contactType.entity';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('contacttype')
 @UseGuards(JwtAuthGuard)
