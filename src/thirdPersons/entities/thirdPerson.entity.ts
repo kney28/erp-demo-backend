@@ -2,11 +2,11 @@ import { Expose } from 'class-transformer';
 import { BaseEntity } from 'src/base/baseEntity';
 import { BeforeInsert, Column, Entity, Unique } from 'typeorm';
 
-export enum ThirdPersonDocument {
-  IDENTITYCARD = 'identity card',
-  IDENTIFICATIONCARD = 'identification card',
-  FOREIGNCARD = 'foreign card',
-  FOREIGNERID = 'foregner ID',
+export enum ThirdPersonDocumentType {
+  IDENTITYCARD = 'identity_card',
+  IDENTIFICATIONCARD = 'identification_card',
+  FOREIGNCARD = 'foreign_card',
+  FOREIGNERID = 'foregner_ID',
   NIT = 'NIT',
   PASSPORT = 'passport',
   FOREIGNIDENTIFICATIONDOCUMENT = 'Foreign Identification Document',
@@ -26,9 +26,9 @@ export enum ThirdPersonNature {
 export class ThirdPerson extends BaseEntity {
   @Column({
     type: 'enum',
-    enum: ThirdPersonDocument,
+    enum: ThirdPersonDocumentType,
   })
-  documenttype: ThirdPersonDocument;
+  documenttype: ThirdPersonDocumentType;
 
   @Column({
     type: 'enum',
