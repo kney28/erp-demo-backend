@@ -3,7 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateRegisterStatusDto } from './dto/create-registerStatus.dto';
 import { UpdateRegisterStatusDto } from './dto/update-registerStatus.dto';
-import { RegisterStatus } from './entities/registerStatus.entity';
+import {
+  RegisterStatus,
+  RegisterStatusType,
+} from './entities/registerStatus.entity';
 
 @Injectable()
 export class RegisterStatusService {
@@ -27,6 +30,10 @@ export class RegisterStatusService {
 
   findOneById(id: string): Promise<RegisterStatus> {
     return this.RegisterStatusRepository.findOneBy({ id });
+  }
+
+  findOneByName(name: RegisterStatusType): Promise<RegisterStatus> {
+    return this.RegisterStatusRepository.findOneBy({ name });
   }
 
   async update(
