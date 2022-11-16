@@ -29,10 +29,6 @@ export class RegisterStatusService {
     return this.RegisterStatusRepository.findOneBy({ id });
   }
 
-  findOneByName(name: string): Promise<RegisterStatus> {
-    return this.RegisterStatusRepository.findOneBy({ name });
-  }
-
   async update(
     id: string,
     updateRegisterStatusDto: UpdateRegisterStatusDto,
