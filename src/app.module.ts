@@ -15,7 +15,7 @@ import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
-
+import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -47,6 +47,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
     RegisterStatusModule,
     MunicipalitiesModule,
     DepartmentsModule,
+    ThirdPersonsModule,
   ],
   providers: [
     {

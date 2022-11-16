@@ -1,40 +1,63 @@
-import { Department } from 'src/departments/entities/department.entity';
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  DeleteDateColumn,
-} from 'typeorm';
-import { User } from '../../users/entities/user.entity';
+import { BaseEntity } from '../../base/baseEntity';
+import { Column, Entity, Unique } from 'typeorm';
+export enum statusMunicipality {
+  ACTIVE = 'active',
+  INACTIVE = 'inactive',
+}
 
 @Entity()
-export class Municipality {
-  @PrimaryGeneratedColumn()
-  id: string;
-
-  @Column({ length: 5, unique: true })
-  codigo: string;
-
-  @Column({ length: 3 })
-  subcodigo: string;
+@Unique(['subcode', 'department'])
+export class Municipality extends BaseEntity {
+  @Column()
+  subcode: string;
 
   @Column({ length: 60 })
-  descripcion: string;
+  description: string;
 
-  @Column('int')
-  estado: number;
+  @Column()
+  department: number;
 
-  @CreateDateColumn()
-  fecha: Date;
+  @Column({
+    type: 'enum',
+    enum: statusMunicipality,
+    default: statusMunicipality.ACTIVE,
+  })
+  status: statusMunicipality;
 
-  @DeleteDateColumn()
-  deleted_at: Date;
-
-  @ManyToOne(() => User, (user: User) => user)
-  public usuario: User;
-
-  @ManyToOne(() => Department, (department: Department) => department)
-  public department: Department;
+  constructor(
+    subcode: string,
+    department: number,
+    description?: string,
+    status?: statusMunicipality,
+  );
+  constructor(
+    subcode: string,
+    department: number,
+    description: string,
+    status?: statusMunicipality,
+  );
+  constructor(
+    subcode: string,
+    department: number,
+    description: string,
+    status: statusMunicipality,
+  );
+  constructor(
+    subcode?: string,
+    department?: number,
+    description?: string,
+    status?: statusMunicipality,
+  );
+  constructor(
+    subcode?: string,
+    department?: number,
+    description?: string,
+    status?: statusMunicipality,
+  ) {
+    super();
+    this.subcode = subcode || '';
+    this.description = description || '';
+    this.department = department || null;
+    this.status = status || statusMunicipality.ACTIVE;
+  }
 }

@@ -1,4 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
+import { statusCountry } from '../entities/country.entity';
 
 export class CreateCountryDto {
   @IsNotEmpty()
@@ -8,5 +9,5 @@ export class CreateCountryDto {
   description: string;
 
   @IsNotEmpty()
-  status: number;
+  status: statusCountry;
 }
