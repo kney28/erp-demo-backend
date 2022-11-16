@@ -14,7 +14,7 @@ import { ContactTypeModule } from './contactType/contactType.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
-
+import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -45,6 +45,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
     ContactTypeModule,
     RegisterStatusModule,
     DepartmentsModule,
+    ThirdPersonsModule,
   ],
   providers: [
     {
