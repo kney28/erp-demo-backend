@@ -1,8 +1,11 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsEmpty, IsNotEmpty } from 'class-validator';
 import { DepartmentExist } from 'src/departments/departments.validations';
 import { statusMunicipality } from '../entities/municipality.entity';
 
 export class CreateMunicipalityDto {
+  @IsEmpty()
+  code: string;
+
   @IsNotEmpty()
   subcode: string;
 
