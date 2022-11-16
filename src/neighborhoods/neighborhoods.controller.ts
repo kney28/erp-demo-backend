@@ -6,11 +6,14 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { NeighborhoodsService } from './neighborhoods.service';
 import { CreateNeighborhoodDto } from './dto/create-neighborhood.dto';
 import { UpdateNeighborhoodDto } from './dto/update-neighborhood.dto';
-
+import { Neighborhood } from './entities/neighborhood.entity';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+@UseGuards(JwtAuthGuard)
 @Controller('neighborhoods')
 export class NeighborhoodsController {
   constructor(private readonly neighborhoodsService: NeighborhoodsService) {}
@@ -21,7 +24,7 @@ export class NeighborhoodsController {
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Neighborhood[]> {
     return this.neighborhoodsService.findAll();
   }
 

@@ -10,6 +10,7 @@ import { Neighborhoodlogs } from './entities/neighborhoodlogs.entity';
   imports: [
     TypeOrmModule.forFeature([Neighborhood]),
     TypeOrmModule.forFeature([Neighborhoodlogs]),
+    NeighborhoodsModule,
   ],
   controllers: [NeighborhoodsController],
   providers: [NeighborhoodsService, NeighborhoodSubscriber],
