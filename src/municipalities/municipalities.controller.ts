@@ -6,7 +6,6 @@ import {
   Patch,
   Param,
   Delete,
-  BadRequestException,
   UseGuards,
 } from '@nestjs/common';
 import { MunicipalitiesService } from './municipalities.service';
@@ -15,35 +14,15 @@ import { UpdateMunicipalityDto } from './dto/update-municipality.dto';
 import { DepartmentsService } from 'src/departments/departments.service';
 import { Municipality } from './entities/municipality.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Department } from 'src/departments/entities/department.entity';
 @UseGuards(JwtAuthGuard)
 @Controller('municipalities')
 export class MunicipalitiesController {
-  constructor(
-    private readonly municipalitiesService: MunicipalitiesService,
-    private readonly departmentsService: DepartmentsService,
-  ) {}
+  constructor(private readonly municipalitiesService: MunicipalitiesService) {}
 
   @Post()
   async create(
     @Body() createMunicipalityDto: CreateMunicipalityDto,
   ): Promise<Municipality> {
-    if (createMunicipalityDto['department']) {
-      const department: Department = await this.departmentsService.findOne(
-        String(createMunicipalityDto['department']),
-      );
-
-      if (!department) {
-        throw new BadRequestException(
-          'No se encontró información del departamento',
-        );
-      }
-
-      createMunicipalityDto[
-        'code'
-      ] = `${department.codigo}${createMunicipalityDto['subcode']}`;
-    }
-
     return this.municipalitiesService.create(createMunicipalityDto);
   }
 

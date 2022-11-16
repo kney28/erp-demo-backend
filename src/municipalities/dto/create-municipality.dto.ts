@@ -1,18 +1,20 @@
 import { IsNotEmpty } from 'class-validator';
-import { Department } from 'src/departments/entities/department.entity';
+import { DepartmentExist } from 'src/departments/departments.validations';
+import { statusCountry } from '../entities/municipality.entity';
 
 export class CreateMunicipalityDto {
-  code: string;
-
   @IsNotEmpty()
   subcode: string;
 
   @IsNotEmpty()
-  department: Department;
+  @DepartmentExist({
+    message: 'El id del departamento, no existe.',
+  })
+  department: number;
 
   @IsNotEmpty()
   description: string;
 
   @IsNotEmpty()
-  status: number;
+  status: statusCountry;
 }
