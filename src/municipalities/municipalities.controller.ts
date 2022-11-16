@@ -11,7 +11,6 @@ import {
 import { MunicipalitiesService } from './municipalities.service';
 import { CreateMunicipalityDto } from './dto/create-municipality.dto';
 import { UpdateMunicipalityDto } from './dto/update-municipality.dto';
-import { DepartmentsService } from 'src/departments/departments.service';
 import { Municipality } from './entities/municipality.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 @UseGuards(JwtAuthGuard)

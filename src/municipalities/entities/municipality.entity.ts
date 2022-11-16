@@ -1,6 +1,6 @@
 import { BaseEntity } from '../../base/baseEntity';
-import { Column, Entity, Index, Unique } from 'typeorm';
-export enum statusCountry {
+import { Column, Entity, Unique } from 'typeorm';
+export enum statusMunicipality {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
 }
@@ -17,43 +17,47 @@ export class Municipality extends BaseEntity {
   @Column()
   department: number;
 
-  @Column({ type: 'enum', enum: statusCountry, default: statusCountry.ACTIVE })
-  status: statusCountry;
+  @Column({
+    type: 'enum',
+    enum: statusMunicipality,
+    default: statusMunicipality.ACTIVE,
+  })
+  status: statusMunicipality;
 
   constructor(
     subcode: string,
     department: number,
     description?: string,
-    status?: statusCountry,
+    status?: statusMunicipality,
   );
   constructor(
     subcode: string,
     department: number,
     description: string,
-    status?: statusCountry,
+    status?: statusMunicipality,
   );
   constructor(
     subcode: string,
     department: number,
     description: string,
-    status: statusCountry,
+    status: statusMunicipality,
   );
   constructor(
     subcode?: string,
     department?: number,
     description?: string,
-    status?: statusCountry,
+    status?: statusMunicipality,
   );
   constructor(
     subcode?: string,
     department?: number,
     description?: string,
-    status?: statusCountry,
+    status?: statusMunicipality,
   ) {
     super();
     this.subcode = subcode || '';
     this.description = description || '';
     this.department = department || null;
-    this.status = status || statusCountry.ACTIVE;
+    this.status = status || statusMunicipality.ACTIVE;
   }
 }

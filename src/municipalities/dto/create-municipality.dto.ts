@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 import { DepartmentExist } from 'src/departments/departments.validations';
-import { statusCountry } from '../entities/municipality.entity';
+import { statusMunicipality } from '../entities/municipality.entity';
 
 export class CreateMunicipalityDto {
   @IsNotEmpty()
@@ -16,5 +16,5 @@ export class CreateMunicipalityDto {
   description: string;
 
   @IsNotEmpty()
-  status: statusCountry;
+  status: statusMunicipality;
 }
