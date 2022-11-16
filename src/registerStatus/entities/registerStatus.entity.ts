@@ -1,26 +1,8 @@
-import {
-  Column,
-  CreateDateColumn,
-  DeleteDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from 'typeorm';
+import { BaseEntity } from 'src/base/baseEntity';
+import { Column, Entity } from 'typeorm';
 
 @Entity()
-export class RegisterStatus {
-  @PrimaryGeneratedColumn()
-  id: string;
-
+export class RegisterStatus extends BaseEntity {
   @Column()
   name: string;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
-
-  @DeleteDateColumn()
-  deleted_at: Date;
 }
