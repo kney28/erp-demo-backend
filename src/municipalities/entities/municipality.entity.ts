@@ -8,6 +8,9 @@ export enum statusMunicipality {
 @Entity()
 @Unique(['subcode', 'department'])
 export class Municipality extends BaseEntity {
+  @Column({ nullable: true })
+  code: string;
+
   @Column()
   subcode: string;
 
