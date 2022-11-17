@@ -15,6 +15,7 @@ import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
+import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 @Module({
   imports: [
@@ -47,6 +48,7 @@ import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
     RegisterStatusModule,
     MunicipalitiesModule,
     DepartmentsModule,
+    NeighborhoodsModule,
     ThirdPersonsModule,
   ],
   providers: [
