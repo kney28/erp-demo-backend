@@ -41,7 +41,7 @@ export class ComplementsService {
   }
 
   async remove(id: string): Promise<Complement> {
-    const user = await this.complementsRepository.findOneBy({ id });
-    return await this.complementsRepository.softRemove(user);
+    const complements = await this.complementsRepository.findOneBy({ id });
+    return await this.complementsRepository.softRemove(complements);
   }
 }
