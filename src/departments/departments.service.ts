@@ -26,6 +26,10 @@ export class DepartmentsService {
     return this.departmentRepository.findOneBy({ id });
   }
 
+  findOneByCodigo(codigo: string): Promise<Department> {
+    return this.departmentRepository.findOneBy({ codigo });
+  }
+
   async update(
     id: string,
     updateDepartmentDto: UpdateDepartmentDto,
