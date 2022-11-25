@@ -17,12 +17,12 @@ import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { ThirdPerson } from './entities/thirdPerson.entity';
 
 @Controller('thirdpersons')
-// @UseInterceptors(ClassSerializerInterceptor)
+@UseInterceptors(ClassSerializerInterceptor)
 export class ThirdPersonsController {
   constructor(private readonly thirdPersonsService: ThirdPersonsService) {}
 
   @Post()
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   create(
     @Body() createThirdPersonDto: CreateThirdPersonDto,
   ): Promise<ThirdPerson> {
@@ -30,19 +30,19 @@ export class ThirdPersonsController {
   }
 
   @Get()
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   findAll(): Promise<ThirdPerson[]> {
     return this.thirdPersonsService.findAll();
   }
 
   @Get(':id')
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   findOne(@Param('id') id: string): Promise<ThirdPerson> {
     return this.thirdPersonsService.findOneById(id);
   }
 
   @Patch(':id')
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   update(
     @Param('id') id: string,
     @Body() updateThirdPersonDto: UpdateThirdPersonDto,
@@ -51,7 +51,7 @@ export class ThirdPersonsController {
   }
 
   @Delete(':id')
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string): Promise<ThirdPerson> {
     return this.thirdPersonsService.remove(id);
   }
