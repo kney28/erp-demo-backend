@@ -17,6 +17,7 @@ import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
+import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -50,6 +51,7 @@ import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
     DepartmentsModule,
     NeighborhoodsModule,
     ThirdPersonsModule,
+    AccountCatalogModule,
   ],
   providers: [
     {
