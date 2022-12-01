@@ -1,5 +1,5 @@
-import { IsNotEmpty } from 'class-validator';
-import { statusCountry } from 'src/countries/entities/country.entity';
+import { IsEnum, IsNotEmpty } from 'class-validator';
+import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
 
 export class CreateTypesSeatDto {
   @IsNotEmpty({
@@ -20,5 +20,6 @@ export class CreateTypesSeatDto {
   @IsNotEmpty({
     message: 'El campo estado es obligatorio.',
   })
-  status: statusCountry;
+  @IsEnum(statusGlobal)
+  status: statusGlobal;
 }

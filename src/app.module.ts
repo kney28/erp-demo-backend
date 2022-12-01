@@ -18,6 +18,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
+import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -52,6 +53,7 @@ import { TypesSeatsModule } from './types-seats/types-seats.module';
     NeighborhoodsModule,
     ThirdPersonsModule,
     TypesSeatsModule,
+    AccountCatalogModule,
   ],
   providers: [
     {

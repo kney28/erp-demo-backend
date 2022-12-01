@@ -11,7 +11,7 @@ export class Municipality extends BaseEntity {
   @Column({ nullable: true })
   code: string;
 
-  @Column()
+  @Column({ length: 3 })
   subcode: string;
 
   @Column({ length: 60 })
