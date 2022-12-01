@@ -6,12 +6,18 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { TypesSeatsService } from './types-seats.service';
 import { CreateTypesSeatDto } from './dto/create-types-seat.dto';
 import { UpdateTypesSeatDto } from './dto/update-types-seat.dto';
 import { TypesSeat } from './entities/types-seat.entity';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
+@ApiTags('TiposAsientos')
+@ApiBearerAuth()
+@UseGuards(JwtAuthGuard)
 @Controller('types-seats')
 export class TypesSeatsController {
   constructor(private readonly typesSeatsService: TypesSeatsService) {}
