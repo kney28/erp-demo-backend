@@ -17,6 +17,7 @@ import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
+import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { AccountCatalogModule } from './account-catalog/account-catalog.module';
     DepartmentsModule,
     NeighborhoodsModule,
     ThirdPersonsModule,
+    TypesSeatsModule,
     AccountCatalogModule,
   ],
   providers: [
