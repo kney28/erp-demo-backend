@@ -12,9 +12,13 @@ import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
+import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
-
+import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
+import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
+import { TypesSeatsModule } from './types-seats/types-seats.module';
+import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -44,7 +48,12 @@ import { UserInterceptor } from './interceptors/user.interceptor';
     SocialsModule,
     ContactTypeModule,
     RegisterStatusModule,
+    MunicipalitiesModule,
     DepartmentsModule,
+    NeighborhoodsModule,
+    ThirdPersonsModule,
+    TypesSeatsModule,
+    AccountCatalogModule,
   ],
   providers: [
     {

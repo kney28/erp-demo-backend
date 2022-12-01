@@ -11,6 +11,7 @@ import {
 
 import { ClsService } from 'nestjs-cls';
 
+import { LogCountryType } from './countrylogs.entity';
 import { Country } from './country.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Countrylogs } from './countrylogs.entity';
@@ -31,7 +32,7 @@ export class ContrySubscriber implements EntitySubscriberInterface<Country> {
   }
 
   createLog(
-    type: number,
+    type: LogCountryType,
     event:
       | InsertEvent<Country>
       | UpdateEvent<Country>
@@ -48,14 +49,14 @@ export class ContrySubscriber implements EntitySubscriberInterface<Country> {
   }
 
   afterInsert(event: InsertEvent<Country>) {
-    this.createLog(1, event);
+    this.createLog(LogCountryType.CREATE, event);
   }
 
   afterUpdate(event: UpdateEvent<Country>) {
-    this.createLog(2, event);
+    this.createLog(LogCountryType.UPDATE, event);
   }
 
   afterSoftRemove(event: SoftRemoveEvent<Country>) {
-    this.createLog(3, event);
+    this.createLog(LogCountryType.DELETE, event);
   }
 }

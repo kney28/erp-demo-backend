@@ -13,7 +13,7 @@ export class Department {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @Column({ length: 10, unique: true })
+  @Column({ length: 2, unique: true })
   codigo: string;
 
   @Column({ length: 60 })

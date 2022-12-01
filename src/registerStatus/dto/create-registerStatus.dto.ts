@@ -1,9 +1,8 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsEnum, IsNotEmpty } from 'class-validator';
+import { RegisterStatusType } from '../entities/registerStatus.entity';
 
 export class CreateRegisterStatusDto {
   @IsNotEmpty()
-  Id: string;
-
-  @IsNotEmpty()
-  name: string;
+  @IsEnum(RegisterStatusType)
+  name: RegisterStatusType;
 }
