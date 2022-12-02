@@ -1,11 +1,11 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
 import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
+import { Unique } from 'typeorm';
 import {
   affectsRetentionCatalog,
   availabilityTypeCatalog,
   classCatalog,
   levelCatalog,
-  natureCatalog,
   selectionCatalog,
   statusGlobal,
 } from '../entities/account-catalog.entity';
@@ -40,12 +40,6 @@ export class CreateAccountCatalogDto {
   class: classCatalog;
 
   @IsNotEmpty({
-    message: 'El campo naturaleza no puede estar vacio.',
-  })
-  @IsEnum(natureCatalog)
-  nature: natureCatalog;
-
-  @IsNotEmpty({
     message: 'El campo tipo disponibilidad no puede estar vacio.',
   })
   @IsEnum(availabilityTypeCatalog)
@@ -69,9 +63,6 @@ export class CreateAccountCatalogDto {
   @IsEnum(selectionCatalog)
   transferThirdParties: selectionCatalog;
 
-  @IsNotEmpty({
-    message: 'El campo tercero no puede estar vacio.',
-  })
   @ThirdPersonExist({
     message: 'El id del tercero, no existe.',
   })
