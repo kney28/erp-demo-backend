@@ -19,6 +19,7 @@ import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
+import { CostCenterModule } from './costcenter/costcenter.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -54,6 +55,7 @@ import { AccountCatalogModule } from './account-catalog/account-catalog.module';
     ThirdPersonsModule,
     TypesSeatsModule,
     AccountCatalogModule,
+    CostCenterModule,
   ],
   providers: [
     {

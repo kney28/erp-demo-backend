@@ -1,4 +1,5 @@
-import { Column } from 'typeorm';
+import { BaseEntity } from 'src/base/baseEntity';
+import { Column, Entity } from 'typeorm';
 
 export enum GeneralAccountingMonth {
   JANUARY = 1,
@@ -29,7 +30,8 @@ export enum GeneralAccountingStatus {
   ACTIVE = 1,
   INACTIVE = 2,
 }
-export class GeneralAccounting {
+@Entity()
+export class GeneralAccounting extends BaseEntity {
   @Column()
   validity: number;
 
