@@ -22,7 +22,6 @@ export class AccountCatalogController {
   ): Promise<AccountCatalog> {
     return this.accountCatalogService.create(createAccountCatalogDto);
   }
-
   @Get()
   findAll(): Promise<AccountCatalog[]> {
     return this.accountCatalogService.findAll();

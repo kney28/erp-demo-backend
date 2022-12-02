@@ -16,7 +16,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Municipalitylogs } from './municipalitylogs.entity';
 
 @EventSubscriber()
-export class ContrySubscriber
+export class MunicipalitySubscriber
   implements EntitySubscriberInterface<Municipality>
 {
   constructor(
@@ -39,13 +39,13 @@ export class ContrySubscriber
       | UpdateEvent<Municipality>
       | SoftRemoveEvent<Municipality>,
   ) {
-    const countrylog: DeepPartial<Municipalitylogs> = {
+    const municipalitylog: DeepPartial<Municipalitylogs> = {
       value: JSON.stringify(event.entity),
       type: type,
       user: this.cls.get('user'),
     };
     const municipalityLogs: Municipalitylogs =
-      this.municipalityLogsRepository.create(countrylog);
+      this.municipalityLogsRepository.create(municipalitylog);
     this.municipalityLogsRepository.save(municipalityLogs);
   }
 
