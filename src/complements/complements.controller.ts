@@ -8,6 +8,7 @@ import {
   Delete,
   UseGuards,
 } from '@nestjs/common';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { ComplementsService } from './complements.service';
 import { CreateComplementDto } from './dto/create-complement.dto';
@@ -15,6 +16,8 @@ import { UpdateComplementDto } from './dto/update-complement.dto';
 import { Complement } from './entities/complement.entity';
 
 @Controller('complements')
+@ApiTags('Complementos')
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 export class ComplementsController {
   constructor(private readonly complementsService: ComplementsService) {}

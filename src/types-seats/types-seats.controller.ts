@@ -15,7 +15,7 @@ import { TypesSeat } from './entities/types-seat.entity';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@ApiTags('TiposAsientos')
+@ApiTags('Tipos de asientos')
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('types-seats')
