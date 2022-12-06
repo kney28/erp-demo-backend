@@ -13,9 +13,12 @@ import { CreateSocialDto } from './dto/create-social.dto';
 import { UpdateSocialDto } from './dto/update-social.dto';
 import { Social } from './entities/social.entity';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @Controller('socials')
 @UseGuards(JwtAuthGuard)
+@ApiTags('Social')
+@ApiBearerAuth()
 export class SocialsController {
   constructor(private readonly socialsService: SocialsService) {}
 
