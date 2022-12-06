@@ -13,9 +13,12 @@ import { CreateContactTypeDto } from './dto/create-contactType.dto';
 import { UpdateContactTypeDto } from './dto/update-contactType.dto';
 import { ContactType } from './entities/contactType.entity';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @Controller('contacttype')
 @UseGuards(JwtAuthGuard)
+@ApiTags('Tipo de contacto')
+@ApiBearerAuth()
 export class ContactTypeController {
   constructor(private readonly contactTypeService: ContactTypeService) {}
 
