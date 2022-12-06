@@ -8,6 +8,7 @@ import { ClsModule } from 'nestjs-cls';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { ComplementsModule } from './complements/complements.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
@@ -44,6 +45,7 @@ import { AccountCatalogModule } from './account-catalog/account-catalog.module';
     }),
     AuthModule,
     UsersModule,
+    ComplementsModule,
     CountriesModule,
     SocialsModule,
     ContactTypeModule,
