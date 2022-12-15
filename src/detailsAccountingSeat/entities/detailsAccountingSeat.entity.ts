@@ -8,7 +8,7 @@ export enum DetailsAccountingSeatStatus {
 
 @Entity()
 export class DetailsAccountingSeat extends BaseEntity {
-  @Column()
+  /*@Column()
   accountingseat: number;
 
   @Column()
@@ -24,7 +24,7 @@ export class DetailsAccountingSeat extends BaseEntity {
   costcenter: number;
 
   @Column()
-  description: string;
+  description: string;*/
 
   @Column()
   debitvalue: number;
