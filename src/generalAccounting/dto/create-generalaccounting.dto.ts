@@ -7,8 +7,8 @@ import {
 } from '../entities/generalaccounting.entity';
 
 export class CreateGeneralAccountingDto {
-  @IsNotEmpty()
-  validity: number;
+  /*@IsNotEmpty()
+  validity: number;*/
 
   @IsNotEmpty()
   @IsEnum(GeneralAccountingMonth)
@@ -18,7 +18,7 @@ export class CreateGeneralAccountingDto {
   @IsEnum(GeneralAccountingRounding)
   rounding: GeneralAccountingRounding;
 
-  @IsNotEmpty()
+  /*@IsNotEmpty()
   typeclosingseat: number;
 
   @IsNotEmpty()
@@ -28,7 +28,7 @@ export class CreateGeneralAccountingDto {
   utilityaccount: number;
 
   @IsNotEmpty()
-  accountclosing: number;
+  accountclosing: number;*/
 
   @IsNotEmpty()
   @IsEnum(GeneralAccountingInUse)

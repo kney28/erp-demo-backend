@@ -32,8 +32,8 @@ export enum GeneralAccountingStatus {
 }
 @Entity()
 export class GeneralAccounting extends BaseEntity {
-  @Column()
-  validity: number;
+  /*@Column()
+  validity: number;*/
 
   @Column({
     type: 'enum',
@@ -48,7 +48,7 @@ export class GeneralAccounting extends BaseEntity {
   })
   rounding: GeneralAccountingRounding;
 
-  @Column()
+  /*@Column()
   typeclosingseat: number;
 
   @Column()
@@ -58,7 +58,7 @@ export class GeneralAccounting extends BaseEntity {
   utilityaccount: number;
 
   @Column()
-  accountclosing: number;
+  accountclosing: number;*/
 
   @Column({
     type: 'enum',
