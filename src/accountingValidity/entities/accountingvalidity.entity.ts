@@ -1,5 +1,5 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { BeforeInsert, Column, Entity } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 
 export enum AccountingValidityStatus {
   OPEN = 1,
@@ -15,8 +15,8 @@ export enum AccountingValidityInUse {
 
 @Entity()
 export class AccountingValidity extends BaseEntity {
-  @Column()
-  validity: number;
+  /*@Column()
+  validity: number;*/
 
   @Column({
     type: 'enum',

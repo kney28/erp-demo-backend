@@ -57,7 +57,7 @@ export class AccountingValidityController {
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
-  remove(@Param('id') id: string): Primise<AccountingValidity> {
+  remove(@Param('id') id: string): Promise<AccountingValidity> {
     return this.accountingValidityService.remove(id);
   }
 }

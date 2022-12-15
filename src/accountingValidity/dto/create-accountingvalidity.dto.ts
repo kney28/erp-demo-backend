@@ -5,8 +5,8 @@ import {
 } from '../entities/accountingvalidity.entity';
 
 export class CreateAccountingValidityDto {
-  @IsNotEmpty()
-  validity: number;
+  /*@IsNotEmpty()
+  validity: number;*/
 
   @IsNotEmpty()
   @IsEnum(AccountingValidityStatus)
