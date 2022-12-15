@@ -11,7 +11,9 @@ describe('AccountingSeatsController', () => {
       providers: [AccountingSeatsService],
     }).compile();
 
-    controller = module.get<AccountingSeatsController>(AccountingSeatsController);
+    controller = module.get<AccountingSeatsController>(
+      AccountingSeatsController,
+    );
   });
 
   it('should be defined', () => {

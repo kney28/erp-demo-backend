@@ -2,11 +2,11 @@ import { IsEnum, IsNotEmpty } from 'class-validator';
 import { AccountingSeatStatus } from '../entities/accountingSeat.entity';
 
 export class CreateAccountingSeatDto {
-  @IsNotEmpty()
+  /*@IsNotEmpty()
   accountingvalidity: number;
 
   @IsNotEmpty()
-  seattype: number;
+  seattype: number;*/
 
   @IsNotEmpty()
   consecutive: number;
@@ -15,8 +15,8 @@ export class CreateAccountingSeatDto {
   @IsEnum(AccountingSeatStatus)
   status: AccountingSeatStatus;
 
-  @IsNotEmpty()
-  documentdate: Date;
+  /*@IsNotEmpty()
+  documentdate: Date;*/
 
   @IsNotEmpty()
   detail: string;

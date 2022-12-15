@@ -9,11 +9,11 @@ export enum AccountingSeatStatus {
 
 @Entity()
 export class AccountingSeat extends BaseEntity {
-  @Column()
+  /*@Column()
   accountingvalidity: number;
 
   @Column()
-  seattype: number;
+  seattype: number;*/
 
   @Column()
   consecutive: number;
@@ -25,8 +25,8 @@ export class AccountingSeat extends BaseEntity {
   })
   status: AccountingSeatStatus;
 
-  @Column()
-  documentdate: Date;
+  /*@Column()
+  documentdate: Date;*/
 
   @Column()
   detail: string;
