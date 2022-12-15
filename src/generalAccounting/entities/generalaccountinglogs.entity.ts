@@ -1,6 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { User } from 'src/users/entities/user.entity';
-import { Column, ManyToOne } from 'typeorm';
+import { Column, Entity, ManyToOne } from 'typeorm';
 
 export enum LogGeneralAccountingType {
   CREATE = 'create',
@@ -8,6 +8,7 @@ export enum LogGeneralAccountingType {
   DELETE = 'delete',
 }
 
+@Entity()
 export class GeneralAccountingLogs extends BaseEntity {
   @Column()
   value: string;
