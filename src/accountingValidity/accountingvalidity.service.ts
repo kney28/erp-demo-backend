@@ -3,7 +3,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateAccountingValidityDto } from './dto/create-accountingvalidity.dto';
 import { UpdateAccountingValidityDto } from './dto/update-accountingvalidity.dto';
-import { AccountingValidity } from './entities/accountingvalidity.entity';
+import {
+  AccountingValidity,
+  AccountingValidityInUse,
+  AccountingValidityStatus,
+} from './entities/accountingvalidity.entity';
 
 @Injectable()
 export class AccountingValidityService {
@@ -37,6 +41,9 @@ export class AccountingValidityService {
       accountingvalidity,
       updateAccountingValidityDto,
     );
+    if (AccountingValidityInUse.YES) {
+      AccountingValidityStatus.OPEN;
+    }
     return await this.accountingvalidityRepository.save(
       editedAccountingValidity,
     );
