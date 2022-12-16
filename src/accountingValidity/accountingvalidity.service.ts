@@ -41,12 +41,11 @@ export class AccountingValidityService {
       accountingvalidity,
       updateAccountingValidityDto,
     );
-    if (AccountingValidityInUse.YES) {
-      AccountingValidityStatus.OPEN;
+    if (accountingvalidity.in_use !== AccountingValidityInUse.YES) {
+      return await this.accountingvalidityRepository.save(
+        editedAccountingValidity,
+      );
     }
-    return await this.accountingvalidityRepository.save(
-      editedAccountingValidity,
-    );
   }
 
   async remove(id: string) {
