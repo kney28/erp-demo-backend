@@ -6,13 +6,19 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { AccountCatalogService } from './account-catalog.service';
 import { CreateAccountCatalogDto } from './dto/create-account-catalog.dto';
 import { UpdateAccountCatalogDto } from './dto/update-account-catalog.dto';
 import { AccountCatalog } from './entities/account-catalog.entity';
 
 @Controller('account-catalog')
+@ApiTags('Catálogo de cuentas')
+@ApiBearerAuth()
+@UseGuards(JwtAuthGuard)
 export class AccountCatalogController {
   constructor(private readonly accountCatalogService: AccountCatalogService) {}
 
@@ -22,7 +28,6 @@ export class AccountCatalogController {
   ): Promise<AccountCatalog> {
     return this.accountCatalogService.create(createAccountCatalogDto);
   }
-
   @Get()
   findAll(): Promise<AccountCatalog[]> {
     return this.accountCatalogService.findAll();

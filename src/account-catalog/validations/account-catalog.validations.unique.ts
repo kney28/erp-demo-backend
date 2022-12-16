@@ -17,6 +17,10 @@ export class AccountCatalogExistConstraint
   ) {}
   async validate(id: string) {
     try {
+      if (!id) {
+        return true;
+      }
+
       return await this.accountCatalogService
         .findOne(id)
         .then((accountCatalog) => {

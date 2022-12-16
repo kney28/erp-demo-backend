@@ -15,14 +15,17 @@ import { CreateThirdPersonDto } from './dto/create-thirdPerson.dto';
 import { UpdateThirdPersonDto } from './dto/update-thirdPerson.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { ThirdPerson } from './entities/thirdPerson.entity';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @Controller('thirdpersons')
 @UseInterceptors(ClassSerializerInterceptor)
+@ApiTags('terceros')
+@ApiBearerAuth()
+@UseGuards(JwtAuthGuard)
 export class ThirdPersonsController {
   constructor(private readonly thirdPersonsService: ThirdPersonsService) {}
 
   @Post()
-  @UseGuards(JwtAuthGuard)
   create(
     @Body() createThirdPersonDto: CreateThirdPersonDto,
   ): Promise<ThirdPerson> {
@@ -30,19 +33,16 @@ export class ThirdPersonsController {
   }
 
   @Get()
-  @UseGuards(JwtAuthGuard)
   findAll(): Promise<ThirdPerson[]> {
     return this.thirdPersonsService.findAll();
   }
 
   @Get(':id')
-  @UseGuards(JwtAuthGuard)
   findOne(@Param('id') id: string): Promise<ThirdPerson> {
     return this.thirdPersonsService.findOneById(id);
   }
 
   @Patch(':id')
-  @UseGuards(JwtAuthGuard)
   update(
     @Param('id') id: string,
     @Body() updateThirdPersonDto: UpdateThirdPersonDto,
@@ -51,7 +51,6 @@ export class ThirdPersonsController {
   }
 
   @Delete(':id')
-  @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string): Promise<ThirdPerson> {
     return this.thirdPersonsService.remove(id);
   }

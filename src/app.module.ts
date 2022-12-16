@@ -8,6 +8,7 @@ import { ClsModule } from 'nestjs-cls';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { ComplementsModule } from './complements/complements.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
@@ -20,6 +21,7 @@ import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
+import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -45,6 +47,7 @@ import { GeneralAccounting } from './generalAccounting/entities/generalaccountin
     }),
     AuthModule,
     UsersModule,
+    ComplementsModule,
     CountriesModule,
     SocialsModule,
     ContactTypeModule,
@@ -56,6 +59,7 @@ import { GeneralAccounting } from './generalAccounting/entities/generalaccountin
     TypesSeatsModule,
     AccountCatalogModule,
     GeneralAccounting,
+    ThirdPartyAccountantsModule,
   ],
   providers: [
     {

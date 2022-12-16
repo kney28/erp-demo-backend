@@ -37,11 +37,13 @@ export class AccountCatalogService {
       await this.accountCatalogsRepository.findOneBy({
         id,
       });
-    const editedMunicipality: AccountCatalog = Object.assign(
+
+    const editedAccountCatalog: AccountCatalog = Object.assign(
       account,
       updateAccountCatalogDto,
     );
-    return this.accountCatalogsRepository.save(editedMunicipality);
+
+    return this.accountCatalogsRepository.save(editedAccountCatalog);
   }
 
   async remove(id: string): Promise<AccountCatalog> {
