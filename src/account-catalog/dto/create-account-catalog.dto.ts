@@ -1,6 +1,5 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
 import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
-import { Unique } from 'typeorm';
 import {
   affectsRetentionCatalog,
   availabilityTypeCatalog,
