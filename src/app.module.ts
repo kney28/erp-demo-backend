@@ -20,6 +20,7 @@ import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
+import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 @Module({
   imports: [
@@ -57,6 +58,7 @@ import { ThirdPartyAccountantsModule } from './third-party-accountants/third-par
     ThirdPersonsModule,
     TypesSeatsModule,
     AccountCatalogModule,
+    GeneralAccounting,
     ThirdPartyAccountantsModule,
   ],
   providers: [
