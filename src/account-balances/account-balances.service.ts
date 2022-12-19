@@ -1,26 +1,53 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateAccountBalanceDto } from './dto/create-account-balance.dto';
 import { UpdateAccountBalanceDto } from './dto/update-account-balance.dto';
+import { AccountBalance } from './entities/account-balance.entity';
 
 @Injectable()
 export class AccountBalancesService {
+  constructor(
+    @InjectRepository(AccountBalance)
+    private accountBalanceRepository: Repository<AccountBalance>,
+  ) {}
   create(createAccountBalanceDto: CreateAccountBalanceDto) {
-    return 'This action adds a new accountBalance';
+    const account: AccountBalance = this.accountBalanceRepository.create(
+      createAccountBalanceDto,
+    );
+    return this.accountBalanceRepository.save(account);
   }
 
-  findAll() {
-    return `This action returns all accountBalances`;
+  findAll(): Promise<AccountBalance[]> {
+    return this.accountBalanceRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} accountBalance`;
+  findOne(id: string): Promise<AccountBalance> {
+    return this.accountBalanceRepository.findOneBy({ id });
   }
 
-  update(id: number, updateAccountBalanceDto: UpdateAccountBalanceDto) {
-    return `This action updates a #${id} accountBalance`;
+  async update(
+    id: string,
+    updateAccountBalanceDto: UpdateAccountBalanceDto,
+  ): Promise<AccountBalance> {
+    const account: AccountBalance =
+      await this.accountBalanceRepository.findOneBy({
+        id,
+      });
+
+    const editedAccount: AccountBalance = Object.assign(
+      account,
+      updateAccountBalanceDto,
+    );
+
+    return this.accountBalanceRepository.save(editedAccount);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} accountBalance`;
+  async remove(id: string): Promise<AccountBalance> {
+    const account: AccountBalance =
+      await this.accountBalanceRepository.findOneBy({
+        id,
+      });
+    return this.accountBalanceRepository.softRemove(account);
   }
 }
