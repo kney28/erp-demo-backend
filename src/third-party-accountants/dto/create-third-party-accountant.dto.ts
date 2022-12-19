@@ -3,6 +3,7 @@ import {
   selectionCatalog,
   statusGlobal,
 } from 'src/account-catalog/entities/account-catalog.entity';
+import { ThirdPerson } from 'src/thirdPersons/entities/thirdPerson.entity';
 import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
 import {
   taxpayerTypeCatalog,
@@ -16,7 +17,7 @@ export class CreateThirdPartyAccountantDto {
   @IsNotEmpty({
     message: 'El campo "Tercero" no puede estar vacio.',
   })
-  third_id: number;
+  third: ThirdPerson;
 
   @IsNotEmpty({
     message: 'El campo "Tipo contribuyente" no puede estar vacio.',

@@ -1,3 +1,4 @@
+import { Municipality } from 'src/municipalities/entities/municipality.entity';
 import {
   Column,
   Entity,
@@ -5,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   DeleteDateColumn,
+  OneToMany,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
 
@@ -28,6 +30,6 @@ export class Department {
   @DeleteDateColumn()
   deleted_at: Date;
 
-  @ManyToOne(() => User, (user: User) => user)
-  public usuario: User;
+  @OneToMany(() => Municipality, (municipality) => municipality.department)
+  municipalities: Municipality[];
 }

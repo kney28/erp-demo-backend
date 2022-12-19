@@ -20,12 +20,21 @@ export class MunicipalitiesService {
     return this.municipalitiesRepository.save(municipality);
   }
 
-  findAll(): Promise<Municipality[]> {
-    return this.municipalitiesRepository.find();
+  async findAll(): Promise<Municipality[]> {
+    const municipalities = await this.municipalitiesRepository
+      .createQueryBuilder('municipality')
+      .leftJoinAndSelect('municipality.department', 'department')
+      .getMany();
+    return municipalities;
   }
 
-  findOne(id: string): Promise<Municipality> {
-    return this.municipalitiesRepository.findOneBy({ id });
+  async findOne(id: string): Promise<Municipality> {
+    const municipalities = await this.municipalitiesRepository
+      .createQueryBuilder('municipality')
+      .leftJoinAndSelect('municipality.department', 'department')
+      .where('municipality.id = :id', { id: id })
+      .getOne();
+    return municipalities;
   }
 
   async update(
