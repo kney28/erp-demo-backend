@@ -23,6 +23,7 @@ import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 import { RetentionConceptsModule } from './retention-concepts/retention-concepts.module';
+import { AccountBalancesModule } from './account-balances/account-balances.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -62,6 +63,7 @@ import { RetentionConceptsModule } from './retention-concepts/retention-concepts
     GeneralAccounting,
     ThirdPartyAccountantsModule,
     RetentionConceptsModule,
+    AccountBalancesModule,
   ],
   providers: [
     {
