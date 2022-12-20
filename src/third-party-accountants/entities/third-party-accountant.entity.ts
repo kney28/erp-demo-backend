@@ -1,5 +1,6 @@
 import { selectionCatalog } from 'src/account-catalog/entities/account-catalog.entity';
-import { Column, Entity } from 'typeorm';
+import { ThirdPerson } from 'src/thirdPersons/entities/thirdPerson.entity';
+import { Column, Entity, ManyToOne } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 
 export enum taxpayerTypeCatalog {
@@ -17,8 +18,8 @@ export enum withholdingTypeCatalog {
 
 @Entity()
 export class ThirdPartyAccountant extends BaseEntity {
-  @Column()
-  third_id: number;
+  @ManyToOne(() => ThirdPerson, (third) => third.thirdPartyAccountant)
+  third: ThirdPerson;
 
   @Column({
     type: 'enum',

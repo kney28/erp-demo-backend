@@ -1,4 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
+import { Municipality } from 'src/municipalities/entities/municipality.entity';
 import { statusNeighborhood } from '../entities/neighborhood.entity';
 import { MunicipalityExist } from '../neighborhoods.validations';
 
@@ -13,7 +14,7 @@ export class CreateNeighborhoodDto {
   @MunicipalityExist({
     message: 'El id del municipio, no existe.',
   })
-  municipality: number;
+  municipality: Municipality;
 
   @IsNotEmpty()
   status: statusNeighborhood;
