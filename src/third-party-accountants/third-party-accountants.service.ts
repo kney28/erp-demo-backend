@@ -20,12 +20,21 @@ export class ThirdPartyAccountantsService {
     return this.thirdPartyAccountantRepository.save(account);
   }
 
-  findAll(): Promise<ThirdPartyAccountant[]> {
-    return this.thirdPartyAccountantRepository.find();
+  async findAll(): Promise<ThirdPartyAccountant[]> {
+    const thirdPartyAccountants = await this.thirdPartyAccountantRepository
+      .createQueryBuilder('thirdPartyAccountant')
+      .leftJoinAndSelect('thirdPartyAccountant.third', 'thirdPersons')
+      .getMany();
+    return thirdPartyAccountants;
   }
 
-  findOne(id: string): Promise<ThirdPartyAccountant> {
-    return this.thirdPartyAccountantRepository.findOneBy({ id });
+  async findOne(id: string): Promise<ThirdPartyAccountant> {
+    const thirdPartyAccountants = await this.thirdPartyAccountantRepository
+      .createQueryBuilder('thirdPartyAccountant')
+      .leftJoinAndSelect('thirdPartyAccountant.third', 'thirdPersons')
+      .where('thirdPartyAccountant.id = :id', { id: id })
+      .getOne();
+    return thirdPartyAccountants;
   }
 
   async update(
