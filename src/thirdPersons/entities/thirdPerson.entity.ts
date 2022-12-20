@@ -1,6 +1,7 @@
 import { Expose } from 'class-transformer';
 import { BaseEntity } from 'src/base/baseEntity';
-import { BeforeInsert, Column, Entity, Unique } from 'typeorm';
+import { ThirdPartyAccountant } from 'src/third-party-accountants/entities/third-party-accountant.entity';
+import { BeforeInsert, Column, Entity, OneToMany, Unique } from 'typeorm';
 
 export enum ThirdPersonDocumentType {
   IDENTITYCARD = 'identity_card',
@@ -63,6 +64,12 @@ export class ThirdPerson extends BaseEntity {
 
   @Column()
   verificationcode: number;
+
+  @OneToMany(
+    () => ThirdPartyAccountant,
+    (thirdPartyAccountant) => thirdPartyAccountant.third,
+  )
+  thirdPartyAccountant: ThirdPartyAccountant[];
 
   @BeforeInsert()
   createVerificationCode() {

@@ -22,12 +22,23 @@ export class NeighborhoodsService {
     return neighborhood;
   }
 
-  findAll(): Promise<Neighborhood[]> {
-    return this.neighborhoodRepository.find();
+  async findAll(): Promise<Neighborhood[]> {
+    const neighborhoods = await this.neighborhoodRepository
+      .createQueryBuilder('neighborhood')
+      .leftJoinAndSelect('neighborhood.municipality', 'municipality')
+      .getMany();
+
+    return neighborhoods;
   }
 
-  findOne(id: string): Promise<Neighborhood> {
-    return this.neighborhoodRepository.findOneBy({ id });
+  async findOne(id: string): Promise<Neighborhood> {
+    const neighborhoods = await this.neighborhoodRepository
+      .createQueryBuilder('neighborhood')
+      .leftJoinAndSelect('neighborhood.municipality', 'municipality')
+      .where('neighborhood.id = :id', { id: id })
+      .getOne();
+
+    return neighborhoods;
   }
 
   async update(
