@@ -4,7 +4,7 @@ import { BeforeInsert, Column, Entity, Unique } from 'typeorm';
 
 export enum ThirdPersonDocumentType {
   IDENTITYCARD = 'identity_card',
-  IDENTIFICATIONCARD = 'identification_card',
+  IDENTIFICATIONCARD = 'identification_card', 
   FOREIGNCARD = 'foreign_card',
   FOREIGNERID = 'foregner_ID',
   NIT = 'NIT',

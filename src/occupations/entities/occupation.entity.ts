@@ -1,5 +1,5 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, Unique } from 'typeorm';
 
 export enum OccupationsStatus {
   ACTIVE = 1,
@@ -7,6 +7,7 @@ export enum OccupationsStatus {
 }
 
 @Entity()
+@Unique(['code'])
 export class Occupation extends BaseEntity {
   @Column()
   code: string;
