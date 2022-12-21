@@ -1,5 +1,7 @@
 import { BaseEntity } from '../../base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany, Unique } from 'typeorm';
+import { Department } from 'src/departments/entities/department.entity';
+import { Neighborhood } from 'src/neighborhoods/entities/neighborhood.entity';
 export enum statusMunicipality {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
@@ -17,8 +19,11 @@ export class Municipality extends BaseEntity {
   @Column({ length: 60 })
   description: string;
 
-  @Column()
-  department: number;
+  @ManyToOne(() => Department, (department) => department.municipalities)
+  department: Department;
+
+  @OneToMany(() => Neighborhood, (neighborhood) => neighborhood.municipality)
+  neighborhoods: Municipality[];
 
   @Column({
     type: 'enum',
@@ -60,7 +65,6 @@ export class Municipality extends BaseEntity {
     super();
     this.subcode = subcode || '';
     this.description = description || '';
-    this.department = department || null;
     this.status = status || statusMunicipality.ACTIVE;
   }
 }

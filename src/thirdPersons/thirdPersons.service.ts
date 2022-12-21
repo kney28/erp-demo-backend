@@ -6,7 +6,7 @@ import { UpdateThirdPersonDto } from './dto/update-thirdPerson.dto';
 import { ThirdPerson } from './entities/thirdPerson.entity';
 
 @Injectable()
-export class ThirdPersonsService {
+export class ThirdPersonsService {  
   constructor(
     @InjectRepository(ThirdPerson)
     private thirpersonsRepository: Repository<ThirdPerson>,
