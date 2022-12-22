@@ -24,6 +24,7 @@ import { OccupationsModule } from './occupations/occupations.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 import { RetentionConceptsModule } from './retention-concepts/retention-concepts.module';
+import { GroupsCupsModule } from './groups-cups/groups-cups.module';
 import { AccountBalancesModule } from './account-balances/account-balances.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 @Module({
@@ -66,6 +67,7 @@ import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
     GeneralAccounting,
     ThirdPartyAccountantsModule,
     RetentionConceptsModule,
+    GroupsCupsModule,
     AccountBalancesModule,
     CategoriesCupsModule,
   ],
