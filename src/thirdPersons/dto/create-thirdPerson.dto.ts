@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsOptional } from 'class-validator';
 import { Unique } from 'typeorm';
 import {
   ThirdPersonDocumentType,
@@ -6,7 +6,7 @@ import {
   ThirdPersonStatus,
 } from '../entities/thirdPerson.entity';
 export class CreateThirdPersonDto {
-  @IsNotEmpty()
+  @IsOptional()
   socialreason: string;
 
   @IsNotEmpty()
@@ -25,14 +25,12 @@ export class CreateThirdPersonDto {
   @IsEnum(ThirdPersonStatus)
   status: ThirdPersonStatus;
 
-  @IsNotEmpty()
+  @IsOptional()
   firstname: string;
-
+  @IsOptional()
   secondname: string;
-
-  @IsNotEmpty()
+  @IsOptional()
   firstsurname: string;
-
-  @IsNotEmpty()
+  @IsOptional()
   secondsurname: string;
 }
