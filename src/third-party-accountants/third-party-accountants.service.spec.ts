@@ -9,7 +9,9 @@ describe('ThirdPartyAccountantsService', () => {
       providers: [ThirdPartyAccountantsService],
     }).compile();
 
-    service = module.get<ThirdPartyAccountantsService>(ThirdPartyAccountantsService);
+    service = module.get<ThirdPartyAccountantsService>(
+      ThirdPartyAccountantsService,
+    );
   });
 
   it('should be defined', () => {

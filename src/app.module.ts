@@ -17,7 +17,6 @@ import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
-import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 import { OccupationsModule } from './occupations/occupations.module';
@@ -27,6 +26,7 @@ import { RetentionConceptsModule } from './retention-concepts/retention-concepts
 import { GroupsCupsModule } from './groups-cups/groups-cups.module';
 import { AccountBalancesModule } from './account-balances/account-balances.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
+import { ThirdPersonModule } from './third-person/third-person.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -60,7 +60,7 @@ import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
     MunicipalitiesModule,
     DepartmentsModule,
     NeighborhoodsModule,
-    ThirdPersonsModule,
+    ThirdPersonModule,
     TypesSeatsModule,
     AccountCatalogModule,
     OccupationsModule,
