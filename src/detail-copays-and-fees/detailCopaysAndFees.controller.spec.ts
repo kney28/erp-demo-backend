@@ -11,7 +11,9 @@ describe('DetailCopaysAndFeesController', () => {
       providers: [DetailCopaysAndFeesService],
     }).compile();
 
-    controller = module.get<DetailCopaysAndFeesController>(DetailCopaysAndFeesController);
+    controller = module.get<DetailCopaysAndFeesController>(
+      DetailCopaysAndFeesController,
+    );
   });
 
   it('should be defined', () => {

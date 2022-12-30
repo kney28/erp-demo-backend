@@ -5,8 +5,8 @@ import {
 } from '../entities/detailCopaysAndFee.entity';
 
 export class CreateDetailCopaysAndFeeDto {
-  @IsNotEmpty()
-  copaysandfees: number;
+  /*@IsNotEmpty()
+  copaysandfees: number;*/
 
   @IsNotEmpty()
   @IsEnum(DetailCopaysAndFeeType)

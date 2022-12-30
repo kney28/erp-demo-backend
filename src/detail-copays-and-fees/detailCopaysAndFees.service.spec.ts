@@ -9,7 +9,9 @@ describe('DetailCopaysAndFeesService', () => {
       providers: [DetailCopaysAndFeesService],
     }).compile();
 
-    service = module.get<DetailCopaysAndFeesService>(DetailCopaysAndFeesService);
+    service = module.get<DetailCopaysAndFeesService>(
+      DetailCopaysAndFeesService,
+    );
   });
 
   it('should be defined', () => {

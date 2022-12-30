@@ -15,8 +15,8 @@ export enum DetailCopaysAndFeeStatus {
 
 @Entity()
 export class DetailCopaysAndFee extends BaseEntity {
-  @Column()
-  copaysandfees: number;
+  /*@Column()
+  copaysandfees: number;*/
 
   @Column({
     type: 'enum',
