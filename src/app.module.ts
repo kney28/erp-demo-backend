@@ -28,6 +28,7 @@ import { AccountBalancesModule } from './account-balances/account-balances.modul
 import { SubgroupsCupsModule } from './subgroups-cups/subgroups-cups.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
+import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -72,6 +73,7 @@ import { ThirdPersonModule } from './third-person/third-person.module';
     AccountBalancesModule,
     SubgroupsCupsModule,
     CategoriesCupsModule,
+    SubcategoriesCupsModule,
   ],
   providers: [
     {
