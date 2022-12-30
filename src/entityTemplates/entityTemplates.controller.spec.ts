@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EntityTemplatesController } from './entityTemplates.controller';
-import { EntityTemplatesService } from './entityTemplates.service';
+import { EntityTemplatesController } from './entitytemplates.controller';
+import { EntityTemplatesService } from './entitytemplates.service';
 
 describe('EntityTemplatesController', () => {
   let controller: EntityTemplatesController;

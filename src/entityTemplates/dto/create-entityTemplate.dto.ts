@@ -1,6 +1,6 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
 import { Unique } from 'typeorm';
-import { EntityTemplateStatus } from '../entities/entityTemplate.entity';
+import { EntityTemplateStatus } from '../entities/entitytemplate.entity';
 
 export class CreateEntityTemplateDto {
   @IsNotEmpty()
