@@ -11,10 +11,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { CostCenterService } from './costCenter.service';
-import { CreateCostCenterDto } from './dto/create-costCenter.dto';
-import { UpdateCostCenterDto } from './dto/update-costCenter.dto';
-import { CostCenter } from './entities/costCenter.entity';
+import { CostCenterService } from './costcenter.service';
+import { CreateCostCenterDto } from './dto/create-costcenter.dto';
+import { UpdateCostCenterDto } from './dto/update-costcenter.dto';
+import { CostCenter } from './entities/costcenter.entity';
 
 @Controller('costcenter')
 @UseInterceptors(ClassSerializerInterceptor)

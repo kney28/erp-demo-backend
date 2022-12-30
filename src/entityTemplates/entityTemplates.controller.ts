@@ -10,11 +10,11 @@ import {
   ClassSerializerInterceptor,
   UseGuards,
 } from '@nestjs/common';
-import { EntityTemplatesService } from './entityTemplates.service';
+import { EntityTemplatesService } from './entitytemplates.service';
 import { CreateEntityTemplateDto } from './dto/create-entitytemplate.dto';
-import { UpdateEntityTemplateDto } from './dto/update-entityTemplate.dto';
+import { UpdateEntityTemplateDto } from './dto/update-entitytemplate.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { EntityTemplate } from './entities/entityTemplate.entity';
+import { EntityTemplate } from './entities/entitytemplate.entity';
 
 @Controller('entitytemplates')
 @UseInterceptors(ClassSerializerInterceptor)

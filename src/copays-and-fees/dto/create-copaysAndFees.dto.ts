@@ -1,6 +1,6 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
 import { Unique } from 'typeorm';
-import { CopaysAndFeesStatus } from '../entities/copaysAndFee.entity';
+import { CopaysAndFeesStatus } from '../entities/copaysandfee.entity';
 
 export class CreateCopaysAndFeesDto {
   @IsNotEmpty()
