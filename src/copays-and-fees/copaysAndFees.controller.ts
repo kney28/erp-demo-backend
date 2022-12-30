@@ -11,10 +11,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { CopaysAndFeesService } from './copaysandfees.service';
-import { CreateCopaysAndFeesDto } from './dto/create-copaysandfees.dto';
-import { UpdateCopaysAndFeeDto } from './dto/update-copaysandfees.dto';
-import { CopaysAndFee } from './entities/copaysandfee.entity';
+import { CopaysAndFeesService } from './copaysAndFees.service';
+import { CreateCopaysAndFeesDto } from './dto/create-copaysAndFees.dto';
+import { UpdateCopaysAndFeeDto } from './dto/update-copaysAndFees.dto';
+import { CopaysAndFee } from './entities/copaysAndFee.entity';
 
 @Controller('copaysandfees')
 @UseInterceptors(ClassSerializerInterceptor)

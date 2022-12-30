@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EntityTemplatesController } from './entitytemplates.controller';
-import { EntityTemplatesService } from './entitytemplates.service';
+import { EntityTemplatesController } from './entityTemplates.controller';
+import { EntityTemplatesService } from './entityTemplates.service';
 
 describe('EntityTemplatesController', () => {
   let controller: EntityTemplatesController;
@@ -11,7 +11,9 @@ describe('EntityTemplatesController', () => {
       providers: [EntityTemplatesService],
     }).compile();
 
-    controller = module.get<EntityTemplatesController>(EntityTemplatesController);
+    controller = module.get<EntityTemplatesController>(
+      EntityTemplatesController,
+    );
   });
 
   it('should be defined', () => {

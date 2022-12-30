@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateCopaysAndFeesDto } from './dto/create-copaysandfees.dto';
-import { UpdateCopaysAndFeeDto } from './dto/update-copaysandfees.dto';
-import { CopaysAndFee } from './entities/copaysandfee.entity';
+import { CreateCopaysAndFeesDto } from './dto/create-copaysAndFees.dto';
+import { UpdateCopaysAndFeeDto } from './dto/update-copaysAndFees.dto';
+import { CopaysAndFee } from './entities/copaysAndFee.entity';
 
 @Injectable()
 export class CopaysAndFeesService {
