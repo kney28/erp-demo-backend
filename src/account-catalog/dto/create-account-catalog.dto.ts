@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
-import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
+import { ThirdPersonExist } from 'src/third-person/validations/third-person.validate.unique';
 import {
   affectsRetentionCatalog,
   availabilityTypeCatalog,
