@@ -1,6 +1,5 @@
 import { selectionCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
-
 import { Column, Entity, ManyToOne } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 
