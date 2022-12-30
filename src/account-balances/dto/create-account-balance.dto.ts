@@ -1,7 +1,7 @@
 import { IsEnum, IsNotEmpty, IsNumberString } from 'class-validator';
 import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
-import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
-import { monthCatalog } from '../entities/account-balance.entity';
+import { ThirdPersonExist } from 'src/third-person/validations/third-person.validate.unique';
+import { monthCatalog } from 'src/account-balances/entities/account-balance.entity';
 
 export class CreateAccountBalanceDto {
   @IsNotEmpty({
