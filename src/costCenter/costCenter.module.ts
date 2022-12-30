@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { CostCenterService } from './costCenter.service';
-import { CostCenterController } from './costCenter.controller';
+import { CostCenterService } from './costcenter.service';
+import { CostCenterController } from './costcenter.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CostCenter } from './entities/costCenter.entity';
-import { CostCenterLogs } from './entities/costCenterlogs.entity';
-import { CostCenterSubscriber } from './entities/costCenter.subscriber';
+import { CostCenter } from './entities/costcenter.entity';
+import { CostCenterLogs } from './entities/costcenterlogs.entity';
+import { CostCenterSubscriber } from './entities/costcenter.subscriber';
 
 @Module({
   imports: [

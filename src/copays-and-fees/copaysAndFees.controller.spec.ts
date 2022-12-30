@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 
-import { CopaysAndFeesController } from './copaysAndFees.controller';
+import { CopaysAndFeesController } from './copaysandfees.controller';
 import { CopaysAndFeesService } from './copaysandfees.service';
 
 describe('CopaysAndFeesController', () => {

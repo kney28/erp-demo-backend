@@ -10,11 +10,11 @@ import {
   SoftRemoveEvent,
   UpdateEvent,
 } from 'typeorm';
-import { EntityTemplate } from './entityTemplate.entity';
+import { EntityTemplate } from './entitytemplate.entity';
 import {
   EntityTemplateLogs,
   LogEntityTemplateType,
-} from './entityTemplateLogs.entity';
+} from './entitytemplateLogs.entity';
 
 @EventSubscriber()
 export class EntityTemplateSubscriber
