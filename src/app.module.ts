@@ -28,6 +28,7 @@ import { AccountBalancesModule } from './account-balances/account-balances.modul
 import { SubgroupsCupsModule } from './subgroups-cups/subgroups-cups.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
+import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 @Module({
   imports: [
@@ -73,6 +74,7 @@ import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups
     AccountBalancesModule,
     SubgroupsCupsModule,
     CategoriesCupsModule,
+    GroundsDenialModule,
     SubcategoriesCupsModule,
   ],
   providers: [
