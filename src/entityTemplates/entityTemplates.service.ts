@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateEntityTemplateDto } from './dto/create-entitytemplate.dto';
-import { UpdateEntityTemplateDto } from './dto/update-entityTemplate.dto';
-import { EntityTemplate } from './entities/entityTemplate.entity';
+import { UpdateEntityTemplateDto } from './dto/update-entitytemplate.dto';
+import { EntityTemplate } from './entities/entitytemplate.entity';
 
 @Injectable()
 export class EntityTemplatesService {

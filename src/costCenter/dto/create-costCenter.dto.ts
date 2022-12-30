@@ -1,6 +1,6 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
 import { Unique } from 'typeorm';
-import { CostCenterStatus } from '../entities/costCenter.entity';
+import { CostCenterStatus } from '../entities/costcenter.entity';
 
 export class CreateCostCenterDto {
   @IsNotEmpty()

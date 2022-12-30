@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateCostCenterDto } from './dto/create-costCenter.dto';
-import { UpdateCostCenterDto } from './dto/update-costCenter.dto';
-import { CostCenter } from './entities/costCenter.entity';
+import { CreateCostCenterDto } from './dto/create-costcenter.dto';
+import { UpdateCostCenterDto } from './dto/update-costcenter.dto';
+import { CostCenter } from './entities/costcenter.entity';
 
 @Injectable()
 export class CostCenterService {

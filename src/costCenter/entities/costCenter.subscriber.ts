@@ -10,8 +10,8 @@ import {
   SoftRemoveEvent,
   UpdateEvent,
 } from 'typeorm';
-import { CostCenter } from './costCenter.entity';
-import { CostCenterLogs, LogCostCenterType } from './costCenterlogs.entity';
+import { CostCenter } from './costcenter.entity';
+import { CostCenterLogs, LogCostCenterType } from './costcenterlogs.entity';
 
 @EventSubscriber()
 export class CostCenterSubscriber

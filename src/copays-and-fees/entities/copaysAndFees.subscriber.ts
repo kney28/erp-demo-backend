@@ -10,11 +10,11 @@ import {
   SoftRemoveEvent,
   UpdateEvent,
 } from 'typeorm';
-import { CopaysAndFee } from './copaysAndFee.entity';
+import { CopaysAndFee } from './copaysandfee.entity';
 import {
   CopaysAndFeesLogs,
   LogCopaysAndFeesType,
-} from './copaysAndFeeslogs.entity';
+} from './copaysandfeeslogs.entity';
 
 @EventSubscriber()
 export class CopaysAndFeesSubscriber
