@@ -27,6 +27,7 @@ import { GroupsCupsModule } from './groups-cups/groups-cups.module';
 import { AccountBalancesModule } from './account-balances/account-balances.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
+import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -70,6 +71,7 @@ import { ThirdPersonModule } from './third-person/third-person.module';
     GroupsCupsModule,
     AccountBalancesModule,
     CategoriesCupsModule,
+    GroundsDenialModule,
   ],
   providers: [
     {
