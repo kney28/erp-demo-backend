@@ -28,6 +28,10 @@ export class ThirdPersonService {
     return this.thirdpersonRepository.findOneBy({ id });
   }
 
+  findOneById(id: string): Promise<ThirdPerson> {
+    return this.thirdpersonRepository.findOneBy({ id });
+  }
+
   async update(
     id: string,
     updateThirdPersonDto: UpdateThirdPersonDto,
