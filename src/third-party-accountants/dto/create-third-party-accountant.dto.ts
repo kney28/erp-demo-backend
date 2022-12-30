@@ -3,8 +3,9 @@ import {
   selectionCatalog,
   statusGlobal,
 } from 'src/account-catalog/entities/account-catalog.entity';
-import { ThirdPerson } from 'src/thirdPersons/entities/thirdPerson.entity';
-import { ThirdPersonExist } from 'src/thirdPersons/validations/thirdPersons.validate.unique';
+import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
+
+import { ThirdPersonExist } from 'src/third-person/validations/third-persons.validate.unique';
 import {
   taxpayerTypeCatalog,
   withholdingTypeCatalog,
