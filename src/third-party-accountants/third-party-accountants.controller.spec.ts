@@ -11,7 +11,9 @@ describe('ThirdPartyAccountantsController', () => {
       providers: [ThirdPartyAccountantsService],
     }).compile();
 
-    controller = module.get<ThirdPartyAccountantsController>(ThirdPartyAccountantsController);
+    controller = module.get<ThirdPartyAccountantsController>(
+      ThirdPartyAccountantsController,
+    );
   });
 
   it('should be defined', () => {
