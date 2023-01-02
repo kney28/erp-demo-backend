@@ -25,6 +25,8 @@ import { ThirdPartyAccountantsModule } from './third-party-accountants/third-par
 import { RetentionConceptsModule } from './retention-concepts/retention-concepts.module';
 import { GroupsCupsModule } from './groups-cups/groups-cups.module';
 import { AccountBalancesModule } from './account-balances/account-balances.module';
+import { DetailCopaysAndFeesModule } from './detail-copays-and-fees/detailCopaysAndFees.module';
+
 import { SubgroupsCupsModule } from './subgroups-cups/subgroups-cups.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
@@ -72,6 +74,7 @@ import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups
     RetentionConceptsModule,
     GroupsCupsModule,
     AccountBalancesModule,
+    DetailCopaysAndFeesModule,
     SubgroupsCupsModule,
     CategoriesCupsModule,
     GroundsDenialModule,
