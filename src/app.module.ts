@@ -32,6 +32,7 @@ import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
+import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -79,6 +80,7 @@ import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups
     CategoriesCupsModule,
     GroundsDenialModule,
     SubcategoriesCupsModule,
+    HealthAdministratorsModule,
   ],
   providers: [
     {
