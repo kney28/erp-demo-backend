@@ -32,7 +32,7 @@ export class CreateThirdPersonDto {
 
   @IsNotEmpty()
   @IsEnum(ThirdPersonNature)
-  legalnature: ThirdPersonNature;
+  nature: ThirdPersonNature;
 
   @IsNotEmpty()
   @IsEnum(ThirdPersonStatus)

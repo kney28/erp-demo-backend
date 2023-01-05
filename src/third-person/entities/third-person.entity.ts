@@ -53,7 +53,7 @@ export class ThirdPerson extends BaseEntity {
     type: 'enum',
     enum: ThirdPersonNature,
   })
-  legalnature: ThirdPersonNature;
+  nature: ThirdPersonNature;
 
   @Column({
     type: 'enum',
