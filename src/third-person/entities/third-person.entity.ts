@@ -4,22 +4,22 @@ import { ThirdPartyAccountant } from 'src/third-party-accountants/entities/third
 import { BeforeInsert, Column, Entity, OneToMany, Unique } from 'typeorm';
 
 export enum ThirdPersonDocumentType {
-  IDENTITYCARD = 'identity_card',
-  IDENTIFICATIONCARD = 'identification_card',
-  FOREIGNCARD = 'foreign_card',
-  FOREIGNERID = 'foregner_ID',
-  NIT = 'NIT',
-  PASSPORT = 'passport',
-  FOREIGNIDENTIFICATIONDOCUMENT = 'Foreign Identification Document',
+  IDENTITYCARD = 1,
+  IDENTIFICATIONCARD = 2,
+  FOREIGNCARD = 3,
+  FOREIGNERID = 4,
+  NIT = 5,
+  PASSPORT = 6,
+  FOREIGNIDENTIFICATIONDOCUMENT = 7,
 }
 
 export enum ThirdPersonStatus {
-  ACTIVE = 'active',
-  INACTIVE = 'inactive',
+  ACTIVE = 1,
+  INACTIVE = 2,
 }
 export enum ThirdPersonNature {
-  NATURAL = 'natural',
-  LEGAL = 'legal',
+  NATURAL = 1,
+  LEGAL = 2,
 }
 
 @Entity()
@@ -30,19 +30,6 @@ export class ThirdPerson extends BaseEntity {
     enum: ThirdPersonDocumentType,
   })
   documenttype: ThirdPersonDocumentType;
-
-  @Column({
-    type: 'enum',
-    enum: ThirdPersonNature,
-  })
-  legalnature: ThirdPersonNature;
-
-  @Column({
-    type: 'enum',
-    enum: ThirdPersonStatus,
-    default: ThirdPersonStatus.ACTIVE,
-  })
-  status: ThirdPersonStatus;
 
   @Column()
   document: string;
@@ -61,6 +48,19 @@ export class ThirdPerson extends BaseEntity {
 
   @Column()
   secondsurname: string;
+
+  @Column({
+    type: 'enum',
+    enum: ThirdPersonNature,
+  })
+  legalnature: ThirdPersonNature;
+
+  @Column({
+    type: 'enum',
+    enum: ThirdPersonStatus,
+    default: ThirdPersonStatus.ACTIVE,
+  })
+  status: ThirdPersonStatus;
 
   @Column()
   verificationcode: number;
