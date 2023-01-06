@@ -31,7 +31,7 @@ export class CreateAddressDto {
   waytype: AddressWayType;
 
   @IsOptional()
-  @Min(0, null)
+  @Min(0)
   number1: number;
 
   @IsNotEmpty()
