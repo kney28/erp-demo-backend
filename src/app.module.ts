@@ -33,6 +33,7 @@ import { ThirdPersonModule } from './third-person/third-person.module';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
+import { SpecialPopulationModule } from './special-population/specialpopulation.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -81,6 +82,7 @@ import { HealthAdministratorsModule } from './health-administrators/healthadmini
     GroundsDenialModule,
     SubcategoriesCupsModule,
     HealthAdministratorsModule,
+    SpecialPopulationModule,
   ],
   providers: [
     {
