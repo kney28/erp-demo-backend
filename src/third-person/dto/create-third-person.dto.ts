@@ -7,24 +7,16 @@ import {
 } from '../entities/third-person.entity';
 
 export class CreateThirdPersonDto {
-  @IsOptional()
-  socialreason: string;
-
-  @IsNotEmpty()
-  @Unique(['document'])
-  document: string;
-
   @IsNotEmpty()
   @IsEnum(ThirdPersonDocumentType)
   documenttype: ThirdPersonDocumentType;
 
   @IsNotEmpty()
-  @IsEnum(ThirdPersonNature)
-  legalnature: ThirdPersonNature;
+  @Unique(['document'])
+  document: string;
 
-  @IsNotEmpty()
-  @IsEnum(ThirdPersonStatus)
-  status: ThirdPersonStatus;
+  @IsOptional()
+  socialreason: string;
 
   @IsOptional()
   firstname: string;
@@ -37,4 +29,12 @@ export class CreateThirdPersonDto {
 
   @IsOptional()
   secondsurname: string;
+
+  @IsNotEmpty()
+  @IsEnum(ThirdPersonNature)
+  nature: ThirdPersonNature;
+
+  @IsNotEmpty()
+  @IsEnum(ThirdPersonStatus)
+  status: ThirdPersonStatus;
 }

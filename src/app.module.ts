@@ -33,6 +33,11 @@ import { ThirdPersonModule } from './third-person/third-person.module';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
+<<<<<<< HEAD
+import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
+=======
+import { SpecialPopulationModule } from './special-population/specialpopulation.module';
+>>>>>>> 269fda3dcfedbaecf9f5e744e106fe048f7eacf5
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -81,6 +86,11 @@ import { HealthAdministratorsModule } from './health-administrators/healthadmini
     GroundsDenialModule,
     SubcategoriesCupsModule,
     HealthAdministratorsModule,
+<<<<<<< HEAD
+    SisbenLevelsModule,
+=======
+    SpecialPopulationModule,
+>>>>>>> 269fda3dcfedbaecf9f5e744e106fe048f7eacf5
   ],
   providers: [
     {
