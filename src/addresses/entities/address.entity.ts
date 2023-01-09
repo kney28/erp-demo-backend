@@ -1,4 +1,4 @@
-import { IsNumberOptions } from 'class-validator';
+import { Expose } from 'class-transformer';
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity } from 'typeorm';
 
@@ -188,7 +188,9 @@ export class Address extends BaseEntity {
   })
   waytype: AddressWayType;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   number1: number;
 
   @Column({
@@ -203,7 +205,9 @@ export class Address extends BaseEntity {
   })
   complement1: AddressComplement1;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   number2: number;
 
   @Column({
@@ -218,7 +222,9 @@ export class Address extends BaseEntity {
   })
   complement2: AddressComplement1;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   number3: number;
 
   @Column({
@@ -233,8 +239,10 @@ export class Address extends BaseEntity {
   @Column()
   address: string;
 
-  @Column()
-  validaddress: string;
+  @Expose()
+  get validaddress(): string {
+    return `${this.waytype} ${this.number1} ${this.letter1} ${this.complement1} #${this.number2} ${this.letter2} ${this.complement2} -${this.number3} ${this.complement3} ${this.complement4}`;
+  }
 
   @Column({
     type: 'enum',

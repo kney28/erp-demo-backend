@@ -1,10 +1,4 @@
-import {
-  IsEnum,
-  IsNotEmpty,
-  IsNumberOptions,
-  IsOptional,
-  Min,
-} from 'class-validator';
+import { IsEnum, IsNotEmpty, IsOptional, Min } from 'class-validator';
 import {
   AddressComplement1,
   AddressComplement2,
@@ -43,6 +37,7 @@ export class CreateAddressDto {
   complement1: AddressComplement1;
 
   @IsOptional()
+  @Min(0)
   number2: number;
 
   @IsNotEmpty()
