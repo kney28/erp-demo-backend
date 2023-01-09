@@ -32,6 +32,8 @@ import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
+import { RequirementsListsModule } from './requirements-lists/requirements-lists.module';
+import { RequirementsListsDetailsModule } from './requirements-lists-details/requirements-lists-details.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 import { ValidityModule } from './validity/validity.module';
 import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
@@ -86,6 +88,8 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     CategoriesCupsModule,
     GroundsDenialModule,
     SubcategoriesCupsModule,
+    RequirementsListsModule,
+    RequirementsListsDetailsModule,
     HealthAdministratorsModule,
     ValidityModule,
     SisbenLevelsModule,
