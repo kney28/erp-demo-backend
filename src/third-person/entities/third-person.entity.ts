@@ -34,19 +34,29 @@ export class ThirdPerson extends BaseEntity {
   @Column()
   document: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   socialreason: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   firstname: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   secondname: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   firstsurname: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   secondsurname: string;
 
   @Column({

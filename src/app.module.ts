@@ -35,6 +35,7 @@ import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups
 import { RequirementsListsModule } from './requirements-lists/requirements-lists.module';
 import { RequirementsListsDetailsModule } from './requirements-lists-details/requirements-lists-details.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
+import { AddressesModule } from './addresses/addresses.module';
 import { ValidityModule } from './validity/validity.module';
 import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
 import { SpecialPopulationModule } from './special-population/specialpopulation.module';
@@ -91,6 +92,7 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     RequirementsListsModule,
     RequirementsListsDetailsModule,
     HealthAdministratorsModule,
+    AddressesModule,
     ValidityModule,
     SisbenLevelsModule,
     SpecialPopulationModule,
