@@ -18,7 +18,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
-import { AccountingValidityModule } from './accountingvalidity/accountingvalidity.module';
+import { AccountingValidityModule } from './accountingValidity/accountingvalidity.module';
 import { OccupationsModule } from './occupations/occupations.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
