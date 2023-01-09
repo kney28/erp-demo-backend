@@ -12,10 +12,14 @@ export class Validity extends BaseEntity {
   @Column()
   year: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   minimumsalary: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   uvtvalue: number;
 
   @Column({
