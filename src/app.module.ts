@@ -16,7 +16,7 @@ import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
-import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
+import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
@@ -53,10 +53,11 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     MunicipalitiesModule,
     DepartmentsModule,
     NeighborhoodsModule,
-    ThirdPersonsModule,
+    ThirdPersonModule,
     TypesSeatsModule,
     AccountCatalogModule,
     DetailsAccountingSeatModule,
+    AccountingSeatsModule,
   ],
   providers: [
     {

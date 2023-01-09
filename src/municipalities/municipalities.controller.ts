@@ -13,8 +13,11 @@ import { CreateMunicipalityDto } from './dto/create-municipality.dto';
 import { UpdateMunicipalityDto } from './dto/update-municipality.dto';
 import { Municipality } from './entities/municipality.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 @UseGuards(JwtAuthGuard)
 @Controller('municipalities')
+@ApiTags('Municipios')
+@ApiBearerAuth()
 export class MunicipalitiesController {
   constructor(private readonly municipalitiesService: MunicipalitiesService) {}
 

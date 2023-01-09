@@ -1,5 +1,6 @@
 import { BaseEntity } from '../../base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, ManyToOne, Unique } from 'typeorm';
+import { Municipality } from 'src/municipalities/entities/municipality.entity';
 export enum statusNeighborhood {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
@@ -14,8 +15,8 @@ export class Neighborhood extends BaseEntity {
   @Column({ length: 60 })
   description: string;
 
-  @Column()
-  municipality: number;
+  @ManyToOne(() => Municipality, (municipality) => municipality.neighborhoods)
+  municipality: Municipality;
 
   @Column({
     type: 'enum',
@@ -57,7 +58,6 @@ export class Neighborhood extends BaseEntity {
     super();
     this.code = code || '';
     this.description = description || '';
-    this.municipality = municipality || null;
     this.status = status || statusNeighborhood.ACTIVE;
   }
 }
