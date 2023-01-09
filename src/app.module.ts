@@ -8,7 +8,6 @@ import { ClsModule } from 'nestjs-cls';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { ComplementsModule } from './complements/complements.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
@@ -19,6 +18,7 @@ import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
+import { AccountingValidityModule } from './accountingValidity/accountingvalidity.module';
 import { OccupationsModule } from './occupations/occupations.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
@@ -34,6 +34,11 @@ import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 import { AddressesModule } from './addresses/addresses.module';
+import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
+import { SpecialPopulationModule } from './special-population/specialpopulation.module';
+import { HeadquartersModule } from './headquarters/headquarters.module';
+import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
+import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -59,7 +64,6 @@ import { AddressesModule } from './addresses/addresses.module';
     }),
     AuthModule,
     UsersModule,
-    ComplementsModule,
     CountriesModule,
     SocialsModule,
     ContactTypeModule,
@@ -70,6 +74,7 @@ import { AddressesModule } from './addresses/addresses.module';
     ThirdPersonModule,
     TypesSeatsModule,
     AccountCatalogModule,
+    AccountingValidityModule,
     OccupationsModule,
     GeneralAccounting,
     ThirdPartyAccountantsModule,
@@ -83,6 +88,11 @@ import { AddressesModule } from './addresses/addresses.module';
     SubcategoriesCupsModule,
     HealthAdministratorsModule,
     AddressesModule,
+    SisbenLevelsModule,
+    SpecialPopulationModule,
+    HeadquartersModule,
+    DetailsAccountingSeatModule,
+    AccountingSeatsModule,
   ],
   providers: [
     {
