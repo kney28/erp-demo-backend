@@ -42,6 +42,8 @@ import { SpecialPopulationModule } from './special-population/specialpopulation.
 import { HeadquartersModule } from './headquarters/headquarters.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
+import { PercentagesQxSoatModule } from './percentages-qx-soat/percentages-qx-soat.module';
+import { PercentagesQxSoatDetailModule } from './percentages-qx-soat-detail/percentages-qx-soat-detail.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -99,6 +101,8 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     HeadquartersModule,
     DetailsAccountingSeatModule,
     AccountingSeatsModule,
+    PercentagesQxSoatModule,
+    PercentagesQxSoatDetailModule,
   ],
   providers: [
     {
