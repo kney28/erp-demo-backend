@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { EntityTemplatesService } from './entitytemplates.service';
-import { EntityTemplatesController } from './entitytemplates.controller';
+import { EntityTemplatesService } from './entityTemplates.service';
+import { EntityTemplatesController } from './entityTemplates.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EntityTemplate } from './entities/entitytemplate.entity';
-import { EntityTemplateLogs } from './entities/entitytemplateLogs.entity';
-import { EntityTemplateSubscriber } from './entities/entitytemplate.subscriber';
+import { EntityTemplate } from './entities/entityTemplate.entity';
+import { EntityTemplateLogs } from './entities/entityTemplateLogs.entity';
+import { EntityTemplateSubscriber } from './entities/entityTemplate.subscriber';
 
 @Module({
   imports: [
