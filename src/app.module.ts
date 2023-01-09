@@ -8,7 +8,6 @@ import { ClsModule } from 'nestjs-cls';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { ComplementsModule } from './complements/complements.module';
 import { CountriesModule } from './countries/countries.module';
 import { SocialsModule } from './socials/socials.module';
 import { ContactTypeModule } from './contactType/contactType.module';
@@ -37,6 +36,8 @@ import { HealthAdministratorsModule } from './health-administrators/healthadmini
 import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
 import { SpecialPopulationModule } from './special-population/specialpopulation.module';
 import { HeadquartersModule } from './headquarters/headquarters.module';
+import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
+import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -62,7 +63,6 @@ import { HeadquartersModule } from './headquarters/headquarters.module';
     }),
     AuthModule,
     UsersModule,
-    ComplementsModule,
     CountriesModule,
     SocialsModule,
     ContactTypeModule,
@@ -89,6 +89,8 @@ import { HeadquartersModule } from './headquarters/headquarters.module';
     SisbenLevelsModule,
     SpecialPopulationModule,
     HeadquartersModule,
+    DetailsAccountingSeatModule,
+    AccountingSeatsModule,
   ],
   providers: [
     {
