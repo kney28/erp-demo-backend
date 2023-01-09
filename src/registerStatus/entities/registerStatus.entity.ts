@@ -1,26 +1,16 @@
-import {
-  Column,
-  CreateDateColumn,
-  DeleteDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from 'typeorm';
+import { BaseEntity } from 'src/base/baseEntity';
+import { Column, Entity } from 'typeorm';
+
+export enum RegisterStatusType {
+  ACTIVE = 'Active',
+  INACTIVE = 'Inactive',
+}
 
 @Entity()
-export class RegisterStatus {
-  @PrimaryGeneratedColumn()
-  id: string;
-
-  @Column()
-  name: string;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
-
-  @DeleteDateColumn()
-  deleted_at: Date;
+export class RegisterStatus extends BaseEntity {
+  @Column({
+    type: 'enum',
+    enum: RegisterStatusType,
+  })
+  name: RegisterStatusType;
 }

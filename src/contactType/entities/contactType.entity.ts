@@ -1,26 +1,7 @@
-import {
-  DeleteDateColumn,
-  UpdateDateColumn,
-  CreateDateColumn,
-  Column,
-  PrimaryGeneratedColumn,
-  Entity,
-} from 'typeorm';
-
+import { BaseEntity } from 'src/base/baseEntity';
+import { Column, Entity } from 'typeorm';
 @Entity()
-export class ContactType {
-  @PrimaryGeneratedColumn()
-  id: string;
-
+export class ContactType extends BaseEntity {
   @Column()
   name: string;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
-
-  @DeleteDateColumn()
-  deleted_at: Date;
 }
