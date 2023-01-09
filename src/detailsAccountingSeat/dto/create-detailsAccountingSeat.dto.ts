@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsOptional } from 'class-validator';
 import { DetailsAccountingSeatStatus } from '../entities/detailsAccountingSeat.entity';
 
 export class CreateDetailsAccountingSeatDto {
@@ -26,7 +26,7 @@ export class CreateDetailsAccountingSeatDto {
   @IsNotEmpty()
   creditvalue: number;
 
-  @IsNotEmpty()
+  @IsOptional()
   detail: string;
 
   @IsNotEmpty()
