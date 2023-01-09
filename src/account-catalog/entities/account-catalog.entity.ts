@@ -1,4 +1,4 @@
-import { Column, Entity } from 'typeorm';
+import { BeforeInsert, Column, Entity, Unique } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 
 export enum levelCatalog {
@@ -50,9 +50,13 @@ export enum statusGlobal {
 }
 
 @Entity()
+@Unique(['code', 'deleted_at'])
 export class AccountCatalog extends BaseEntity {
   @Column()
   code: string;
+
+  @Column({ nullable: true })
+  accountCatalogId: number;
 
   @Column()
   description: string;
@@ -96,10 +100,11 @@ export class AccountCatalog extends BaseEntity {
   @Column({
     type: 'enum',
     enum: selectionCatalog,
+    nullable: true,
   })
   transferThirdParties: selectionCatalog;
 
-  @Column()
+  @Column({ nullable: true })
   thirdId: number;
 
   @Column({
@@ -113,4 +118,27 @@ export class AccountCatalog extends BaseEntity {
     enum: statusGlobal,
   })
   status: statusGlobal;
+
+  @BeforeInsert()
+  encrypt(): void {
+    return this.generateClass();
+  }
+
+  public generateClass(): void {
+    const classOptions = [
+      classCatalog.ACTIVE,
+      classCatalog.EXPENSES,
+      classCatalog.SALES_COSTS,
+      classCatalog.PRODUCTION_COSTS,
+      classCatalog.DEBTOR_ACCOUNTS_ORDER,
+    ];
+
+    const existDebit = classOptions.filter((element) => element == this.class);
+
+    if (existDebit.length > 0) {
+      this.nature = natureCatalog.DEBIT;
+    } else {
+      this.nature = natureCatalog.CREDIT;
+    }
+  }
 }

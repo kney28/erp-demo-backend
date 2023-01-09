@@ -13,8 +13,11 @@ import { CreateNeighborhoodDto } from './dto/create-neighborhood.dto';
 import { UpdateNeighborhoodDto } from './dto/update-neighborhood.dto';
 import { Neighborhood } from './entities/neighborhood.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 @UseGuards(JwtAuthGuard)
 @Controller('neighborhoods')
+@ApiTags('Barrios')
+@ApiBearerAuth()
 export class NeighborhoodsController {
   constructor(private readonly neighborhoodsService: NeighborhoodsService) {}
 
