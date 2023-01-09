@@ -8,11 +8,11 @@ export class CreateValidityDto {
   year: number;
 
   @IsOptional()
-  @IsDecimal(['minimumsalary'])
+  @IsDecimal()
   minimumsalary: number;
 
   @IsOptional()
-  @IsDecimal(['uvtvalue'])
+  @IsDecimal()
   uvtvalue: number;
 
   @IsNotEmpty()
