@@ -17,13 +17,24 @@ import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
-import { ThirdPersonsModule } from './thirdPersons/thirdPersons.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
+import { OccupationsModule } from './occupations/occupations.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 import { RetentionConceptsModule } from './retention-concepts/retention-concepts.module';
+import { GroupsCupsModule } from './groups-cups/groups-cups.module';
 import { AccountBalancesModule } from './account-balances/account-balances.module';
+import { DetailCopaysAndFeesModule } from './detail-copays-and-fees/detailCopaysAndFees.module';
+
+import { SubgroupsCupsModule } from './subgroups-cups/subgroups-cups.module';
+import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
+import { ThirdPersonModule } from './third-person/third-person.module';
+import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
+import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
+import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
+import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
+import { SpecialPopulationModule } from './special-population/specialpopulation.module';
 import { HeadquartersModule } from './headquarters/headquarters.module';
 @Module({
   imports: [
@@ -58,13 +69,23 @@ import { HeadquartersModule } from './headquarters/headquarters.module';
     MunicipalitiesModule,
     DepartmentsModule,
     NeighborhoodsModule,
-    ThirdPersonsModule,
+    ThirdPersonModule,
     TypesSeatsModule,
     AccountCatalogModule,
+    OccupationsModule,
     GeneralAccounting,
     ThirdPartyAccountantsModule,
     RetentionConceptsModule,
+    GroupsCupsModule,
     AccountBalancesModule,
+    DetailCopaysAndFeesModule,
+    SubgroupsCupsModule,
+    CategoriesCupsModule,
+    GroundsDenialModule,
+    SubcategoriesCupsModule,
+    HealthAdministratorsModule,
+    SisbenLevelsModule,
+    SpecialPopulationModule,
     HeadquartersModule,
   ],
   providers: [

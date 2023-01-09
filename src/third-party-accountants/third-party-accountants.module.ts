@@ -3,14 +3,14 @@ import { ThirdPartyAccountantsService } from './third-party-accountants.service'
 import { ThirdPartyAccountantsController } from './third-party-accountants.controller';
 import { ThirdPartyAccountant } from './entities/third-party-accountant.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ThirdPersonsModule } from 'src/thirdPersons/thirdPersons.module';
+import { ThirdPersonModule } from 'src/third-person/third-person.module';
 import { ThirdPartyAccountantLogs } from './entities/third-party-accountantlogs.entity';
 import { ThirdPartyAccountantSubscriber } from './entities/third-party-accountant.subscriber';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([ThirdPartyAccountant]),
-    ThirdPersonsModule,
+    ThirdPersonModule,
     TypeOrmModule.forFeature([ThirdPartyAccountantLogs]),
   ],
   controllers: [ThirdPartyAccountantsController],
