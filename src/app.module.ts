@@ -33,6 +33,7 @@ import { ThirdPersonModule } from './third-person/third-person.module';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { SubcategoriesCupsModule } from './subcategories-cups/subcategories-cups.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
+import { ValidityModule } from './validity/validity.module';
 import { SisbenLevelsModule } from './sisben-levels/sisbenlevels.module';
 import { SpecialPopulationModule } from './special-population/specialpopulation.module';
 import { HeadquartersModule } from './headquarters/headquarters.module';
@@ -86,6 +87,7 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     GroundsDenialModule,
     SubcategoriesCupsModule,
     HealthAdministratorsModule,
+    ValidityModule,
     SisbenLevelsModule,
     SpecialPopulationModule,
     HeadquartersModule,
