@@ -44,6 +44,7 @@ import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module'
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
+import { CompanysModule } from './companys/companys.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -103,6 +104,7 @@ import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permi
     AccountingSeatsModule,
     AnnualClosingModule,
     ProfilesPermissionsModule,
+    CompanysModule,
   ],
   providers: [
     {

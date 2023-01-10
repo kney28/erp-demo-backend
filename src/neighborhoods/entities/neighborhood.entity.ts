@@ -1,6 +1,7 @@
 import { BaseEntity } from '../../base/baseEntity';
-import { Column, Entity, ManyToOne, Unique } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany, Unique } from 'typeorm';
 import { Municipality } from 'src/municipalities/entities/municipality.entity';
+import { Company } from 'src/companys/entities/company.entity';
 export enum statusNeighborhood {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
@@ -24,6 +25,9 @@ export class Neighborhood extends BaseEntity {
     default: statusNeighborhood.ACTIVE,
   })
   status: statusNeighborhood;
+
+  @OneToMany(() => Company, (company) => company.neighborhood)
+  detail: Company[];
 
   constructor(
     code: string,
