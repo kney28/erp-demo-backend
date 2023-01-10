@@ -3,6 +3,6 @@ import { Column, Entity } from 'typeorm';
 
 @Entity()
 export class MonthlyOpening extends BaseEntity {
-  @Column()
-  month: string;
+  /*@Column()
+  month: string;*/
 }

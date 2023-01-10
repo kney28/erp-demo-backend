@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class CreateMonthlyOpeningDto {
-  @IsNotEmpty()
-  month: string;
+  /*@IsNotEmpty()
+  month: string;*/
 }
