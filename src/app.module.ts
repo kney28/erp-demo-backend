@@ -50,6 +50,7 @@ import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
+import { CompanysModule } from './companys/companys.module';
 import { ProfilesModule } from './profiles/profiles.module';
 @Module({
   imports: [
@@ -116,6 +117,7 @@ import { ProfilesModule } from './profiles/profiles.module';
     MonthlyClosureModule,
     AnnualClosingModule,
     ProfilesPermissionsModule,
+    CompanysModule,
     ProfilesModule,
   ],
   providers: [
