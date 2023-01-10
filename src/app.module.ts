@@ -44,6 +44,12 @@ import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module'
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 import { PercentagesQxSoatModule } from './percentages-qx-soat/percentages-qx-soat.module';
 import { PercentagesQxSoatDetailModule } from './percentages-qx-soat-detail/percentages-qx-soat-detail.module';
+import { FloorsModule } from './floors/floors.module';
+import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
+import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
+import { AnnualClosingModule } from './annual-closing/annualclosing.module';
+import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
+import { ProfilesModule } from './profiles/profiles.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -103,6 +109,12 @@ import { PercentagesQxSoatDetailModule } from './percentages-qx-soat-detail/perc
     AccountingSeatsModule,
     PercentagesQxSoatModule,
     PercentagesQxSoatDetailModule,
+    FloorsModule,
+    MonthlyOpeningModule,
+    MonthlyClosureModule,
+    AnnualClosingModule,
+    ProfilesPermissionsModule,
+    ProfilesModule,
   ],
   providers: [
     {
