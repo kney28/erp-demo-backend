@@ -42,6 +42,7 @@ import { SpecialPopulationModule } from './special-population/specialpopulation.
 import { HeadquartersModule } from './headquarters/headquarters.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
+import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
@@ -102,6 +103,7 @@ import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permi
     HeadquartersModule,
     DetailsAccountingSeatModule,
     AccountingSeatsModule,
+    MonthlyOpeningModule,
     MonthlyClosureModule,
     AnnualClosingModule,
     ProfilesPermissionsModule,
