@@ -42,6 +42,7 @@ import { SpecialPopulationModule } from './special-population/specialpopulation.
 import { HeadquartersModule } from './headquarters/headquarters.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
+import { LocationsModule } from './locations/locations.module';
 import { PercentagesQxSoatModule } from './percentages-qx-soat/percentages-qx-soat.module';
 import { PercentagesQxSoatDetailModule } from './percentages-qx-soat-detail/percentages-qx-soat-detail.module';
 import { FloorsModule } from './floors/floors.module';
@@ -107,6 +108,7 @@ import { ProfilesModule } from './profiles/profiles.module';
     HeadquartersModule,
     DetailsAccountingSeatModule,
     AccountingSeatsModule,
+    LocationsModule,
     PercentagesQxSoatModule,
     PercentagesQxSoatDetailModule,
     FloorsModule,
