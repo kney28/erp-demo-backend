@@ -3,9 +3,9 @@ import { Column, Entity } from 'typeorm';
 
 @Entity()
 export class AnnualClosingSeat extends BaseEntity {
-  @Column()
+  /*@Column()
   validity: number;
 
   @Column()
-  month: string;
+  month: string;*/
 }
