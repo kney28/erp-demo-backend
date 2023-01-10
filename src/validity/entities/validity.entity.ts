@@ -13,11 +13,17 @@ export class Validity extends BaseEntity {
   year: number;
 
   @Column({
+    type: 'decimal',
+    scale: 2,
+    precision: 11,
     nullable: true,
   })
   minimumsalary: number;
 
   @Column({
+    type: 'decimal',
+    scale: 2,
+    precision: 11,
     nullable: true,
   })
   uvtvalue: number;
