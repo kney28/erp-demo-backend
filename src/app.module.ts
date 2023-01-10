@@ -46,6 +46,7 @@ import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
+import { ProfilesModule } from './profiles/profiles.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -107,6 +108,7 @@ import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permi
     MonthlyClosureModule,
     AnnualClosingModule,
     ProfilesPermissionsModule,
+    ProfilesModule,
   ],
   providers: [
     {
