@@ -43,6 +43,7 @@ import { HeadquartersModule } from './headquarters/headquarters.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
+import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -101,6 +102,7 @@ import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
     DetailsAccountingSeatModule,
     AccountingSeatsModule,
     MonthlyClosureModule,
+    ProfilesPermissionsModule,
   ],
   providers: [
     {
