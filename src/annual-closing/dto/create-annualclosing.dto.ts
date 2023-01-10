@@ -1,9 +1,9 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class CreateAnnualClosingDto {
-  @IsNotEmpty()
+  /*@IsNotEmpty()
   validity: number;
 
   @IsNotEmpty()
-  month: string;
+  month: string;*/
 }
