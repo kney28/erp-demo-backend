@@ -42,6 +42,7 @@ import { SpecialPopulationModule } from './special-population/specialpopulation.
 import { HeadquartersModule } from './headquarters/headquarters.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
+import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -99,6 +100,7 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
     HeadquartersModule,
     DetailsAccountingSeatModule,
     AccountingSeatsModule,
+    MonthlyClosureModule,
   ],
   providers: [
     {
