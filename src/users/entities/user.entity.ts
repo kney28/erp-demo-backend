@@ -8,7 +8,9 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
+import { Profile } from 'src/profiles/entities/profile.entity';
 import * as bcrypt from 'bcrypt';
 
 @Entity()
@@ -32,8 +34,10 @@ export class User {
   @Column()
   active: boolean;
 
-  @Column()
-  role: string;
+  @ManyToOne(() => Profile, (profile) => profile.users, {
+    eager: true
+  })
+  role: Profile;
 
   @CreateDateColumn()
   created_at: Date;
