@@ -1,7 +1,7 @@
 import { BaseEntity } from '../../base/baseEntity';
 import { Column, Entity, ManyToOne, OneToMany, Unique } from 'typeorm';
 import { Municipality } from 'src/municipalities/entities/municipality.entity';
-import { Company } from 'src/companys/entities/company.entity';
+import { Company } from 'src/companies/entities/company.entity';
 export enum statusNeighborhood {
   ACTIVE = 'active',
   INACTIVE = 'inactive',

@@ -14,7 +14,7 @@ import { AddressesModule } from './addresses/addresses.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { AuthModule } from './auth/auth.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
-import { CompanysModule } from './companys/companys.module';
+import { CompaniesModule } from './companies/companies.module';
 import { ContactTypeModule } from './contactType/contactType.module';
 import { CostCenterModule } from './costCenter/costCenter.module';
 import { CountriesModule } from './countries/countries.module';
@@ -79,7 +79,7 @@ import { ValidityModule } from './validity/validity.module';
     AnnualClosingModule,
     AuthModule,
     CategoriesCupsModule,
-    CompanysModule,
+    CompaniesModule,
     ContactTypeModule,
     CostCenterModule,
     CountriesModule,
