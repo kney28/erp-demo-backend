@@ -118,7 +118,7 @@ export class ThirdPerson extends BaseEntity {
 
   @Expose()
   get fullname(): string {
-    return `${this.socialreason} ${this.firstname} ${this.secondname} ${this.firstsurname} ${this.secondsurname}`;
+    return `${this.firstname} ${this.secondname} ${this.firstsurname} ${this.secondsurname}`;
   }
 
   constructor(partial: Partial<ThirdPerson>) {
