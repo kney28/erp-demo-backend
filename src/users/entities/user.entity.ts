@@ -13,11 +13,6 @@ import {
 import { Profile } from 'src/profiles/entities/profile.entity';
 import * as bcrypt from 'bcrypt';
 
-export enum ProfilesStatus {
-  ACTIVE = 1,
-  INACTIVE = 2,
-}
-
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
