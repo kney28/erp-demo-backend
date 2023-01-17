@@ -12,7 +12,4 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   active: boolean;
-
-  @IsNotEmpty()
-  role: string;
 }
