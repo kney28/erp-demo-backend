@@ -28,7 +28,7 @@ export class AccountBalance extends BaseEntity {
   month: monthCatalog;
 
   @Column()
-  thirdId: number;
+  third: number;
 
   @Column({ type: 'numeric', precision: 10, scale: 2 })
   debit: number;

@@ -1,6 +1,6 @@
 import { IsEnum, IsNotEmpty, IsNumberString } from 'class-validator';
 import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
-import { ThirdPersonExist } from 'src/third-person/validations/third-person.validate.unique';
+// import { ThirdPersonExist } from 'src/third-person/validations/third-person.validate.unique';
 import { monthCatalog } from 'src/account-balances/entities/account-balance.entity';
 
 export class CreateAccountBalanceDto {
@@ -10,13 +10,13 @@ export class CreateAccountBalanceDto {
   @IsEnum(monthCatalog)
   month: number;
 
-  @ThirdPersonExist({
-    message: 'El id del tercero, no existe.',
-  })
+  // @ThirdPersonExist({
+  //   message: 'El id del tercero, no existe.',
+  // })
   @IsNotEmpty({
     message: 'El campo tercero no puede estar vacio.',
   })
-  thirdId: number;
+  third: number;
 
   @IsNotEmpty({
     message: 'El campo débito no puede estar vacio.',

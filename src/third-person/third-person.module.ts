@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ThirdPerson } from './entities/third-person.entity';
 import { ThirdPersonLogs } from './entities/third-personlogs.entity';
 import { ThirdPersonSubscriber } from './entities/third-person.subscriber';
+import { ThirdPersonExistConstraint } from './validations/third-person.validate.unique';
 
 @Module({
   imports: [
@@ -12,7 +13,11 @@ import { ThirdPersonSubscriber } from './entities/third-person.subscriber';
     TypeOrmModule.forFeature([ThirdPersonLogs]),
   ],
   controllers: [ThirdPersonController],
-  providers: [ThirdPersonService, ThirdPersonSubscriber],
+  providers: [
+    ThirdPersonService,
+    ThirdPersonSubscriber,
+    ThirdPersonExistConstraint,
+  ],
   exports: [ThirdPersonService],
 })
 export class ThirdPersonModule {}
