@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, OneToMany } from 'typeorm';
+import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 
 export enum CostCenterStatus {
   ACTIVE = 1,
@@ -21,4 +22,7 @@ export class CostCenter extends BaseEntity {
     default: CostCenterStatus.ACTIVE,
   })
   status: CostCenterStatus;
+
+  @OneToMany(() => Careservice, (careservice) => careservice.costcenter)
+	careservices: Careservice[];
 }

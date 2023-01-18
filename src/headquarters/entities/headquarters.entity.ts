@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, OneToMany } from 'typeorm';
+import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 
 export enum HeadquartersStatus {
   ACTIVE = 1,
@@ -14,6 +15,9 @@ export class Headquarters extends BaseEntity {
 
   @Column()
   description: string;
+
+  @OneToMany(() => Careservice, (careservice) => careservice.headquarter)
+	careservices: Careservice[];
   /*
   @Column()
   diannumbering: number;
