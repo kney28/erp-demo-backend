@@ -48,6 +48,11 @@ import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { UsersModule } from './users/users.module';
 import { ValidityModule } from './validity/validity.module';
+
+import { CareservicesModule } from './billing/careservices/careservices.module'; 
+import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module'; 
+import { NumerationdiansModule } from './billing/numerationdians/numerationdians.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -112,6 +117,9 @@ import { ValidityModule } from './validity/validity.module';
     TypesSeatsModule,
     UsersModule,
     ValidityModule,
+    CareservicesModule,
+    DetailnumerationdiansModule,
+    NumerationdiansModule,
   ],
   providers: [
     {
