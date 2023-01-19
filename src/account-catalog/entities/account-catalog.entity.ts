@@ -1,5 +1,6 @@
-import { BeforeInsert, Column, Entity, Unique } from 'typeorm';
+import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
+import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 
 export enum levelCatalog {
   CLASS = 1,
@@ -118,6 +119,27 @@ export class AccountCatalog extends BaseEntity {
     enum: statusGlobal,
   })
   status: statusGlobal;
+
+  @OneToMany(() => Careservice, (careservice) => careservice.incomeaccount)
+	csincomeaccounts: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.incomeaccountindividuals)
+	csincomeaccountindividuals: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.capitationincomeaccount)
+	cscapitationincomeaccounts: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.costaccountpharmacyorders)
+	cscostaccountpharmacyorders: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.discountaccount)
+	csdiscountaccounts: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.feesettlementaccount)
+	csfeesettlementaccounts: Careservice[];
+
+  @OneToMany(() => Careservice, (careservice) => careservice.accountpreviousperiods)
+	csaccountpreviousperiods: Careservice[];
 
   @BeforeInsert()
   encrypt(): void {
