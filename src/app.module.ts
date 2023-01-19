@@ -53,6 +53,12 @@ import { CareservicesModule } from './billing/careservices/careservices.module';
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module'; 
 import { NumerationdiansModule } from './billing/numerationdians/numerationdians.module';
 
+import { FloorsModule } from './hospitalization/floors/floors.module';
+import { LocationsModule } from './hospitalization/locations/locations.module';
+import { BedsModule } from './hospitalization/beds/beds.module';
+import { FeesModule } from './hospitalization/fees/fees.module';
+
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -120,6 +126,10 @@ import { NumerationdiansModule } from './billing/numerationdians/numerationdians
     CareservicesModule,
     DetailnumerationdiansModule,
     NumerationdiansModule,
+    BedsModule,
+    FeesModule,
+    FloorsModule,
+    LocationsModule,
   ],
   providers: [
     {
