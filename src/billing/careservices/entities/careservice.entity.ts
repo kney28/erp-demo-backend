@@ -1,8 +1,9 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique, ManyToOne } from 'typeorm'; 
+import { Column, Entity, Unique, ManyToOne, OneToMany } from 'typeorm'; 
 import { Headquarters } from 'src/headquarters/entities/headquarters.entity';
 import { CostCenter } from 'src/costCenter/entities/costCenter.entity';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
+import { Bed } from 'src/hospitalization/beds/entities/bed.entity';
 
 export enum CareserviceStatus {
 	ACTIVE = 1,
@@ -94,5 +95,8 @@ export class Careservice extends BaseEntity {
 		default: CareserviceStatus.ACTIVE 
 	}) 
 	status: CareserviceStatus; 
+
+	@OneToMany(() => Bed, (bed) => bed.careservice)
+	beds: Bed[];
 
 } 
