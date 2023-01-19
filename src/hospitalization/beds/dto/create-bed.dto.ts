@@ -9,19 +9,19 @@ export class CreateBedDto {
 	@IsNotEmpty() 
 	description: string; 
 
-	@IsNotEmpty() 
-	idfloor: number; 
+	//@IsNotEmpty() 
+	//idfloor: number; 
 
-	@IsNotEmpty() 
-	idlocation: number; 
+	//@IsNotEmpty() 
+	//idlocation: number; 
 
 	//Remember add <type enum> import and add IsEnum in import class-validator 
 	//@IsNotEmpty() 
 	//@IsEnum(<define type enum>) 
 	//typebed: <define type enum>; 
 
-	@IsNotEmpty() 
-	idcareservice: number; 
+	//@IsNotEmpty() 
+	//idcareservice: number; 
 
 	//Remember add <type enum> import and add IsEnum in import class-validator 
 	//@IsNotEmpty() 

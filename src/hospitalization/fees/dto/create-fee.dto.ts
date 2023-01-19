@@ -9,14 +9,14 @@ export class CreateFeeDto {
 	@IsNotEmpty() 
 	description: string; 
 
-	@IsNotEmpty() 
-	idbed: number; 
+	//@IsNotEmpty() 
+	//idbed: number; 
 
-	@IsNotEmpty() 
-	idminattminhou: number; 
+	//@IsNotEmpty() 
+	//idminattminhou: number; 
 
-	@IsNotEmpty() 
-	idattgreminhou: number; 
+	//@IsNotEmpty() 
+	//idattgreminhou: number; 
 
 	//Remember add <type enum> import and add IsEnum in import class-validator 
 	//@IsNotEmpty() 
