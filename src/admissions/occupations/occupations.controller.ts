@@ -15,7 +15,7 @@ import { ClassSerializerInterceptor } from '@nestjs/common/serializer';
 import { Occupation } from './entities/occupation.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('occupations')
+@Controller('admissions/occupations')
 @UseInterceptors(ClassSerializerInterceptor)
 @UseGuards(JwtAuthGuard)
 export class OccupationsController {
