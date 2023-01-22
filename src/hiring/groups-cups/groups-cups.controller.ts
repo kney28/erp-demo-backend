@@ -15,7 +15,7 @@ import { GroupsCup } from './entities/groups-cup.entity';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('groups-cups')
+@Controller('hiring/groups-cups')
 @ApiTags('Grupos CUPS')
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard)

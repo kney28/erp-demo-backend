@@ -1,6 +1,6 @@
 import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
 import { Column, Entity, Unique } from 'typeorm';
-import { BaseEntity } from '../../base/baseEntity';
+import { BaseEntity } from 'src/base/baseEntity';
 
 @Entity()
 @Unique(['code', 'deleted_at'])
