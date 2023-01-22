@@ -23,7 +23,7 @@ import { DetailCopaysAndFeesModule } from './detail-copays-and-fees/detailCopays
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
-import { GroupsCupsModule } from './groups-cups/groups-cups.module';
+import { GroupsCupsModule } from './hiring/groups-cups/groups-cups.module';
 import { HeadquartersModule } from './headquarters/headquarters.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
@@ -31,7 +31,7 @@ import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
 import { MunicipalitiesModule } from './municipalities/municipalities.module';
 import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
-import { OccupationsModule } from './occupations/occupations.module';
+import { OccupationsModule } from './admissions/occupations/occupations.module';
 import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
 import { ProfilesModule } from './profiles/profiles.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
