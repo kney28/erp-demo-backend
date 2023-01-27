@@ -1,6 +1,7 @@
 import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
+import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 
 export enum levelCatalog {
   CLASS = 1,
@@ -140,6 +141,9 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Careservice, (careservice) => careservice.accountpreviousperiods)
 	csaccountpreviousperiods: Careservice[];
+
+  @OneToMany(() => Headquarters, (headquarterss) => headquarterss.udacccanpreval)
+	headquarterss: Headquarters[];
 
   @BeforeInsert()
   encrypt(): void {

@@ -31,11 +31,11 @@ export class CreateThirdPartyAccountantDto {
   @IsEnum(withholdingTypeCatalog)
   withholding_type: number;
 
-  @IsNotEmpty({
-    message: 'El campo "Afectar ICA" no puede estar vacio.',
-  })
-  @IsEnum(selectionCatalog)
-  affect_ICA: number;
+  //@IsNotEmpty({
+  //  message: 'El campo "Afectar ICA" no puede estar vacio.',
+  //})
+  //@IsEnum(selectionCatalog)
+  //affect_ICA: number;
 
   @IsNotEmpty({
     message: 'El campo "Porcentaje ICA" no puede estar vacio.',

@@ -1,6 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
 import { Column, Entity, Unique, ManyToOne, OneToMany } from 'typeorm'; 
-import { Headquarters } from 'src/headquarters/entities/headquarters.entity';
+import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { CostCenter } from 'src/costCenter/entities/costCenter.entity';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 import { Bed } from 'src/hospitalization/beds/entities/bed.entity';
