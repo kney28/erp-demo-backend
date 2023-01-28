@@ -2,6 +2,7 @@ import { Expose } from 'class-transformer';
 import { BaseEntity } from 'src/base/baseEntity';
 import { ThirdPartyAccountant } from 'src/third-party-accountants/entities/third-party-accountant.entity';
 import { BeforeInsert, Column, Entity, OneToMany, Unique } from 'typeorm';
+import { Healthproviders } from 'src/admissions/healthproviderss/entities/healthproviders.entity';
 
 export enum ThirdPersonDocumentType {
   IDENTITYCARD = 1,
@@ -81,6 +82,9 @@ export class ThirdPerson extends BaseEntity {
   )
   thirdPartyAccountant: ThirdPartyAccountant[];
 
+  @OneToMany(() => Healthproviders, (healthProviders) => healthProviders.thirdPerson,)
+	healthProviders: Healthproviders[];
+
   @BeforeInsert()
   createVerificationCode() {
     this.document = this.document.replace(/\s/g, '');
@@ -118,7 +122,7 @@ export class ThirdPerson extends BaseEntity {
 
   @Expose()
   get fullname(): string {
-    return `${this.firstname} ${this.secondname} ${this.firstsurname} ${this.secondsurname}`;
+    return `${this.socialreason ?? ''} ${this.firstname ?? ''} ${this.secondname ?? ''} ${this.firstsurname ?? ''} ${this.secondsurname ?? ''}`;
   }
 
   constructor(partial: Partial<ThirdPerson>) {
