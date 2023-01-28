@@ -24,7 +24,6 @@ import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAcco
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
 import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { GroupsCupsModule } from './hiring/groups-cups/groups-cups.module';
-import { HeadquartersModule } from './headquarters/headquarters.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
@@ -57,6 +56,15 @@ import { FloorsModule } from './hospitalization/floors/floors.module';
 import { LocationsModule } from './hospitalization/locations/locations.module';
 import { BedsModule } from './hospitalization/beds/beds.module';
 import { FeesModule } from './hospitalization/fees/fees.module';
+
+import { HolidayssModule } from './configuration/holidayss/holidayss.module';
+
+import { HeadquarterssModule } from './admissions/headquarterss/headquarterss.module';
+import { HealthproviderssModule } from './admissions/healthproviderss/healthproviderss.module';
+import { ChargesModule } from './admissions/charges/charges.module';
+import { GroundsdenialcaresModule } from './admissions/groundsdenialcares/groundsdenialcares.module';
+import { SisbenlevelsModule } from './admissions/sisbenlevels/sisbenlevels.module';
+import { SpecialpopulationsModule } from './admissions/specialpopulations/specialpopulations.module';
 
 
 @Module({
@@ -100,7 +108,6 @@ import { FeesModule } from './hospitalization/fees/fees.module';
     GeneralAccounting,
     GroundsDenialModule,
     GroupsCupsModule,
-    HeadquartersModule,
     HealthAdministratorsModule,
     MonthlyClosureModule,
     MonthlyOpeningModule,
@@ -130,6 +137,13 @@ import { FeesModule } from './hospitalization/fees/fees.module';
     FeesModule,
     FloorsModule,
     LocationsModule,
+    HolidayssModule,
+    HeadquarterssModule,
+    HealthproviderssModule,
+    ChargesModule,
+    GroundsdenialcaresModule,
+    SisbenlevelsModule,
+    SpecialpopulationsModule,
   ],
   providers: [
     {

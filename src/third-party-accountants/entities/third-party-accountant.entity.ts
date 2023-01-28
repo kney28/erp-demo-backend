@@ -16,6 +16,12 @@ export enum withholdingTypeCatalog {
   EXEMPT = 3,
 }
 
+export enum selectionCatalo {
+  YES = 1,
+  NO = 2,
+}
+
+
 @Entity()
 export class ThirdPartyAccountant extends BaseEntity {
   @ManyToOne(() => ThirdPerson, (third) => third.thirdPartyAccountant)
@@ -35,9 +41,9 @@ export class ThirdPartyAccountant extends BaseEntity {
 
   @Column({
     type: 'enum',
-    enum: selectionCatalog,
+    enum: selectionCatalo,
   })
-  affect_ICA: selectionCatalog;
+  affect_ICA: selectionCatalo;
 
   @Column()
   percentage_ICA: number;
