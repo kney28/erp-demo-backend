@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'; 
 import { InjectRepository } from '@nestjs/typeorm'; 
-import { Repository } from 'typeorm'; 
+import { Equal, Repository } from 'typeorm'; 
 import { CreateDetailnumerationdianDto } from './dto/create-detailnumerationdian.dto'; 
 import { UpdateDetailnumerationdianDto } from './dto/update-detailnumerationdian.dto'; 
 import { Detailnumerationdian } from './entities/detailnumerationdian.entity'; 
@@ -20,6 +20,12 @@ export class DetailnumerationdiansService {
 
 	findAll(): Promise<Detailnumerationdian[]> { 
 		return this.detailnumerationdiansRepository.find(); 
+	}
+
+	findAllByHead(id: string): Promise<Detailnumerationdian[]> { 
+		return this.detailnumerationdiansRepository.findBy({
+			numerationdian: Equal(id)
+		});
 	} 
 
 	findOne(id: string): Promise<Detailnumerationdian> { 
@@ -29,10 +35,10 @@ export class DetailnumerationdiansService {
 	async update( 
 		id: string, 
 		updateDetailnumerationdianDto: UpdateDetailnumerationdianDto, 
-	): Promise<Detailnumerationdian> { 
+	): Promise<Detailnumerationdian> {
 		const detailnumerationdian: Detailnumerationdian = await this.detailnumerationdiansRepository.findOneBy({ 
 			id, 
-		}); 
+		});
 		const editedDetailnumerationdian: Detailnumerationdian = Object.assign( 
 			detailnumerationdian, 
 			updateDetailnumerationdianDto, 
