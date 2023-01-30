@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, OneToMany } from 'typeorm';
+import { Consecutivecontrolvalidities } from 'src/configuration/consecutivecontrolvaliditiess/entities/consecutivecontrolvalidities.entity';
 
 export enum ValidityStatus {
   ACTIVE = 1,
@@ -34,4 +35,7 @@ export class Validity extends BaseEntity {
     default: ValidityStatus.ACTIVE,
   })
   status: ValidityStatus;
+
+  @OneToMany(() => Consecutivecontrolvalidities, (consecutivecontrolvalidities) => consecutivecontrolvalidities.validity)
+	detailvalidity: Consecutivecontrolvalidities[];
 }

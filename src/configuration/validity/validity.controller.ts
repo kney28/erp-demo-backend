@@ -16,7 +16,7 @@ import { UpdateValidityDto } from './dto/update-validity.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { Validity } from './entities/validity.entity';
 
-@Controller('validity')
+@Controller('configuration/validity')
 @UseInterceptors(ClassSerializerInterceptor)
 @UseGuards(JwtAuthGuard)
 export class ValidityController {
