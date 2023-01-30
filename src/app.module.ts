@@ -58,6 +58,7 @@ import { BedsModule } from './hospitalization/beds/beds.module';
 import { FeesModule } from './hospitalization/fees/fees.module';
 
 import { HolidayssModule } from './configuration/holidayss/holidayss.module';
+import { PermissionssModule } from './configuration/permissionss/permissionss.module';
 
 import { HeadquarterssModule } from './admissions/headquarterss/headquarterss.module';
 import { HealthproviderssModule } from './admissions/healthproviderss/healthproviderss.module';
@@ -144,6 +145,7 @@ import { SpecialpopulationsModule } from './admissions/specialpopulations/specia
     GroundsdenialcaresModule,
     SisbenlevelsModule,
     SpecialpopulationsModule,
+    PermissionssModule,
   ],
   providers: [
     {
