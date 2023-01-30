@@ -1,6 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, OneToMany } from 'typeorm';
 import { User } from 'src/users/entities/user.entity';
+import { Permissions } from 'src/configuration/permissionss/entities/permissions.entity'
 
 export enum ProfilesStatus {
   ACTIVE = 1,
@@ -25,4 +26,8 @@ export class Profile extends BaseEntity {
 
   @OneToMany(() => User, (user) => user.role)
   users: User[];
+
+  @OneToMany(() => Permissions, (permissions) => permissions.profile)
+  permissions: Permissions[];
+  
 }
