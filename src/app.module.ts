@@ -68,6 +68,12 @@ import { GroundsdenialcaresModule } from './admissions/groundsdenialcares/ground
 import { SisbenlevelsModule } from './admissions/sisbenlevels/sisbenlevels.module';
 import { SpecialpopulationsModule } from './admissions/specialpopulations/specialpopulations.module';
 
+import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
+import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
+import { ParameterizationcupssModule } from './hiring/parameterizationcupss/parameterizationcupss.module';
+import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
+import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
+
 
 @Module({
   imports: [
@@ -148,6 +154,11 @@ import { SpecialpopulationsModule } from './admissions/specialpopulations/specia
     SpecialpopulationsModule,
     PermissionssModule,
     ConsecutivecontrolvaliditiessModule,
+    CategoriescupssModule,
+    EntitytemplatesModule,
+    ParameterizationcupssModule,
+    SubcatcupssModule,
+    SubgruposcupssModule,
   ],
   providers: [
     {
