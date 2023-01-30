@@ -46,7 +46,6 @@ import { ThirdPartyAccountantsModule } from './third-party-accountants/third-par
 import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { UsersModule } from './users/users.module';
-import { ValidityModule } from './validity/validity.module';
 
 import { CareservicesModule } from './billing/careservices/careservices.module'; 
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module'; 
@@ -59,6 +58,8 @@ import { FeesModule } from './hospitalization/fees/fees.module';
 
 import { HolidayssModule } from './configuration/holidayss/holidayss.module';
 import { PermissionssModule } from './configuration/permissionss/permissionss.module';
+import { ValidityModule } from './configuration/validity/validity.module';
+import { ConsecutivecontrolvaliditiessModule } from './configuration/consecutivecontrolvaliditiess/consecutivecontrolvaliditiess.module';
 
 import { HeadquarterssModule } from './admissions/headquarterss/headquarterss.module';
 import { HealthproviderssModule } from './admissions/healthproviderss/healthproviderss.module';
@@ -146,6 +147,7 @@ import { SpecialpopulationsModule } from './admissions/specialpopulations/specia
     SisbenlevelsModule,
     SpecialpopulationsModule,
     PermissionssModule,
+    ConsecutivecontrolvaliditiessModule,
   ],
   providers: [
     {
