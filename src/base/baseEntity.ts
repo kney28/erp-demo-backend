@@ -18,3 +18,8 @@ export abstract class BaseEntity {
   @DeleteDateColumn()
   deleted_at: Date;
 }
+
+export enum Status {
+	ACTIVE = 1,
+	INACTIVE = 2,
+}
