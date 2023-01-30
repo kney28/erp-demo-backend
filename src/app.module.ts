@@ -46,7 +46,6 @@ import { ThirdPartyAccountantsModule } from './third-party-accountants/third-par
 import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { UsersModule } from './users/users.module';
-import { ValidityModule } from './validity/validity.module';
 
 import { CareservicesModule } from './billing/careservices/careservices.module'; 
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module'; 
@@ -58,6 +57,9 @@ import { BedsModule } from './hospitalization/beds/beds.module';
 import { FeesModule } from './hospitalization/fees/fees.module';
 
 import { HolidayssModule } from './configuration/holidayss/holidayss.module';
+import { PermissionssModule } from './configuration/permissionss/permissionss.module';
+import { ValidityModule } from './configuration/validity/validity.module';
+import { ConsecutivecontrolvaliditiessModule } from './configuration/consecutivecontrolvaliditiess/consecutivecontrolvaliditiess.module';
 
 import { HeadquarterssModule } from './admissions/headquarterss/headquarterss.module';
 import { HealthproviderssModule } from './admissions/healthproviderss/healthproviderss.module';
@@ -65,6 +67,12 @@ import { ChargesModule } from './admissions/charges/charges.module';
 import { GroundsdenialcaresModule } from './admissions/groundsdenialcares/groundsdenialcares.module';
 import { SisbenlevelsModule } from './admissions/sisbenlevels/sisbenlevels.module';
 import { SpecialpopulationsModule } from './admissions/specialpopulations/specialpopulations.module';
+
+import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
+import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
+import { ParameterizationcupssModule } from './hiring/parameterizationcupss/parameterizationcupss.module';
+import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
+import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
 
 
 @Module({
@@ -144,6 +152,13 @@ import { SpecialpopulationsModule } from './admissions/specialpopulations/specia
     GroundsdenialcaresModule,
     SisbenlevelsModule,
     SpecialpopulationsModule,
+    PermissionssModule,
+    ConsecutivecontrolvaliditiessModule,
+    CategoriescupssModule,
+    EntitytemplatesModule,
+    ParameterizationcupssModule,
+    SubcatcupssModule,
+    SubgruposcupssModule,
   ],
   providers: [
     {

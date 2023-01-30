@@ -31,6 +31,11 @@ export class DetailnumerationdiansController {
 	@Get() 
 	findAll(): Promise<Detailnumerationdian[]> { 
 		return this.detailnumerationdiansService.findAll(); 
+	}
+
+	@Get('/head/:id') 
+	findAllByHead(@Param('id') id: string): Promise<Detailnumerationdian[]> { 
+		return this.detailnumerationdiansService.findAllByHead(id); 
 	} 
 
 	@Get(':id') 

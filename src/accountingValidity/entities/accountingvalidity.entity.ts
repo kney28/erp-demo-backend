@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, ManyToOne } from 'typeorm';
+import { Validity } from 'src/configuration/validity/entities/validity.entity';
 
 export enum AccountingValidityStatus {
   OPEN = 1,
@@ -17,6 +18,10 @@ export enum AccountingValidityInUse {
 export class AccountingValidity extends BaseEntity {
   /*@Column()
   validity: number;*/
+  @ManyToOne(() => Validity, (validity) => validity.accountingValidity, {
+    eager: true
+  })
+  validity: Validity;
 
   @Column({
     type: 'enum',
