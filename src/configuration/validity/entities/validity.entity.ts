@@ -2,7 +2,7 @@ import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, OneToMany } from 'typeorm';
 import { Consecutivecontrolvalidities } from 'src/configuration/consecutivecontrolvaliditiess/entities/consecutivecontrolvalidities.entity';
 import { AccountingValidity } from 'src/accountingValidity/entities/accountingvalidity.entity';
-
+import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity'
 export enum ValidityStatus {
   ACTIVE = 1,
   INACTIVE = 2,
@@ -42,4 +42,7 @@ export class Validity extends BaseEntity {
 
   @OneToMany(() => AccountingValidity, (accountingValidity) => accountingValidity.validity)
   accountingValidity: AccountingValidity[];
+
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.validity)
+  acccongens: Acccongen[];
 }

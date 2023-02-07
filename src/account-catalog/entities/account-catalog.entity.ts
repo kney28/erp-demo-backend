@@ -2,7 +2,7 @@ import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
-
+import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 export enum levelCatalog {
   CLASS = 1,
   GROUP = 2,
@@ -144,6 +144,9 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Headquarters, (headquarterss) => headquarterss.udacccanpreval)
 	headquarterss: Headquarters[];
+
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount) 
+  acccongens: Acccongen[];
 
   @BeforeInsert()
   encrypt(): void {
