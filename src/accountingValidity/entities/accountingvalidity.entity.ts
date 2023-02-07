@@ -1,7 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, ManyToOne } from 'typeorm';
 import { Validity } from 'src/configuration/validity/entities/validity.entity';
-
+import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity'
 export enum AccountingValidityStatus {
   OPEN = 1,
   ACITVE = 2,
@@ -36,4 +36,5 @@ export class AccountingValidity extends BaseEntity {
     default: AccountingValidityInUse.NO,
   })
   in_use: AccountingValidityInUse;
+
 }

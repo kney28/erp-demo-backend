@@ -74,6 +74,8 @@ import { ParameterizationcupssModule } from './hiring/parameterizationcupss/para
 import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
 
+import { AcccongensModule } from './accounting/acccongens/acccongens.module';
+
 
 @Module({
   imports: [
@@ -159,6 +161,7 @@ import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.mod
     ParameterizationcupssModule,
     SubcatcupssModule,
     SubgruposcupssModule,
+    AcccongensModule,
   ],
   providers: [
     {
