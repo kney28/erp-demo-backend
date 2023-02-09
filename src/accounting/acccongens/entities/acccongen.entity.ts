@@ -115,5 +115,5 @@ export class Acccongen extends BaseEntity {
   @ManyToOne(() => Validity, (validity) => validity.acccongens, {
     eager: true,
   })
-  validity: Validity;
+  validity: Validity; 
 }
