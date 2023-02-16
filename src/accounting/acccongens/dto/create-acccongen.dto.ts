@@ -19,17 +19,17 @@ export class CreateAcccongenDto {
 	//@IsEnum(<define type enum>) 
 	//rounding: <define type enum>; 
 
-	@IsNotEmpty() 
-	seattypeclosure: number; 
+	//@IsNotEmpty() 
+	//seattypeclosure: number; 
 
 	//@IsNotEmpty() 
 	//lostcount: number; 
 
-  @IsNotEmpty() 
-  profitaccount: number; 
+  //@IsNotEmpty() 
+  //profitaccount: number; 
 
-	@IsNotEmpty() 
-	closingaccount: number; 
+	//@IsNotEmpty() 
+	//closingaccount: number; 
 
 	//Remember add <type enum> import and add IsEnum in import class-validator 
 	//@IsNotEmpty() 

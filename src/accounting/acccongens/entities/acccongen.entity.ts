@@ -2,8 +2,7 @@ import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 import { Validity } from 'src/configuration/validity/entities/validity.entity';
-
-
+import { TypesSeat } from 'src/types-seats/entities/types-seat.entity'
 export enum LISTMONTH {
   ENERO = 1,
   FEBRERO = 2,
@@ -18,7 +17,6 @@ export enum LISTMONTH {
   NOVIEMBRE = 11,
   DICIEMBRE = 12,
 }
-
 export enum LISTREDONDING {
   'SIN REDONDEO' = 1,
   ' AL PESO' = 2,
@@ -68,17 +66,17 @@ export class Acccongen extends BaseEntity {
     default: LISTREDONDING['SIN REDONDEO'],
   })
   rounding: LISTREDONDING;
-  @Column()
-  seattypeclosure: number;
+  //@Column()
+  //seattypeclosure: number;
 
   //@Column()
   //lostcount: number;
 
-  @Column()
-  profitaccount: number;
+  //@Column()
+  //profitaccount: number;
 
-  @Column()
-  closingaccount: number;
+  //@Column()
+  //closingaccount: number;
 
   //The next column is ENUM, please complete the code necessary
   //@Column({
@@ -111,9 +109,20 @@ export class Acccongen extends BaseEntity {
     eager: true,
   })
   lostcount: AccountCatalog;
-
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.acccongensclosin, {
+    eager: true,
+  })
+  closingaccount: AccountCatalog;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.acccongensprofitaccount, {
+    eager: true,
+  })
+  profitaccount: AccountCatalog;
+  @ManyToOne(() => TypesSeat, (typesSeat) => typesSeat.codes, {
+    eager: true,
+  })
+  seattypeclosure: TypesSeat;
   @ManyToOne(() => Validity, (validity) => validity.acccongens, {
     eager: true,
   })
-  validity: Validity; 
+  validity: Validity;
 }

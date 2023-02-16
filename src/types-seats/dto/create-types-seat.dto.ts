@@ -17,9 +17,9 @@ export class CreateTypesSeatDto {
   })
   number: number;
 
-  @IsNotEmpty({
-    message: 'El campo estado es obligatorio.',
-  })
-  @IsEnum(statusGlobal)
-  status: statusGlobal;
+  //@IsNotEmpty({
+  //  message: 'El campo estado es obligatorio.',
+  //})
+  //@IsEnum(statusGlobal)
+  //status: statusGlobal;
 }

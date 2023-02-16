@@ -148,6 +148,10 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount) 
   acccongens: Acccongen[];
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount) 
+  acccongensclosin: Acccongen[];
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount) 
+  acccongensprofitaccount: Acccongen[];
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount) 
   account: Accbalmov[];
