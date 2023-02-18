@@ -75,7 +75,9 @@ import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
 
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
-
+import { AccountingtermssModule } from './accounting/accountingtermss/accountingtermss.module';
+import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
+import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
 
 @Module({
   imports: [
@@ -162,6 +164,9 @@ import { AcccongensModule } from './accounting/acccongens/acccongens.module';
     SubcatcupssModule,
     SubgruposcupssModule,
     AcccongensModule,
+    AccountingtermssModule,
+    AcccostcenterssModule,
+    AccbalmovsModule
   ],
   providers: [
     {

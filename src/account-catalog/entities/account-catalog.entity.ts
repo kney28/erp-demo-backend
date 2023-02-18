@@ -3,6 +3,7 @@ import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
+import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
 export enum levelCatalog {
   CLASS = 1,
   GROUP = 2,
@@ -147,6 +148,13 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount) 
   acccongens: Acccongen[];
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount) 
+  acccongensclosin: Acccongen[];
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount) 
+  acccongensprofitaccount: Acccongen[];
+
+  @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount) 
+  account: Accbalmov[];
 
   @BeforeInsert()
   encrypt(): void {
