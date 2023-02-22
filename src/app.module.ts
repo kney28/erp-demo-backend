@@ -47,8 +47,8 @@ import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
 import { UsersModule } from './users/users.module';
 
-import { CareservicesModule } from './billing/careservices/careservices.module'; 
-import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module'; 
+import { CareservicesModule } from './billing/careservices/careservices.module';
+import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module';
 import { NumerationdiansModule } from './billing/numerationdians/numerationdians.module';
 
 import { FloorsModule } from './hospitalization/floors/floors.module';
@@ -78,6 +78,11 @@ import { AcccongensModule } from './accounting/acccongens/acccongens.module';
 import { AccountingtermssModule } from './accounting/accountingtermss/accountingtermss.module';
 import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
 import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
+
+//Historia Clinica
+import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
+import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
+import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
 
 @Module({
   imports: [
@@ -166,7 +171,10 @@ import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
     AcccongensModule,
     AccountingtermssModule,
     AcccostcenterssModule,
-    AccbalmovsModule
+    AccbalmovsModule,
+    HcdignosessModule,
+    HcspecialtiessModule,
+    HchealthprosModule,
   ],
   providers: [
     {
