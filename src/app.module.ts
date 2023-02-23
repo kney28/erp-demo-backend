@@ -84,6 +84,9 @@ import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.modu
 import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
 import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
 
+
+// Bienes
+import { GooparsModule } from './goods/goopars/goopars.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -175,6 +178,7 @@ import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.m
     HcdignosessModule,
     HcspecialtiessModule,
     HchealthprosModule,
+    GooparsModule,
   ],
   providers: [
     {
