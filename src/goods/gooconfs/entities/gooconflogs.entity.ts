@@ -2,22 +2,22 @@ import { BaseEntity } from 'src/base/baseEntity';
 import { User } from 'src/users/entities/user.entity';
 import { Column, Entity, ManyToOne } from 'typeorm';
 
-export enum LogHchealthproType {
+export enum LogGooconfType {
   CREATE = 'create',
   UPDATE = 'update',
   DELETE = 'delete',
 }
 
 @Entity()
-export class HchealthproLogs extends BaseEntity {
+export class GooconfLogs extends BaseEntity {
   @Column()
   value: string;
 
   @Column({
     type: 'enum',
-    enum: LogHchealthproType,
+    enum: LogGooconfType,
   })
-  type: LogHchealthproType;
+  type: LogGooconfType;
 
   @ManyToOne(() => User, (user: User) => user)
   user: User;

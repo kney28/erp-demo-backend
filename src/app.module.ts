@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
@@ -84,9 +85,11 @@ import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.modu
 import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
 import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
 
-
 // Bienes
 import { GooparsModule } from './goods/goopars/goopars.module';
+import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
+import { GooclasModule } from './goods/gooclas/gooclas.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -179,6 +182,8 @@ import { GooparsModule } from './goods/goopars/goopars.module';
     HcspecialtiessModule,
     HchealthprosModule,
     GooparsModule,
+    GooconfsModule,
+    GooclasModule,
   ],
   providers: [
     {
