@@ -90,6 +90,14 @@ import { GooparsModule } from './goods/goopars/goopars.module';
 import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
 import { GooclasModule } from './goods/gooclas/gooclas.module';
 
+// Cuentas por cobrar
+import { CxcaccrecsModule } from './accounts-receivable/cxcaccrecs/cxcaccrecs.module';
+import { CxccouconsModule } from './accounts-receivable/cxccoucons/cxccoucons.module';
+
+// Cuentas por pagar
+import { CxpproviderssModule } from './accounts-payable/cxpproviderss/cxpproviderss.module';
+import { CxpcouconsModule } from './accounts-payable/cxpcoucons/cxpcoucons.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -184,6 +192,10 @@ import { GooclasModule } from './goods/gooclas/gooclas.module';
     GooparsModule,
     GooconfsModule,
     GooclasModule,
+    CxcaccrecsModule,
+    CxccouconsModule,
+    CxpproviderssModule,
+    CxpcouconsModule
   ],
   providers: [
     {
