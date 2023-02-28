@@ -1,5 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { Goocla } from 'src/goods/gooclas/entities/goocla.entity';
+import { Goopar } from 'src/goods/goopars/entities/goopar.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -35,11 +37,15 @@ export class Gooconf extends BaseEntity {
   @Column()
   description: string;
 
-  @Column()
-  idgoocla: number;
+  @ManyToOne(() => Goocla, (goocla) => goocla.code, {
+    eager: true,
+  })
+  idgoocla: Goocla;
 
-  @Column()
-  idaccpar: number;
+  @ManyToOne(() => Goopar, (goopar) => goopar.code, {
+    eager: true,
+  })
+  idaccpar: Goopar;
 
   @Column({
     type: 'enum',

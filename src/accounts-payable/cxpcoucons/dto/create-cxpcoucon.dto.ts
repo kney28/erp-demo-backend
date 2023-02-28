@@ -14,8 +14,8 @@ export class CreateCxpcouconDto {
   //@IsEnum(<define type enum>)
   //type: <define type enum>;
 
-  @IsNotEmpty()
-  idledacc: number;
+  //@IsNotEmpty()
+  //idledacc: number;
 
   //Remember add <type enum> import and add IsEnum in import class-validator
   //@IsNotEmpty()

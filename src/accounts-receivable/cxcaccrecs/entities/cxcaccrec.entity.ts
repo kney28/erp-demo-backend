@@ -1,6 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
-
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 export enum Status {
   ACTIVE = 1,
   INACTIVE = 2,
@@ -20,6 +20,11 @@ export class Cxcaccrec extends BaseEntity {
 
   @Column()
   description: string;
+
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idactacc: AccountCatalog;
 
   @Column({
     type: 'enum',

@@ -98,6 +98,17 @@ import { CxccouconsModule } from './accounts-receivable/cxccoucons/cxccoucons.mo
 import { CxpproviderssModule } from './accounts-payable/cxpproviderss/cxpproviderss.module';
 import { CxpcouconsModule } from './accounts-payable/cxpcoucons/cxpcoucons.module';
 
+// Citas medicas
+import { AppreacansModule } from './medical-appointments/appreacans/appreacans.module';
+import { AppofficessModule } from './medical-appointments/appofficess/appofficess.module';
+
+// Inventarios
+import { InvaccparsModule } from './inventory/invaccpars/invaccpars.module';
+import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.module';
+import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
+import { InvcumsModule } from './inventory/invcums/invcums.module';
+import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -195,7 +206,14 @@ import { CxpcouconsModule } from './accounts-payable/cxpcoucons/cxpcoucons.modul
     CxcaccrecsModule,
     CxccouconsModule,
     CxpproviderssModule,
-    CxpcouconsModule
+    CxpcouconsModule,
+    AppreacansModule,
+    AppofficessModule,
+    InvaccparsModule,
+    InvunitsmeasModule, 
+    InvmanufrolessModule,
+    InvcumsModule,
+    InvpharforsModule
   ],
   providers: [
     {
