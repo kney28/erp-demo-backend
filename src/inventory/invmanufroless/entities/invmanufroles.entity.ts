@@ -15,15 +15,15 @@ export enum RolType {
 @Unique(['code'])
 export class Invmanufroles extends BaseEntity {
   @Column()
-  code: number;
+  code: string;
 
   @Column()
-  description: number;
+  description: string;
 
   @Column({
     type: 'enum',
     enum: RolType,
-    default: RolType,
+    default: RolType.Fabricante,
   })
   roltype: RolType;
 

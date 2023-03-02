@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
@@ -123,37 +124,55 @@ export class AccountCatalog extends BaseEntity {
   status: statusGlobal;
 
   @OneToMany(() => Careservice, (careservice) => careservice.incomeaccount)
-	csincomeaccounts: Careservice[];
+  csincomeaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.incomeaccountindividuals)
-	csincomeaccountindividuals: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.incomeaccountindividuals,
+  )
+  csincomeaccountindividuals: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.capitationincomeaccount)
-	cscapitationincomeaccounts: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.capitationincomeaccount,
+  )
+  cscapitationincomeaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.costaccountpharmacyorders)
-	cscostaccountpharmacyorders: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.costaccountpharmacyorders,
+  )
+  cscostaccountpharmacyorders: Careservice[];
 
   @OneToMany(() => Careservice, (careservice) => careservice.discountaccount)
-	csdiscountaccounts: Careservice[];
+  csdiscountaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.feesettlementaccount)
-	csfeesettlementaccounts: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.feesettlementaccount,
+  )
+  csfeesettlementaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.accountpreviousperiods)
-	csaccountpreviousperiods: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.accountpreviousperiods,
+  )
+  csaccountpreviousperiods: Careservice[];
 
-  @OneToMany(() => Headquarters, (headquarterss) => headquarterss.udacccanpreval)
-	headquarterss: Headquarters[];
+  @OneToMany(
+    () => Headquarters,
+    (headquarterss) => headquarterss.udacccanpreval,
+  )
+  headquarterss: Headquarters[];
 
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount)
   acccongens: Acccongen[];
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount)
   acccongensclosin: Acccongen[];
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount)
   acccongensprofitaccount: Acccongen[];
 
-  @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount) 
+  @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount)
   account: Accbalmov[];
 
   @BeforeInsert()
