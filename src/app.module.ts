@@ -75,10 +75,15 @@ import { ParameterizationcupssModule } from './hiring/parameterizationcupss/para
 import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
 
+// Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
 import { AccountingtermssModule } from './accounting/accountingtermss/accountingtermss.module';
 import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
 import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
+import { AccentsubdetsModule } from './accounting/accentsubdets/accentsubdets.module';
+import { AccinicialrunsModule } from './accounting/accinicialruns/accinicialruns.module';
+import { AccountingentriesdetsModule } from './accounting/accountingentriesdets/accountingentriesdets.module';
+import { Accountingentries } from './accounting/accountingentriess/entities/accountingentries.entity';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -213,7 +218,11 @@ import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
     InvunitsmeasModule, 
     InvmanufrolessModule,
     InvcumsModule,
-    InvpharforsModule
+    InvpharforsModule,
+    AccentsubdetsModule,
+    AccinicialrunsModule,
+    AccountingentriesdetsModule,
+    Accountingentries
   ],
   providers: [
     {
