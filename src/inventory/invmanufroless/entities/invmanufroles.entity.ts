@@ -7,8 +7,8 @@ export enum Status {
 }
 
 export enum RolType {
-  Fabricante = 1,
-  Importador = 2,
+  FABRICANTE = 1,
+  IMPORTADOR = 2,
 }
 
 @Entity()
@@ -23,7 +23,7 @@ export class Invmanufroles extends BaseEntity {
   @Column({
     type: 'enum',
     enum: RolType,
-    default: RolType.Fabricante,
+    default: RolType.FABRICANTE,
   })
   roltype: RolType;
 
