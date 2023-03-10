@@ -1,6 +1,8 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
+import { CostCenter } from 'src/costCenter/entities/costCenter.entity';
+import { RetentionConcept } from 'src/retention-concepts/entities/retention-concept.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -41,20 +43,28 @@ export class Invaccpar extends BaseEntity {
   })
   idaccaccwitsounonrep: AccountCatalog;
 
-  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+  @ManyToOne(() => CostCenter, (costCenter) => costCenter.code, {
     eager: true,
   })
-  idcoscen: AccountCatalog;
+  idcoscen: CostCenter;
 
-  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
-    eager: true,
-  })
-  iddecwitcon: AccountCatalog;
+  @ManyToOne(
+    () => RetentionConcept,
+    (retentionConcept) => retentionConcept.code,
+    {
+      eager: true,
+    },
+  )
+  iddecwitcon: RetentionConcept;
 
-  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
-    eager: true,
-  })
-  idnonfilwitcon: AccountCatalog;
+  @ManyToOne(
+    () => RetentionConcept,
+    (retentionConcept) => retentionConcept.code,
+    {
+      eager: true,
+    },
+  )
+  idnonfilwitcon: RetentionConcept;
 
   @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
     eager: true,
