@@ -1,7 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, ManyToOne } from 'typeorm';
 import { Validity } from 'src/configuration/validity/entities/validity.entity';
-import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity'
+import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 export enum AccountingValidityStatus {
   OPEN = 1,
   ACITVE = 2,
@@ -19,7 +19,7 @@ export class AccountingValidity extends BaseEntity {
   /*@Column()
   validity: number;*/
   @ManyToOne(() => Validity, (validity) => validity.accountingValidity, {
-    eager: true
+    eager: true,
   })
   validity: Validity;
 
@@ -29,12 +29,11 @@ export class AccountingValidity extends BaseEntity {
     default: AccountingValidityStatus.OPEN,
   })
   status: AccountingValidityStatus;
-
+  
   @Column({
     type: 'enum',
     enum: AccountingValidityInUse,
     default: AccountingValidityInUse.NO,
   })
   in_use: AccountingValidityInUse;
-
 }

@@ -84,6 +84,10 @@ import { AccentsubdetsModule } from './accounting/accentsubdets/accentsubdets.mo
 import { AccinicialrunsModule } from './accounting/accinicialruns/accinicialruns.module';
 import { AccountingentriesdetsModule } from './accounting/accountingentriesdets/accountingentriesdets.module';
 import { Accountingentries } from './accounting/accountingentriess/entities/accountingentries.entity';
+import { AccannclosModule } from './accounting/accannclos/accannclos.module';
+import { AccannualclosingentrysModule } from './accounting/accannualclosingentrys/accannualclosingentrys.module';
+import { AccmontopesModule } from './accounting/accmontopes/accmontopes.module'; 
+import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -222,7 +226,11 @@ import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
     AccentsubdetsModule,
     AccinicialrunsModule,
     AccountingentriesdetsModule,
-    Accountingentries
+    Accountingentries,
+    AccannclosModule,
+    AccannualclosingentrysModule,
+    AccmontopesModule,
+    AccmonclosModule
   ],
   providers: [
     {
