@@ -6,8 +6,8 @@ export class CreateInvcumDto {
   @Unique(['code'])
   code: string;
 
-  @IsNotEmpty()
-  filecum: number;
+  /*@IsNotEmpty()
+  filecum: number;*/
 
   @IsNotEmpty()
   actdat: Date;
