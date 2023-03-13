@@ -88,6 +88,9 @@ import { AccannclosModule } from './accounting/accannclos/accannclos.module';
 import { AccannualclosingentrysModule } from './accounting/accannualclosingentrys/accannualclosingentrys.module';
 import { AccmontopesModule } from './accounting/accmontopes/accmontopes.module'; 
 import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
+import { AccbeginningbalancessModule } from './accounting/accbeginningbalancess/accbeginningbalancess.module';
+import { AccbeginningbalancesdetsModule } from './accounting/accbeginningbalancesdets/accbeginningbalancesdets.module';
+import { Accbeginningbalancesdet2sModule } from './accounting/accbeginningbalancesdet2s/accbeginningbalancesdet2s.module';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -230,7 +233,10 @@ import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
     AccannclosModule,
     AccannualclosingentrysModule,
     AccmontopesModule,
-    AccmonclosModule
+    AccmonclosModule,
+    AccbeginningbalancessModule,
+    AccbeginningbalancesdetsModule,
+    Accbeginningbalancesdet2sModule
   ],
   providers: [
     {
