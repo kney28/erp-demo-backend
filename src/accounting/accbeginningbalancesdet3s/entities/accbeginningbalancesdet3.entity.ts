@@ -1,5 +1,17 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { AccountingSeat } from 'src/accountingSeats/entities/accountingSeat.entity';
+import { RetentionConcept } from 'src/retention-concepts/entities/retention-concept.entity';
+
+export enum Status {
+  ACTIVE = 1,
+  INACTIVE = 2,
+}
+
+export enum Nature {
+  DEBITO = 1,
+  CREDITO = 2,
+}
 
 @Entity()
 @Unique(['code'])
@@ -7,19 +19,26 @@ export class Accbeginningbalancesdet3 extends BaseEntity {
   @Column()
   code: string;
 
-  @Column()
-  idaccoentry: number;
+  @ManyToOne(() => AccountingSeat, (accountingSeat) => accountingSeat.detail, {
+    eager: true,
+  })
+  idaccoentry: AccountingSeat;
 
-  @Column()
-  idconcrete: number;
+  @ManyToOne(
+    () => RetentionConcept,
+    (retentionConcept) => retentionConcept.description,
+    {
+      eager: true,
+    },
+  )
+  idconcrete: RetentionConcept;
 
-  //The next column is ENUM, please complete the code necessary
-  //@Column({
-  //	type: 'enum',
-  //	enum: <define type enum>,
-  //	default: <define value of default type enum>,
-  //})
-  //nature: <define type enum>;
+  @Column({
+    type: 'enum',
+    enum: Nature,
+    default: Nature.DEBITO,
+  })
+  nature: Nature;
 
   @Column()
   basevalue: number;
@@ -33,11 +52,10 @@ export class Accbeginningbalancesdet3 extends BaseEntity {
   @Column()
   retainedvalue: number;
 
-  //The next column is ENUM, please complete the code necessary
-  //@Column({
-  //	type: 'enum',
-  //	enum: <define type enum>,
-  //	default: <define value of default type enum>,
-  //})
-  //status: <define type enum>;
+  @Column({
+    type: 'enum',
+    enum: Status,
+    default: Status.ACTIVE,
+  })
+  status: Status;
 }

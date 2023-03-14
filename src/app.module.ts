@@ -91,6 +91,7 @@ import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
 import { AccbeginningbalancessModule } from './accounting/accbeginningbalancess/accbeginningbalancess.module';
 import { AccbeginningbalancesdetsModule } from './accounting/accbeginningbalancesdets/accbeginningbalancesdets.module';
 import { Accbeginningbalancesdet2sModule } from './accounting/accbeginningbalancesdet2s/accbeginningbalancesdet2s.module';
+import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalancesdet3s/accbeginningbalancesdet3s.module';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -236,7 +237,8 @@ import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
     AccmonclosModule,
     AccbeginningbalancessModule,
     AccbeginningbalancesdetsModule,
-    Accbeginningbalancesdet2sModule
+    Accbeginningbalancesdet2sModule,
+    Accbeginningbalancesdet3sModule
   ],
   providers: [
     {
