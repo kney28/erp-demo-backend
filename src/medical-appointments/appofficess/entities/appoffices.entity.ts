@@ -1,6 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
-import { Headquarters } from 'src/headquarters/entities/headquarters.entity';
+import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity'; 
 
 export enum Status {
   ACTIVE = 1,
@@ -21,11 +21,6 @@ export class Appoffices extends BaseEntity {
   @Column()
   description: string;
 
-  /*@ManyToOne(() => Headquarters, (headquarters) => headquarters.code, {
-    eager: true,
-  })
-  idheadquarters: Headquarters;*/
-
   @Column({
     type: 'enum',
     enum: EmerOffice,
@@ -39,4 +34,9 @@ export class Appoffices extends BaseEntity {
     default: Status.ACTIVE,
   })
   status: Status;
+
+  @ManyToOne(() => Headquarters, (headquarters) => headquarters.code, {
+    eager: true,
+  })
+  idheadquarters: Headquarters;
 }

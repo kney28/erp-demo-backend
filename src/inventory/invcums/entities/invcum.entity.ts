@@ -13,7 +13,7 @@ export class Invcum extends BaseEntity {
   code: string;
 
   @Column()
-  filecum: number;
+  filecum: string;
 
   @Column()
   actdat: Date;

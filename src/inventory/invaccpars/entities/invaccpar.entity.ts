@@ -1,7 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
-import { CostCenter } from 'src/costCenter/entities/costCenter.entity';
+import { Acccostcenters } from 'src/accounting/acccostcenterss/entities/acccostcenters.entity';
 import { RetentionConcept } from 'src/retention-concepts/entities/retention-concept.entity';
 
 export enum Status {
@@ -43,10 +43,10 @@ export class Invaccpar extends BaseEntity {
   })
   idaccaccwitsounonrep: AccountCatalog;
 
-  @ManyToOne(() => CostCenter, (costCenter) => costCenter.code, {
+  @ManyToOne(() => Acccostcenters, (acccostCenters) => acccostCenters.code, {
     eager: true,
   })
-  idcoscen: CostCenter;
+  idcoscen: Acccostcenters;
 
   @ManyToOne(
     () => RetentionConcept,

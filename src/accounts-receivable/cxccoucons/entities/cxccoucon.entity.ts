@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -34,8 +35,10 @@ export class Cxccoucon extends BaseEntity {
   })
   type: TypeGloss;
 
-  @Column()
-  idledacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idledacc: AccountCatalog;
 
   @Column({
     type: 'enum',
