@@ -4,6 +4,9 @@ import { Careservice } from 'src/billing/careservices/entities/careservice.entit
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+import { Tsnotcon } from 'src/treasury/tsnotcons/entities/tsnotcon.entity';
+import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
+
 export enum levelCatalog {
   CLASS = 1,
   GROUP = 2,
@@ -155,6 +158,12 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount) 
   account: Accbalmov[];
+
+  @OneToMany(() => Tsnotcon, (tsnotcon) => tsnotcon.idledacc) 
+  accidledacc: Tsnotcon[];
+
+  @OneToMany(() => Tsboxes, (tsboxes) => tsboxes.idledacc) 
+  acctsboxes: Tsboxes[];
 
   @BeforeInsert()
   encrypt(): void {

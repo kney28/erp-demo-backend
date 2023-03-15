@@ -4,6 +4,7 @@ import { ThirdPartyAccountant } from 'src/third-party-accountants/entities/third
 import { BeforeInsert, Column, Entity, OneToMany, Unique } from 'typeorm';
 import { Healthproviders } from 'src/admissions/healthproviderss/entities/healthproviders.entity';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+import { Tsbanks } from 'src/treasury/tsbankss/entities/tsbanks.entity';
 
 export enum ThirdPersonDocumentType {
   IDENTITYCARD = 1,
@@ -88,6 +89,9 @@ export class ThirdPerson extends BaseEntity {
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idthird)
   account: Accbalmov[];
+
+  @OneToMany(() => Tsbanks, (tsbanks) => tsbanks.idthird)
+  thirdtsbank: Tsbanks[];
 
   @BeforeInsert()
   createVerificationCode() {
