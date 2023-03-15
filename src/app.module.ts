@@ -90,6 +90,12 @@ import { GooparsModule } from './goods/goopars/goopars.module';
 import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
 import { GooclasModule } from './goods/gooclas/gooclas.module';
 
+//Tesoreria
+import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
+import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
+import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
+import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -184,6 +190,10 @@ import { GooclasModule } from './goods/gooclas/gooclas.module';
     GooparsModule,
     GooconfsModule,
     GooclasModule,
+    TsnotconsModule,
+    TsboxessModule,
+    TsbankssModule,
+    TsconpaysModule,
   ],
   providers: [
     {
