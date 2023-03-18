@@ -70,5 +70,4 @@ export class Accbalmov extends BaseEntity {
     default: LISTSTATUS.ACTIVO,
   })
   status: LISTSTATUS;
-
 }

@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -15,32 +16,50 @@ export class Goopar extends BaseEntity {
   @Column()
   description: string;
 
-  @Column()
-  idactacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idledacc: AccountCatalog;
 
-  @Column()
-  idadmdepacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idadmdepacc: AccountCatalog;
 
-  @Column()
-  idweldepacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idweldepacc: AccountCatalog;
 
-  @Column()
-  idaccdepacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idaccdepacc: AccountCatalog;
 
-  @Column()
-  idaccmovgoowar: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idaccmovgoowar: AccountCatalog;
 
-  @Column()
-  idacclos: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idacclos: AccountCatalog;
 
-  @Column()
-  idaccoutusedue: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idaccoutusedue: AccountCatalog;
 
-  @Column()
-  idacccomowe: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idacccomowe: AccountCatalog;
 
-  @Column()
-  idcrecomacc: number;
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.account, {
+    eager: true,
+  })
+  idcrecomacc: AccountCatalog;
 
   @Column({
     type: 'enum',

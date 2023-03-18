@@ -75,10 +75,23 @@ import { ParameterizationcupssModule } from './hiring/parameterizationcupss/para
 import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
 
+// Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
 import { AccountingtermssModule } from './accounting/accountingtermss/accountingtermss.module';
 import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
 import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
+import { AccentsubdetsModule } from './accounting/accentsubdets/accentsubdets.module';
+import { AccinicialrunsModule } from './accounting/accinicialruns/accinicialruns.module';
+import { AccountingentriesdetsModule } from './accounting/accountingentriesdets/accountingentriesdets.module';
+import { Accountingentries } from './accounting/accountingentriess/entities/accountingentries.entity';
+import { AccannclosModule } from './accounting/accannclos/accannclos.module';
+import { AccannualclosingentrysModule } from './accounting/accannualclosingentrys/accannualclosingentrys.module';
+import { AccmontopesModule } from './accounting/accmontopes/accmontopes.module'; 
+import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
+import { AccbeginningbalancessModule } from './accounting/accbeginningbalancess/accbeginningbalancess.module';
+import { AccbeginningbalancesdetsModule } from './accounting/accbeginningbalancesdets/accbeginningbalancesdets.module';
+import { Accbeginningbalancesdet2sModule } from './accounting/accbeginningbalancesdet2s/accbeginningbalancesdet2s.module';
+import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalancesdet3s/accbeginningbalancesdet3s.module';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -90,6 +103,24 @@ import { GooparsModule } from './goods/goopars/goopars.module';
 import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
 import { GooclasModule } from './goods/gooclas/gooclas.module';
 
+// Cuentas por cobrar
+import { CxcaccrecsModule } from './accounts-receivable/cxcaccrecs/cxcaccrecs.module';
+import { CxccouconsModule } from './accounts-receivable/cxccoucons/cxccoucons.module';
+
+// Cuentas por pagar
+import { CxpproviderssModule } from './accounts-payable/cxpproviderss/cxpproviderss.module';
+import { CxpcouconsModule } from './accounts-payable/cxpcoucons/cxpcoucons.module';
+
+// Citas medicas
+import { AppreacansModule } from './medical-appointments/appreacans/appreacans.module';
+import { AppofficessModule } from './medical-appointments/appofficess/appofficess.module';
+
+// Inventarios
+import { InvaccparsModule } from './inventory/invaccpars/invaccpars.module';
+import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.module';
+import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
+import { InvcumsModule } from './inventory/invcums/invcums.module';
+import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
 //Tesoreria
 import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
 import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
@@ -190,6 +221,29 @@ import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
     GooparsModule,
     GooconfsModule,
     GooclasModule,
+    CxcaccrecsModule,
+    CxccouconsModule,
+    CxpproviderssModule,
+    CxpcouconsModule,
+    AppreacansModule,
+    AppofficessModule,
+    InvaccparsModule,
+    InvunitsmeasModule, 
+    InvmanufrolessModule,
+    InvcumsModule,
+    InvpharforsModule,
+    AccentsubdetsModule,
+    AccinicialrunsModule,
+    AccountingentriesdetsModule,
+    Accountingentries,
+    AccannclosModule,
+    AccannualclosingentrysModule,
+    AccmontopesModule,
+    AccmonclosModule,
+    AccbeginningbalancessModule,
+    AccbeginningbalancesdetsModule,
+    Accbeginningbalancesdet2sModule,
+    Accbeginningbalancesdet3sModule,
     TsnotconsModule,
     TsboxessModule,
     TsbankssModule,

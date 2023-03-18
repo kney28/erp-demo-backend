@@ -1,39 +1,38 @@
-import { IsNotEmpty } from 'class-validator'; 
-import { Unique } from 'typeorm'; 
+import { IsNotEmpty } from 'class-validator';
+import { Unique } from 'typeorm';
 
-export class CreateHchealthproDto { 
-	@IsNotEmpty() 
-	@Unique(['code']) 
-	code: string; 
+export class CreateHchealthproDto {
+  @IsNotEmpty()
+  @Unique(['code'])
+  code: string;
 
-	@IsNotEmpty() 
-	description: string; 
+  @IsNotEmpty()
+  description: string;
 
-	//Remember add <type enum> import and add IsEnum in import class-validator 
-	//@IsNotEmpty() 
-	//@IsEnum(<define type enum>) 
-	//typheapro: <define type enum>; 
+  //Remember add <type enum> import and add IsEnum in import class-validator
+  //@IsNotEmpty()
+  //@IsEnum(<define type enum>)
+  //typheapro: <define type enum>;
 
-	@IsNotEmpty() 
-	idthird: number; 
+  /*@IsNotEmpty() 
+	idthird: number; */
 
-	@IsNotEmpty() 
-	businesscard: string; 
+  @IsNotEmpty()
+  businesscard: string;
 
-	//Remember add <type enum> import and add IsEnum in import class-validator 
-	//@IsNotEmpty() 
-	//@IsEnum(<define type enum>) 
-	//conttyp: <define type enum>; 
+  //Remember add <type enum> import and add IsEnum in import class-validator
+  //@IsNotEmpty()
+  //@IsEnum(<define type enum>)
+  //conttyp: <define type enum>;
 
-	@IsNotEmpty() 
-	idspecialty: number; 
+  /*@IsNotEmpty()
+  idspecialty: number;*/
 
-	@IsNotEmpty() 
-	digsig: string; 
+  @IsNotEmpty()
+  digsig: string;
 
-	//Remember add <type enum> import and add IsEnum in import class-validator 
-	//@IsNotEmpty() 
-	//@IsEnum(<define type enum>) 
-	//status: <define type enum>; 
-
-} 
+  //Remember add <type enum> import and add IsEnum in import class-validator
+  //@IsNotEmpty()
+  //@IsEnum(<define type enum>)
+  //status: <define type enum>;
+}

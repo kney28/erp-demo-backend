@@ -17,7 +17,7 @@ export class Headquarters extends BaseEntity {
   description: string;
 
   @OneToMany(() => Careservice, (careservice) => careservice.headquarter)
-	careservices: Careservice[];
+  careservices: Careservice[];
   /*
   @Column()
   diannumbering: number;
