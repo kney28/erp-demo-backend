@@ -1,11 +1,18 @@
+/* eslint-disable prettier/prettier */
 import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+<<<<<<< HEAD
 import { Tscasreccon } from 'src/treasury/tscasreccons/entities/tscasreccon.entity';
 import { Tsdiscon } from 'src/treasury/tsdiscons/entities/tsdiscon.entity';
+=======
+import { Tsnotcon } from 'src/treasury/tsnotcons/entities/tsnotcon.entity';
+import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
+
+>>>>>>> 455a11b097086671e2053772b61a8e36b6c064e2
 export enum levelCatalog {
   CLASS = 1,
   GROUP = 2,
@@ -125,44 +132,70 @@ export class AccountCatalog extends BaseEntity {
   status: statusGlobal;
 
   @OneToMany(() => Careservice, (careservice) => careservice.incomeaccount)
-	csincomeaccounts: Careservice[];
+  csincomeaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.incomeaccountindividuals)
-	csincomeaccountindividuals: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.incomeaccountindividuals,
+  )
+  csincomeaccountindividuals: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.capitationincomeaccount)
-	cscapitationincomeaccounts: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.capitationincomeaccount,
+  )
+  cscapitationincomeaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.costaccountpharmacyorders)
-	cscostaccountpharmacyorders: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.costaccountpharmacyorders,
+  )
+  cscostaccountpharmacyorders: Careservice[];
 
   @OneToMany(() => Careservice, (careservice) => careservice.discountaccount)
-	csdiscountaccounts: Careservice[];
+  csdiscountaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.feesettlementaccount)
-	csfeesettlementaccounts: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.feesettlementaccount,
+  )
+  csfeesettlementaccounts: Careservice[];
 
-  @OneToMany(() => Careservice, (careservice) => careservice.accountpreviousperiods)
-	csaccountpreviousperiods: Careservice[];
+  @OneToMany(
+    () => Careservice,
+    (careservice) => careservice.accountpreviousperiods,
+  )
+  csaccountpreviousperiods: Careservice[];
 
-  @OneToMany(() => Headquarters, (headquarterss) => headquarterss.udacccanpreval)
-	headquarterss: Headquarters[];
+  @OneToMany(
+    () => Headquarters,
+    (headquarterss) => headquarterss.udacccanpreval,
+  )
+  headquarterss: Headquarters[];
 
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.lostcount)
   acccongens: Acccongen[];
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.closingaccount)
   acccongensclosin: Acccongen[];
-  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount) 
+  @OneToMany(() => Acccongen, (acccongen) => acccongen.profitaccount)
   acccongensprofitaccount: Acccongen[];
 
-  @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount) 
+  @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount)
   account: Accbalmov[];
 
+<<<<<<< HEAD
   @OneToMany(() => Tscasreccon, (tscasreccon) => tscasreccon.idledacc)
 	tscasreccon: Tscasreccon[];
 
   @OneToMany(() => Tsdiscon, (tsdiscons) => tsdiscons.)
 	tsdiscons: Tscasreccon[];
+=======
+  @OneToMany(() => Tsnotcon, (tsnotcon) => tsnotcon.idledacc) 
+  accidledacc: Tsnotcon[];
+
+  @OneToMany(() => Tsboxes, (tsboxes) => tsboxes.idledacc) 
+  acctsboxes: Tsboxes[];
+>>>>>>> 455a11b097086671e2053772b61a8e36b6c064e2
 
   @BeforeInsert()
   encrypt(): void {
