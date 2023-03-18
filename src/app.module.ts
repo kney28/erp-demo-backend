@@ -79,6 +79,10 @@ import { AccountingtermssModule } from './accounting/accountingtermss/accounting
 import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
 import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
 
+import { TscasrecconsModule } from './treasury/tscasreccons/Tscasreccons.Module';
+import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
+
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -166,8 +170,10 @@ import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
     AcccongensModule,
     AccountingtermssModule,
     AcccostcenterssModule,
-    AccbalmovsModule
-  ],
+    AccbalmovsModule,
+    TscasrecconsModule,
+    TsdisconsModule
+    ],
   providers: [
     {
       provide: 'APP_INTERCEPTOR',
