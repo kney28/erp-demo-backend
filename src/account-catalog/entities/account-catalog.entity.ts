@@ -5,9 +5,14 @@ import { Careservice } from 'src/billing/careservices/entities/careservice.entit
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+<<<<<<< HEAD
+import { Tscasreccon } from 'src/treasury/tscasreccons/entities/tscasreccon.entity';
+import { Tsdiscon } from 'src/treasury/tsdiscons/entities/tsdiscon.entity';
+=======
 import { Tsnotcon } from 'src/treasury/tsnotcons/entities/tsnotcon.entity';
 import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
 
+>>>>>>> 455a11b097086671e2053772b61a8e36b6c064e2
 export enum levelCatalog {
   CLASS = 1,
   GROUP = 2,
@@ -178,11 +183,19 @@ export class AccountCatalog extends BaseEntity {
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount)
   account: Accbalmov[];
 
+<<<<<<< HEAD
+  @OneToMany(() => Tscasreccon, (tscasreccon) => tscasreccon.idledacc)
+	tscasreccon: Tscasreccon[];
+
+  @OneToMany(() => Tsdiscon, (tsdiscons) => tsdiscons.)
+	tsdiscons: Tscasreccon[];
+=======
   @OneToMany(() => Tsnotcon, (tsnotcon) => tsnotcon.idledacc) 
   accidledacc: Tsnotcon[];
 
   @OneToMany(() => Tsboxes, (tsboxes) => tsboxes.idledacc) 
   acctsboxes: Tsboxes[];
+>>>>>>> 455a11b097086671e2053772b61a8e36b6c064e2
 
   @BeforeInsert()
   encrypt(): void {

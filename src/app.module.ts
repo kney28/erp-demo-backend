@@ -130,6 +130,10 @@ import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
 
+import { TscasrecconsModule } from './treasury/tscasreccons/Tscasreccons.Module';
+import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
+
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -221,6 +225,8 @@ import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
     AccountingtermssModule,
     AcccostcenterssModule,
     AccbalmovsModule,
+    TscasrecconsModule,
+    TsdisconsModule,
     HcdignosessModule,
     HcspecialtiessModule,
     HchealthprosModule,
@@ -253,7 +259,7 @@ import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
     TsnotconsModule,
     TsboxessModule,
     TsbankssModule,
-    TsconpaysModule,
+    TsconpaysModule
   ],
   providers: [
     {
