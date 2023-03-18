@@ -6,10 +6,15 @@ export enum Status {
   INACTIVE = 2,
 }
 
-export enum ConceptType {
-  NINGUNO = 0,
-  CUENTASPORCOBRAR = 1,
-  NOTAS = 2,
+export enum TypeGloss {
+  NINGUNO = 1,
+  FACTURACION = 2,
+  TARIFAS = 3,
+  AUTORIZACION = 4,
+  COBERTURA = 5,
+  PERTINENCIA = 6,
+  DEVOLUCION = 7,
+  RESPUESTA = 8,
 }
 
 @Entity()
@@ -28,10 +33,10 @@ export class Cxcaccrec extends BaseEntity {
 
   @Column({
     type: 'enum',
-    enum: ConceptType,
-    default: ConceptType.NINGUNO,
+    enum: TypeGloss,
+    default: TypeGloss.NINGUNO,
   })
-  typglo: ConceptType;
+  typglo: TypeGloss;
 
   @Column({
     type: 'enum',

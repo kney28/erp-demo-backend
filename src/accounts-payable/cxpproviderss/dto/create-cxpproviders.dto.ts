@@ -9,8 +9,8 @@ export class CreateCxpprovidersDto {
   @IsNotEmpty()
   idthird: number;
 
-  @IsNotEmpty()
-  thirddocument: string;
+  //@IsNotEmpty()
+  //thirddocument: string;
 
   //Remember add <type enum> import and add IsEnum in import class-validator
   //@IsNotEmpty()
