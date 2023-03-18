@@ -7,7 +7,6 @@ export enum Status {
 }
 
 export enum TypeSex {
-  NINGUNA = 0,
   FEMENINO = 1,
   MASCULINO = 2,
   AMBOS = 3,
@@ -38,7 +37,7 @@ export class Hcdignoses extends BaseEntity {
   @Column({
     type: 'enum',
     enum: TypeSex,
-    default: TypeSex.NINGUNA,
+    default: TypeSex.AMBOS,
   })
   sex: TypeSex;
 }

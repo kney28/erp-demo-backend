@@ -1,15 +1,15 @@
-import { IsNotEmpty } from 'class-validator'; 
-import { Unique } from 'typeorm'; 
+import { IsNotEmpty } from 'class-validator';
+import { Unique } from 'typeorm';
 
-export class CreateGooparDto { 
-	@IsNotEmpty() 
-	@Unique(['code']) 
-	code: string; 
+export class CreateGooparDto {
+  @IsNotEmpty()
+  @Unique(['code'])
+  code: string;
 
-	@IsNotEmpty() 
-	description: string; 
+  @IsNotEmpty()
+  description: string;
 
-	@IsNotEmpty() 
+  /*	@IsNotEmpty() 
 	idactacc: number; 
 
 	@IsNotEmpty() 
@@ -34,11 +34,10 @@ export class CreateGooparDto {
 	idacccomowe: number; 
 
 	@IsNotEmpty() 
-	idcrecomacc: number; 
+	idcrecomacc: number; */
 
-	//Remember add <type enum> import and add IsEnum in import class-validator 
-	//@IsNotEmpty() 
-	//@IsEnum(<define type enum>) 
-	//status: <define type enum>; 
-
-} 
+  //Remember add <type enum> import and add IsEnum in import class-validator
+  //@IsNotEmpty()
+  //@IsEnum(<define type enum>)
+  //status: <define type enum>;
+}

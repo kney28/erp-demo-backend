@@ -1,5 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
+import { Hcspecialties } from 'src/clinic-history/hcspecialtiess/entities/hcspecialties.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -47,8 +49,10 @@ export class Hchealthpro extends BaseEntity {
   })
   typheapro: TypeProf;
 
-  @Column()
-  idthird: number;
+  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.account, {
+    eager: true,
+  })
+  idthird: ThirdPerson;
 
   @Column()
   businesscard: string;
@@ -60,8 +64,10 @@ export class Hchealthpro extends BaseEntity {
   })
   conttyp: TypeCont;
 
-  @Column()
-  idspecialty: number;
+  @ManyToOne(() => Hcspecialties, (hcSpecialties) => hcSpecialties.code, {
+    eager: true,
+  })
+  idspecialty: Hcspecialties;
 
   @Column()
   digsig: string;
