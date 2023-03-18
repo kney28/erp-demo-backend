@@ -121,6 +121,11 @@ import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.
 import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
 import { InvcumsModule } from './inventory/invcums/invcums.module';
 import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+//Tesoreria
+import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
+import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
+import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
+import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
 
 @Module({
   imports: [
@@ -238,7 +243,11 @@ import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
     AccbeginningbalancessModule,
     AccbeginningbalancesdetsModule,
     Accbeginningbalancesdet2sModule,
-    Accbeginningbalancesdet3sModule
+    Accbeginningbalancesdet3sModule,
+    TsnotconsModule,
+    TsboxessModule,
+    TsbankssModule,
+    TsconpaysModule,
   ],
   providers: [
     {

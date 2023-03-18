@@ -2,6 +2,8 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, OneToMany } from 'typeorm';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
+
 export enum LISTSTATUS {
   ACTIVO = 1,
   INACTIVO = 2,
@@ -33,4 +35,7 @@ export class Acccostcenters extends BaseEntity {
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idcostcenter)
   account: Accbalmov[];
+
+  @OneToMany(() => Tsboxes, (tsboxes) => tsboxes.idcoscen) 
+  costtsboxes: Tsboxes[];
 }
