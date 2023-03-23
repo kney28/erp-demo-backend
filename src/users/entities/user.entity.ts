@@ -11,6 +11,7 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Profile } from 'src/profiles/entities/profile.entity';
+import { Preconfigeneral } from 'src/budget/preconfigenerals/entities/preconfigeneral.entity';
 import * as bcrypt from 'bcrypt';
 
 @Entity()
@@ -35,7 +36,7 @@ export class User {
   active: boolean;
 
   @ManyToOne(() => Profile, (profile) => profile.users, {
-    eager: true
+    eager: true,
   })
   role: Profile;
 

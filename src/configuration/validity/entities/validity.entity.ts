@@ -4,6 +4,8 @@ import { Consecutivecontrolvalidities } from 'src/configuration/consecutivecontr
 import { AccountingValidity } from 'src/accountingValidity/entities/accountingvalidity.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accountingterms } from 'src/accounting/accountingtermss/entities/accountingterms.entity';
+import { Preconfigeneral } from 'src/budget/preconfigenerals/entities/preconfigeneral.entity';
+
 export enum ValidityStatus {
   ACTIVE = 1,
   INACTIVE = 2,
@@ -58,4 +60,9 @@ export class Validity extends BaseEntity {
     (accountingterms) => accountingterms.validity,
   )
   accountingtermss: Accountingterms[];
+
+  @OneToMany(() => Preconfigeneral, (preConfigeneral) => preConfigeneral.code, {
+    eager: true,
+  })
+  preconfigeneralcode: Preconfigeneral;
 }

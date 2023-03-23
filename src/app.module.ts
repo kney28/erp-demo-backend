@@ -121,11 +121,15 @@ import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.
 import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
 import { InvcumsModule } from './inventory/invcums/invcums.module';
 import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+
 //Tesoreria
 import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
 import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
+
+// Presupuesto
+import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenerals.module';
 
 @Module({
   imports: [
@@ -248,6 +252,7 @@ import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
     TsboxessModule,
     TsbankssModule,
     TsconpaysModule,
+    PreconfigeneralsModule
   ],
   providers: [
     {
