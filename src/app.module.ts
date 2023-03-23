@@ -68,6 +68,11 @@ import { ChargesModule } from './admissions/charges/charges.module';
 import { GroundsdenialcaresModule } from './admissions/groundsdenialcares/groundsdenialcares.module';
 import { SisbenlevelsModule } from './admissions/sisbenlevels/sisbenlevels.module';
 import { SpecialpopulationsModule } from './admissions/specialpopulations/specialpopulations.module';
+import { ModeratingcopaysModule } from './admissions/moderatingcopays/moderatingcopays.module';
+import { ModeratingcopaysdetsModule } from './admissions/moderatingcopaysdets/moderatingcopaysdets.module';
+import { HealthadministratorsModule } from './admissions/healthadministrators/healthadministrators.module';
+import { RequirementslistsModule } from './admissions/requirementslists/requirementslists.module';
+import { RequirementslistdetsModule } from './admissions/requirementslistdets/requirementslistdets.module';
 
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
 import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
@@ -129,6 +134,9 @@ import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
 
 // Presupuesto
+import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
+import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
+
 import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenerals.module';
 
 @Module({
@@ -187,6 +195,7 @@ import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenera
     SisbenLevelsModule,
     SocialsModule,
     SpecialPopulationModule,
+    HealthadministratorsModule,
     SubcategoriesCupsModule,
     SubgroupsCupsModule,
     ThirdPartyAccountantsModule,
@@ -208,6 +217,10 @@ import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenera
     GroundsdenialcaresModule,
     SisbenlevelsModule,
     SpecialpopulationsModule,
+    ModeratingcopaysModule,
+    ModeratingcopaysdetsModule,
+    RequirementslistsModule,
+    RequirementslistdetsModule,
     PermissionssModule,
     ConsecutivecontrolvaliditiessModule,
     CategoriescupssModule,
@@ -219,6 +232,8 @@ import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenera
     AccountingtermssModule,
     AcccostcenterssModule,
     AccbalmovsModule,
+    TscasrecconsModule,
+    TsdisconsModule,
     HcdignosessModule,
     HcspecialtiessModule,
     HchealthprosModule,

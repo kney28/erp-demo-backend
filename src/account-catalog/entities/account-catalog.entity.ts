@@ -5,8 +5,13 @@ import { Careservice } from 'src/billing/careservices/entities/careservice.entit
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accbalmov } from 'src/accounting/accbalmovs/entities/accbalmov.entity';
+
+import { Tscasreccon } from 'src/treasury/tscasreccons/entities/tscasreccon.entity';
+import { Tsdiscon } from 'src/treasury/tsdiscons/entities/tsdiscon.entity';
+
 import { Tsnotcon } from 'src/treasury/tsnotcons/entities/tsnotcon.entity';
 import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
+
 
 export enum levelCatalog {
   CLASS = 1,
@@ -177,6 +182,12 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idledgeraccount)
   account: Accbalmov[];
+
+  @OneToMany(() => Tscasreccon, (tscasreccon) => tscasreccon.idledacc)
+	tscasreccon: Tscasreccon[];
+
+  @OneToMany(() => Tsdiscon, (tsdiscons) => tsdiscons.idledacc)
+	tsdiscons: Tscasreccon[];
 
   @OneToMany(() => Tsnotcon, (tsnotcon) => tsnotcon.idledacc) 
   accidledacc: Tsnotcon[];
