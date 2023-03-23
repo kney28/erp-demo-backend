@@ -35,7 +35,7 @@ export class Detailnumerationdian extends BaseEntity {
 	@Column({ type: 'date' }) 
 	resolutionenddate: string; 
 
-	@Column() 
+	@Column({ nullable: true }) 
 	billingprefix: string; 
 
 	@Column() 

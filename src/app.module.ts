@@ -71,6 +71,8 @@ import { SpecialpopulationsModule } from './admissions/specialpopulations/specia
 import { ModeratingcopaysModule } from './admissions/moderatingcopays/moderatingcopays.module';
 import { ModeratingcopaysdetsModule } from './admissions/moderatingcopaysdets/moderatingcopaysdets.module';
 import { HealthadministratorsModule } from './admissions/healthadministrators/healthadministrators.module';
+import { RequirementslistsModule } from './admissions/requirementslists/requirementslists.module';
+import { RequirementslistdetsModule } from './admissions/requirementslistdets/requirementslistdets.module';
 
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
 import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
@@ -130,7 +132,7 @@ import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
 
-import { TscasrecconsModule } from './treasury/tscasreccons/Tscasreccons.Module';
+import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
 import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
 
 
@@ -214,6 +216,8 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     SpecialpopulationsModule,
     ModeratingcopaysModule,
     ModeratingcopaysdetsModule,
+    RequirementslistsModule,
+    RequirementslistdetsModule,
     PermissionssModule,
     ConsecutivecontrolvaliditiessModule,
     CategoriescupssModule,
