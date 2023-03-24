@@ -97,6 +97,11 @@ import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalanc
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
 import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
 import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
+import { HcvadsispromipressModule } from './clinic-history/hcvadsispromipress/hcvadsispromipress.module';
+import { HcclassanestrecordsModule } from './clinic-history/hcclassanestrecords/hcclassanestrecords.module';
+import { HcadvereventclasssModule } from './clinic-history/hcadvereventclasss/hcadvereventclasss.module';
+import { HcallerclasssModule } from './clinic-history/hcallerclasss/hcallerclasss.module';
+import { HcvacunclasssModule } from './clinic-history/hcvacunclasss/hcvacunclasss.module';
 
 // Bienes
 import { GooparsModule } from './goods/goopars/goopars.module';
@@ -252,7 +257,12 @@ import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenera
     TsboxessModule,
     TsbankssModule,
     TsconpaysModule,
-    PreconfigeneralsModule
+    PreconfigeneralsModule,
+    HcvadsispromipressModule,
+    HcclassanestrecordsModule,
+    HcadvereventclasssModule,
+    HcallerclasssModule,
+    HcvacunclasssModule
   ],
   providers: [
     {
