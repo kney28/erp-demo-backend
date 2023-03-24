@@ -18,14 +18,11 @@ export class CreateDetailnumerationdianDto {
 	resolutionenddate: string; 
 
 	@IsNotEmpty() 
-	billingprefix: string; 
-
-	@IsNotEmpty() 
 	initialinvoice: number; 
 
 	@IsNotEmpty() 
 	finalbill: number; 
-
+	
 	//Remember add <type enum> import and add IsEnum in import class-validator 
 	//@IsNotEmpty() 
 	//@IsEnum(<define type enum>) 
