@@ -107,6 +107,7 @@ import { HcclassanestrecordsModule } from './clinic-history/hcclassanestrecords/
 import { HcadvereventclasssModule } from './clinic-history/hcadvereventclasss/hcadvereventclasss.module';
 import { HcallerclasssModule } from './clinic-history/hcallerclasss/hcallerclasss.module';
 import { HcvacunclasssModule } from './clinic-history/hcvacunclasss/hcvacunclasss.module';
+import { HccauserefusrefersModule } from './clinic-history/hccauserefusrefers/hccauserefusrefers.module';
 
 // Bienes
 import { GooparsModule } from './goods/goopars/goopars.module';
@@ -277,7 +278,8 @@ import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenera
     HcclassanestrecordsModule,
     HcadvereventclasssModule,
     HcallerclasssModule,
-    HcvacunclasssModule
+    HcvacunclasssModule,
+    HccauserefusrefersModule
   ],
   providers: [
     {
