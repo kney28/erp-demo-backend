@@ -138,11 +138,10 @@ import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
 import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
-
-// Presupuesto
 import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
 import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
 
+// Presupuesto
 import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenerals.module';
 
 @Module({

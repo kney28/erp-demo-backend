@@ -1,4 +1,6 @@
-import { PartialType } from '@nestjs/swagger'; 
-import { CreatePreconfigeneralDto } from './create-preconfigeneral.dto'; 
+import { PartialType } from '@nestjs/swagger';
+import { CreatePreconfigeneralDto } from './create-preconfigeneral.dto';
 
-export class UpdatePreconfigeneralDto extends PartialType(CreatePreconfigeneralDto) {} 
+export class UpdatePreconfigeneralDto extends PartialType(
+  CreatePreconfigeneralDto,
+) {}
