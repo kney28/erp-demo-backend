@@ -32,7 +32,7 @@ export class Preconfigeneral extends BaseEntity {
   @Column()
   code: string;
 
-  @ManyToOne(() => Validity, (validity) => validity.status, {
+  @ManyToOne(() => Validity, (validity) => validity.id, {
     eager: true,
   })
   idvalidity: Validity;

@@ -2,11 +2,11 @@ import { IsNotEmpty } from 'class-validator';
 import { Unique } from 'typeorm';
 
 export class CreatePreconfigeneralDto {
-  /*@IsNotEmpty() 
-	@Unique(['code']) 
-	code: string; 
+  @IsNotEmpty()
+  @Unique(['code'])
+  code: string;
 
-	@IsNotEmpty() 
+  /*@IsNotEmpty() 
 	idvalidity: number; 
 
 	@IsNotEmpty() 
