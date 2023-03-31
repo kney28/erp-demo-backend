@@ -141,11 +141,6 @@ import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
 import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
 import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
 
-// Presupuesto
-import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenerals.module';
-import { PretypincsModule } from './budget/pretypincs/pretypincs.module';
-import { PretypexpsModule } from './budget/pretypexps/pretypexps.module';
-
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -280,10 +275,7 @@ import { PretypexpsModule } from './budget/pretypexps/pretypexps.module';
     HcallerclasssModule,
     HcvacunclasssModule,
     HccauserefusrefersModule,
-    HccauseremisrefersModule,
-    PreconfigeneralsModule,
-    PretypincsModule,
-    PretypexpsModule
+    HccauseremisrefersModule
   ],
   providers: [
     {
