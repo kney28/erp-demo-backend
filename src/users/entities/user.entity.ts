@@ -9,9 +9,11 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   ManyToOne,
+  OneToMany,
 } from 'typeorm';
 import { Profile } from 'src/profiles/entities/profile.entity';
 import * as bcrypt from 'bcrypt';
+import { Preconfigeneral } from 'src/budget/preconfigenerals/entities/preconfigeneral.entity';
 
 @Entity()
 export class User {
@@ -38,6 +40,9 @@ export class User {
     eager: true,
   })
   role: Profile;
+
+  @OneToMany(() => Preconfigeneral, (preConfigeneral) => preConfigeneral.id)
+  usersvalidity: Preconfigeneral[];
 
   @CreateDateColumn()
   created_at: Date;

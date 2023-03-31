@@ -144,6 +144,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
 // Presupuesto
 import { PreconfigeneralsModule } from './budget/preconfigenerals/preconfigenerals.module';
 import { PretypincsModule } from './budget/pretypincs/pretypincs.module';
+import { PretypexpsModule } from './budget/pretypexps/pretypexps.module';
 
 @Module({
   imports: [
@@ -281,7 +282,8 @@ import { PretypincsModule } from './budget/pretypincs/pretypincs.module';
     HccauserefusrefersModule,
     HccauseremisrefersModule,
     PreconfigeneralsModule,
-    PretypincsModule
+    PretypincsModule,
+    PretypexpsModule
   ],
   providers: [
     {
