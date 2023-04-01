@@ -13,7 +13,7 @@ export class Neighborhood extends BaseEntity {
   @Column()
   code: string;
 
-  @Column({ length: 60 })
+  @Column({ length: 100 })
   description: string;
 
   @ManyToOne(() => Municipality, (municipality) => municipality.neighborhoods)
