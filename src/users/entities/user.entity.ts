@@ -9,6 +9,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   ManyToOne,
+  OneToMany,
 } from 'typeorm';
 import { Profile } from 'src/profiles/entities/profile.entity';
 import * as bcrypt from 'bcrypt';
@@ -35,7 +36,7 @@ export class User {
   active: boolean;
 
   @ManyToOne(() => Profile, (profile) => profile.users, {
-    eager: true
+    eager: true,
   })
   role: Profile;
 
