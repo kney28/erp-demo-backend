@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique } from 'typeorm'; 
+import { Column, Entity, Unique, OneToMany } from 'typeorm'; 
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 
 export enum SpecialPopulationStatus {
 	ACTIVE = 1,
@@ -22,4 +23,6 @@ export class Specialpopulation extends BaseEntity {
 	}) 
 	status: SpecialPopulationStatus; 
 
+	@OneToMany(() => Patient, (patient) => patient.specialpopulation)
+	patients: Patient[];
 } 

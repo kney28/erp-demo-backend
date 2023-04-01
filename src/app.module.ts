@@ -73,12 +73,17 @@ import { ModeratingcopaysdetsModule } from './admissions/moderatingcopaysdets/mo
 import { HealthadministratorsModule } from './admissions/healthadministrators/healthadministrators.module';
 import { RequirementslistsModule } from './admissions/requirementslists/requirementslists.module';
 import { RequirementslistdetsModule } from './admissions/requirementslistdets/requirementslistdets.module';
+import { PatientsModule } from './admissions/patients/patients.module';
 
+// Contratación
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
 import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
 import { ParameterizationcupssModule } from './hiring/parameterizationcupss/parameterizationcupss.module';
 import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
+import { PercentageqxsModule } from './hiring/percentageqxs/percentageqxs.module';
+import { PercentajeqxdetsModule } from './hiring/percentajeqxdets/percentajeqxdets.module';
+import { HealthservicesModule } from './hiring/healthservices/healthservices.module';
 
 // Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
@@ -102,7 +107,13 @@ import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalanc
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
 import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
 import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
-
+import { HcvadsispromipressModule } from './clinic-history/hcvadsispromipress/hcvadsispromipress.module';
+import { HcclassanestrecordsModule } from './clinic-history/hcclassanestrecords/hcclassanestrecords.module';
+import { HcadvereventclasssModule } from './clinic-history/hcadvereventclasss/hcadvereventclasss.module';
+import { HcallerclasssModule } from './clinic-history/hcallerclasss/hcallerclasss.module';
+import { HcvacunclasssModule } from './clinic-history/hcvacunclasss/hcvacunclasss.module';
+import { HccauserefusrefersModule } from './clinic-history/hccauserefusrefers/hccauserefusrefers.module';
+import { HccauseremisrefersModule } from './clinic-history/hccauseremisrefers/hccauseremisrefers.module'; 
 // Bienes
 import { GooparsModule } from './goods/goopars/goopars.module';
 import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
@@ -126,15 +137,14 @@ import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.
 import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
 import { InvcumsModule } from './inventory/invcums/invcums.module';
 import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+
 //Tesoreria
 import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
 import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
-
 import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
 import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
-
 
 @Module({
   imports: [
@@ -195,6 +205,9 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     HealthadministratorsModule,
     SubcategoriesCupsModule,
     SubgroupsCupsModule,
+    PercentageqxsModule,
+    PercentajeqxdetsModule,
+    HealthservicesModule,
     ThirdPartyAccountantsModule,
     ThirdPersonModule,
     TypesSeatsModule,
@@ -218,6 +231,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     ModeratingcopaysdetsModule,
     RequirementslistsModule,
     RequirementslistdetsModule,
+    PatientsModule,
     PermissionssModule,
     ConsecutivecontrolvaliditiessModule,
     CategoriescupssModule,
@@ -263,7 +277,14 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     TsnotconsModule,
     TsboxessModule,
     TsbankssModule,
-    TsconpaysModule
+    TsconpaysModule,
+    HcvadsispromipressModule,
+    HcclassanestrecordsModule,
+    HcadvereventclasssModule,
+    HcallerclasssModule,
+    HcvacunclasssModule,
+    HccauserefusrefersModule,
+    HccauseremisrefersModule
   ],
   providers: [
     {

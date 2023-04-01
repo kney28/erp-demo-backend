@@ -1,9 +1,10 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne, OneToMany } from 'typeorm';
 import { GroupsCup } from 'src/hiring/groups-cups/entities/groups-cup.entity';
 import { Subgruposcups } from 'src/hiring/subgruposcupss/entities/subgruposcups.entity';
 import { Categoriescups } from 'src/hiring/categoriescupss/entities/categoriescups.entity';
 import { Subcatcups } from 'src/hiring/subcatcupss/entities/subcatcups.entity';
+import { Healthservice } from 'src/hiring/healthservices/entities/healthservice.entity';
 
 export enum ParameterizationcupsStatus {
 	ACTIVE = 1,
@@ -57,4 +58,7 @@ export class Parameterizationcups extends BaseEntity {
 		eager: true
 	})
 	subcategory: Subcatcups;
+
+	@OneToMany(() => Healthservice, (healthservice) => healthservice.parcups)
+	healthservice: Healthservice[];
 } 

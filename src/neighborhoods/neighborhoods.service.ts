@@ -26,6 +26,7 @@ export class NeighborhoodsService {
     const neighborhoods = await this.neighborhoodRepository
       .createQueryBuilder('neighborhood')
       .leftJoinAndSelect('neighborhood.municipality', 'municipality')
+      .leftJoinAndSelect('municipality.department', 'department')
       .getMany();
 
     return neighborhoods;
@@ -35,6 +36,7 @@ export class NeighborhoodsService {
     const neighborhoods = await this.neighborhoodRepository
       .createQueryBuilder('neighborhood')
       .leftJoinAndSelect('neighborhood.municipality', 'municipality')
+      .leftJoinAndSelect('municipality.department', 'department')
       .where('neighborhood.id = :id', { id: id })
       .getOne();
 

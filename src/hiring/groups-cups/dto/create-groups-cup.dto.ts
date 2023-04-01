@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
-import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
+import { Status } from 'src/base/baseEntity';
 
 export class CreateGroupsCupDto {
   @IsNotEmpty({
@@ -15,6 +15,6 @@ export class CreateGroupsCupDto {
   @IsNotEmpty({
     message: 'El campo estado no puede estar vacio.',
   })
-  @IsEnum(statusGlobal)
-  status: statusGlobal;
+  @IsEnum(Status)
+  status: Status;
 }
