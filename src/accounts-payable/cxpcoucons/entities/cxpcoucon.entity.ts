@@ -8,9 +8,9 @@ export enum Status {
 }
 
 export enum ConceptType {
-  NINGUNO = 0,
-  CUENTASPORPAGAR = 1,
-  NOTAS = 2,
+  NINGUNO = 1,
+  CUENTASPORPAGAR = 2,
+  NOTAS = 3,
 }
 
 export enum Selection {

@@ -1,5 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, ManyToOne } from 'typeorm';
+import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
+import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
 
 export enum Status {
   ACTIVE = 1,
@@ -19,11 +21,15 @@ export class Cxpproviders extends BaseEntity {
   @Column()
   code: string;
 
-  @Column()
-  idthird: number;
+  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.cxpproviders, {
+    eager: true,
+  })
+  idthird: ThirdPerson;
 
-  @Column()
-  thirddocument: string;
+  //@ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.cxpproviders, {
+  //  eager: true,
+  //})
+  //thirddocument: ThirdPerson;
 
   @Column({
     type: 'enum',
@@ -32,7 +38,9 @@ export class Cxpproviders extends BaseEntity {
   })
   typeprovider: TypeProvider;
 
-  @Column()
+  @ManyToOne(() => AccountCatalog, (accountCatalog) => accountCatalog.id, {
+    eager: true,
+  })
   idledacc: number;
 
   @Column()
