@@ -1,5 +1,6 @@
 import { BaseEntity } from '../../base/baseEntity';
-import { Column, Entity, Unique } from 'typeorm';
+import { Column, Entity, Unique, OneToMany } from 'typeorm';
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 export enum statusCountry {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
@@ -27,4 +28,7 @@ export class Country extends BaseEntity {
     this.description = description || '';
     this.status = status || statusCountry.ACTIVE;
   }
+
+  @OneToMany(() => Patient, (patient) => patient.country)
+  patients: Patient[];
 }

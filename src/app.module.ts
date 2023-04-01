@@ -73,12 +73,17 @@ import { ModeratingcopaysdetsModule } from './admissions/moderatingcopaysdets/mo
 import { HealthadministratorsModule } from './admissions/healthadministrators/healthadministrators.module';
 import { RequirementslistsModule } from './admissions/requirementslists/requirementslists.module';
 import { RequirementslistdetsModule } from './admissions/requirementslistdets/requirementslistdets.module';
+import { PatientsModule } from './admissions/patients/patients.module';
 
+// Contratación
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
 import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
 import { ParameterizationcupssModule } from './hiring/parameterizationcupss/parameterizationcupss.module';
 import { SubcatcupssModule } from './hiring/subcatcupss/subcatcupss.module';
 import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.module';
+import { PercentageqxsModule } from './hiring/percentageqxs/percentageqxs.module';
+import { PercentajeqxdetsModule } from './hiring/percentajeqxdets/percentajeqxdets.module';
+import { HealthservicesModule } from './hiring/healthservices/healthservices.module';
 
 // Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
@@ -195,6 +200,9 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     HealthadministratorsModule,
     SubcategoriesCupsModule,
     SubgroupsCupsModule,
+    PercentageqxsModule,
+    PercentajeqxdetsModule,
+    HealthservicesModule,
     ThirdPartyAccountantsModule,
     ThirdPersonModule,
     TypesSeatsModule,
@@ -218,6 +226,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     ModeratingcopaysdetsModule,
     RequirementslistsModule,
     RequirementslistdetsModule,
+    PatientsModule,
     PermissionssModule,
     ConsecutivecontrolvaliditiessModule,
     CategoriescupssModule,

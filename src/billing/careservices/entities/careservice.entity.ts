@@ -4,6 +4,7 @@ import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters
 import { CostCenter } from 'src/costCenter/entities/costCenter.entity';
 import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 import { Bed } from 'src/hospitalization/beds/entities/bed.entity';
+import { Healthservice } from 'src/hiring/healthservices/entities/healthservice.entity';
 
 export enum CareserviceStatus {
 	ACTIVE = 1,
@@ -99,4 +100,6 @@ export class Careservice extends BaseEntity {
 	@OneToMany(() => Bed, (bed) => bed.careservice)
 	beds: Bed[];
 
+	@OneToMany(() => Healthservice, (healthservice) => healthservice.careservice)
+	healthservice: Healthservice[];
 } 

@@ -1,7 +1,8 @@
 import { selectionCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
-import { Column, Entity, ManyToOne } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 
 export enum taxpayerTypeCatalog {
   SIMPLIFIED_REGIMEN = 1,
@@ -26,6 +27,9 @@ export enum selectionCatalo {
 export class ThirdPartyAccountant extends BaseEntity {
   @ManyToOne(() => ThirdPerson, (third) => third.thirdPartyAccountant)
   third: ThirdPerson;
+
+  @OneToMany(() => Patient, (patient) => patient.thirdPartyAccountant)
+  patients: Patient[];
 
   @Column({
     type: 'enum',
