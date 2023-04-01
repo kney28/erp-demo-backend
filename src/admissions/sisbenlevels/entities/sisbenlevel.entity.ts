@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique } from 'typeorm'; 
+import { Column, Entity, Unique, OneToMany } from 'typeorm'; 
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 
 export enum SisbenLevelStatus {
 	ACTIVE = 1,
@@ -88,27 +89,30 @@ export class Sisbenlevel extends BaseEntity {
 		type: 'enum',
 		enum: SisbenLevelType,
 		default: SisbenLevelType.NONE,
-	  })
-	  sisbenlevel: SisbenLevelType;
+	})
+	sisbenlevel: SisbenLevelType;
 	
-	  @Column({
+	@Column({
 		type: 'enum',
 		enum: SisbenLevelGroup,
 		default: SisbenLevelGroup.NONE,
-	  })
-	  sisbengroup: SisbenLevelGroup;
-		
-	  @Column({
+	})
+	sisbengroup: SisbenLevelGroup;
+	
+	@Column({
 		type: 'enum',
 		enum: SisbenLevelSubgroup,
 		default: SisbenLevelSubgroup.NONE,
-	  })
-	  sisbensubgroup: SisbenLevelSubgroup;
-		
-	  @Column({
+	})
+	sisbensubgroup: SisbenLevelSubgroup;
+	
+	@Column({
 		type: 'enum',
 		enum: SisbenLevelStatus,
 		default: SisbenLevelStatus.ACTIVE,
-	  })
-	  status: SisbenLevelStatus;
+	})
+	status: SisbenLevelStatus;
+
+	@OneToMany(() => Patient, (patient) => patient.sisbenlevel)
+	patients: Patient[];
 } 

@@ -19,7 +19,9 @@ export class Municipality extends BaseEntity {
   @Column({ length: 60 })
   description: string;
 
-  @ManyToOne(() => Department, (department) => department.municipalities)
+  @ManyToOne(() => Department, (department) => department.municipalities, {
+    eager: true
+  })
   department: Department;
 
   @OneToMany(() => Neighborhood, (neighborhood) => neighborhood.municipality)

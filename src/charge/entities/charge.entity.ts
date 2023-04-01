@@ -21,4 +21,5 @@ export class Charge extends BaseEntity {
     default: ChargeStatus.ACTIVE,
   })
   status: ChargeStatus;
+
 }

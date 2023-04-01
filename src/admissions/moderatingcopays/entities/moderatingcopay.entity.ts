@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique } from 'typeorm'; 
+import { Column, Entity, Unique, OneToMany } from 'typeorm'; 
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 
 export enum Status {
 	ACTIVE = 1,
@@ -20,4 +21,7 @@ export class Moderatingcopay extends BaseEntity {
 		enum: Status, 
 	}) 
 	status: Status; 
+
+	@OneToMany(() => Patient, (patient) => patient.copgovfee)
+  	patients: Patient[];
 } 
