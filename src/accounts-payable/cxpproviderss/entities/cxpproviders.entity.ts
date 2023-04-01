@@ -21,15 +21,15 @@ export class Cxpproviders extends BaseEntity {
   @Column()
   code: string;
 
-  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.id, {
+  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.cxpproviders, {
     eager: true,
   })
   idthird: ThirdPerson;
 
-  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.document, {
-    eager: true,
-  })
-  thirddocument: ThirdPerson;
+  //@ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.cxpproviders, {
+  //  eager: true,
+  //})
+  //thirddocument: ThirdPerson;
 
   @Column({
     type: 'enum',
