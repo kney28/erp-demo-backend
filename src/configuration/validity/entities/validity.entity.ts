@@ -4,6 +4,7 @@ import { Consecutivecontrolvalidities } from 'src/configuration/consecutivecontr
 import { AccountingValidity } from 'src/accountingValidity/entities/accountingvalidity.entity';
 import { Acccongen } from 'src/accounting/acccongens/entities/acccongen.entity';
 import { Accountingterms } from 'src/accounting/accountingtermss/entities/accountingterms.entity';
+
 export enum ValidityStatus {
   ACTIVE = 1,
   INACTIVE = 2,
@@ -58,4 +59,7 @@ export class Validity extends BaseEntity {
     (accountingterms) => accountingterms.validity,
   )
   accountingtermss: Accountingterms[];
+
+  //@Column()
+  //preconfigeneralcode: number;
 }

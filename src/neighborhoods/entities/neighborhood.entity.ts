@@ -2,6 +2,7 @@ import { BaseEntity } from '../../base/baseEntity';
 import { Column, Entity, ManyToOne, OneToMany, Unique } from 'typeorm';
 import { Municipality } from 'src/municipalities/entities/municipality.entity';
 import { Company } from 'src/companies/entities/company.entity';
+import { Patient } from 'src/admissions/patients/entities/patient.entity';
 export enum statusNeighborhood {
   ACTIVE = 'active',
   INACTIVE = 'inactive',
@@ -13,10 +14,12 @@ export class Neighborhood extends BaseEntity {
   @Column()
   code: string;
 
-  @Column({ length: 60 })
+  @Column({ length: 100 })
   description: string;
 
-  @ManyToOne(() => Municipality, (municipality) => municipality.neighborhoods)
+  @ManyToOne(() => Municipality, (municipality) => municipality.neighborhoods, {
+    eager: true
+  })
   municipality: Municipality;
 
   @Column({
@@ -28,6 +31,9 @@ export class Neighborhood extends BaseEntity {
 
   @OneToMany(() => Company, (company) => company.neighborhood)
   detail: Company[];
+
+  @OneToMany(() => Patient, (patient) => patient.neighborhood)
+  patients: Patient[];
 
   constructor(
     code: string,

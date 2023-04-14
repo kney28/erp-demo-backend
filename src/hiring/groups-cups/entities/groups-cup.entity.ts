@@ -1,4 +1,4 @@
-import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
+import { Status } from 'src/base/baseEntity';
 import { Column, Entity, Unique, OneToMany } from 'typeorm';
 import { BaseEntity } from 'src/base/baseEntity';
 import { Parameterizationcups } from 'src/hiring/parameterizationcupss/entities/parameterizationcups.entity';
@@ -14,9 +14,9 @@ export class GroupsCup extends BaseEntity {
 
   @Column({
     type: 'enum',
-    enum: statusGlobal,
+    enum: Status,
   })
-  status: statusGlobal;
+  status: Status;
 
   @OneToMany(() => Parameterizationcups, (parameterizationCups) => parameterizationCups.group)
 	parameterizationCups: Parameterizationcups[];

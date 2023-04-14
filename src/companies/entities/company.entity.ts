@@ -1,5 +1,4 @@
 import { IsEmail } from 'class-validator';
-import { statusGlobal } from 'src/account-catalog/entities/account-catalog.entity';
 import { BaseEntity } from 'src/base/baseEntity';
 import { Neighborhood } from 'src/neighborhoods/entities/neighborhood.entity';
 import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
@@ -9,6 +8,11 @@ export enum companyTypes {
   NONE = 0,
   PUBLIC = 1,
   PRIVATE = 2,
+}
+
+export enum statusGlobal {
+  ACTIVE = 1,
+  INACTIVE = 2,
 }
 
 @Entity()
