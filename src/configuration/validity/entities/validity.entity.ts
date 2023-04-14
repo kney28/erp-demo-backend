@@ -60,6 +60,6 @@ export class Validity extends BaseEntity {
   )
   accountingtermss: Accountingterms[];
 
-  @Column()
-  preconfigeneralcode: number;
+  //@Column()
+  //preconfigeneralcode: number;
 }
