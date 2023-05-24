@@ -6,8 +6,8 @@ export class CreateCxpprovidersDto {
   @Unique(['code'])
   code: string;
 
-  @IsNotEmpty()
-  idthird: number;
+  /*@IsNotEmpty()
+  idthird: number;*/
 
   //@IsNotEmpty()
   //thirddocument: string;

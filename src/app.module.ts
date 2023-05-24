@@ -112,7 +112,13 @@ import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalanc
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
 import { HcspecialtiessModule } from './clinic-history/hcspecialtiess/hcspecialtiess.module';
 import { HchealthprosModule } from './clinic-history/hchealthpros/hchealthpros.module';
-
+import { HcvadsispromipressModule } from './clinic-history/hcvadsispromipress/hcvadsispromipress.module';
+import { HcclassanestrecordsModule } from './clinic-history/hcclassanestrecords/hcclassanestrecords.module';
+import { HcadvereventclasssModule } from './clinic-history/hcadvereventclasss/hcadvereventclasss.module';
+import { HcallerclasssModule } from './clinic-history/hcallerclasss/hcallerclasss.module';
+import { HcvacunclasssModule } from './clinic-history/hcvacunclasss/hcvacunclasss.module';
+import { HccauserefusrefersModule } from './clinic-history/hccauserefusrefers/hccauserefusrefers.module';
+import { HccauseremisrefersModule } from './clinic-history/hccauseremisrefers/hccauseremisrefers.module'; 
 // Bienes
 import { GooparsModule } from './goods/goopars/goopars.module';
 import { GooconfsModule } from './goods/gooconfs/gooconfs.module'; 
@@ -136,15 +142,14 @@ import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.
 import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
 import { InvcumsModule } from './inventory/invcums/invcums.module';
 import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+
 //Tesoreria
 import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
 import { TsboxessModule } from './treasury/tsboxess/tsboxess.module';
 import { TsbankssModule } from './treasury/tsbankss/tsbankss.module';
 import { TsconpaysModule } from './treasury/tsconpays/tsconpays.module';
-
 import { TscasrecconsModule } from './treasury/tscasreccons/tscasreccons.module';
 import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
-
 
 @Module({
   imports: [
@@ -281,7 +286,14 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     TsnotconsModule,
     TsboxessModule,
     TsbankssModule,
-    TsconpaysModule
+    TsconpaysModule,
+    HcvadsispromipressModule,
+    HcclassanestrecordsModule,
+    HcadvereventclasssModule,
+    HcallerclasssModule,
+    HcvacunclasssModule,
+    HccauserefusrefersModule,
+    HccauseremisrefersModule
   ],
   providers: [
     {
