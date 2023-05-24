@@ -84,6 +84,11 @@ import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.mod
 import { PercentageqxsModule } from './hiring/percentageqxs/percentageqxs.module';
 import { PercentajeqxdetsModule } from './hiring/percentajeqxdets/percentajeqxdets.module';
 import { HealthservicesModule } from './hiring/healthservices/healthservices.module';
+import { ParameterizationqxsModule } from './hiring/parameterizationqxs/parameterizationqxs.module';
+import { Parqxdetail1sModule } from './hiring/parqxdetail1s/parqxdetail1s.module';
+import { Parqxdetail2sModule } from './hiring/parqxdetail2s/parqxdetail2s.module';
+import { Parqxdetail3sModule } from './hiring/parqxdetail3s/parqxdetail3s.module';
+
 
 // Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
@@ -203,6 +208,10 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     PercentageqxsModule,
     PercentajeqxdetsModule,
     HealthservicesModule,
+    ParameterizationqxsModule,
+    Parqxdetail1sModule,
+    Parqxdetail2sModule,
+    Parqxdetail3sModule,
     ThirdPartyAccountantsModule,
     ThirdPersonModule,
     TypesSeatsModule,
