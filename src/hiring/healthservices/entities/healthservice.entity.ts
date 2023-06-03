@@ -1,8 +1,10 @@
 import { BaseEntity } from 'src/base/baseEntity'; 
-import { Column, Entity, Unique, ManyToOne } from 'typeorm'; 
+import { Column, Entity, Unique, ManyToOne, OneToMany } from 'typeorm'; 
 import { Status } from 'src/base/baseEntity';
 import { Parameterizationcups } from 'src/hiring/parameterizationcupss/entities/parameterizationcups.entity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
+import { Parqxdetail3 } from 'src/hiring/parqxdetail3s/entities/parqxdetail3.entity';
+import { Parqxdetail2 } from 'src/hiring/parqxdetail2s/entities/parqxdetail2.entity';
 
 export enum ServiceType {
 	NINGUNO = 0,
@@ -226,4 +228,10 @@ export class Healthservice extends BaseEntity {
 		eager: true
 	})
 	careservice: Careservice;
+
+	@OneToMany(() => Parqxdetail3, (parqxdetail3) => parqxdetail3.healthservice)
+	parqxdetail3: Parqxdetail3[];
+
+	@OneToMany(() => Parqxdetail2, (parqxdetail2) => parqxdetail2.healthservice)
+	parqxdetail2: Parqxdetail2[];
 } 
