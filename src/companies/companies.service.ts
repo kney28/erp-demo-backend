@@ -31,6 +31,11 @@ export class CompaniesService {
     return this.companysRepository.findOneBy({ id });
   }
 
+  findCompany(): Promise<Company[]> {    
+    const company = this.companysRepository.find();
+    return company;
+  }
+
   async update(
     id: string,
     updateCompanyDto: UpdateCompanyDto,
