@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CompaniesService } from './companies.service';
 import { CompaniesController } from './companies.controller';
+import { CompanyController } from './company.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Company } from './entities/company.entity';
 import { CompanyLogs } from './entities/companylogs.entity';
@@ -13,7 +14,7 @@ import { ThirdPersonModule } from 'src/third-person/third-person.module';
     TypeOrmModule.forFeature([CompanyLogs]),
     ThirdPersonModule,
   ],
-  controllers: [CompaniesController],
+  controllers: [CompaniesController, CompanyController],
   providers: [CompaniesService, CompanySubscriber],
   exports: [CompaniesService],
 })

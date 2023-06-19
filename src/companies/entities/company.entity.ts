@@ -20,6 +20,11 @@ export class Company extends BaseEntity {
   @Column()
   name: string;
 
+  @Column({
+    default: null
+  })
+  logo: string;
+
   @Column()
   legal_representative: string;
 
