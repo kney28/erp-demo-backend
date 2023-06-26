@@ -19,7 +19,11 @@ export class PermissionssService {
 	} 
 
 	findAll(): Promise<Permissions[]> { 
-		return this.permissionssRepository.find(); 
+		return this.permissionssRepository.find({
+			order: {
+				id: "ASC"
+			}
+		}); 
 	} 
 
 	findOne(id: string): Promise<Permissions> { 

@@ -1,18 +1,18 @@
 import { IsNotEmpty } from 'class-validator'; 
 import { Unique } from 'typeorm'; 
+import { Erp_modules } from 'src/configuration/erp_moduless/entities/erp_modules.entity'
+import { Profile } from 'src/configuration/profiles/entities/profile.entity';
 
 export class CreatePermissionsDto { 
 	@IsNotEmpty() 
 	@Unique(['code']) 
 	code: string; 
 
-	//@IsNotEmpty() 
-	//profile: number; 
+	@IsNotEmpty() 
+	profile: Profile; 
 
-	//Remember add <type enum> import and add IsEnum in import class-validator 
-	//@IsNotEmpty() 
-	//@IsEnum(<define type enum>) 
-	//option: <define type enum>; 
+	@IsNotEmpty() 
+	option: Erp_modules; 
 
 	@IsNotEmpty() 
 	add: boolean; 
@@ -37,6 +37,9 @@ export class CreatePermissionsDto {
 
 	@IsNotEmpty() 
 	process: boolean; 
+
+	@IsNotEmpty() 
+	run: boolean; 
 
 	@IsNotEmpty() 
 	override: boolean; 

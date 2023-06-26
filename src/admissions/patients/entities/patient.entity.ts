@@ -1,7 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Status } from 'src/base/baseEntity'; 
 import { Column, Entity, Unique, ManyToOne } from 'typeorm'; 
-import { Neighborhood } from 'src/neighborhoods/entities/neighborhood.entity';
+import { Neighborhood } from 'src/configuration/neighborhoods/entities/neighborhood.entity';
 import { Country } from 'src/countries/entities/country.entity';
 import { Charge } from 'src/admissions/charges/entities/charge.entity';
 import { Occupation } from 'src/admissions/occupations/entities/occupation.entity';

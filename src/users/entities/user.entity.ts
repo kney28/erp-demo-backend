@@ -11,7 +11,7 @@ import {
   ManyToOne,
   OneToMany,
 } from 'typeorm';
-import { Profile } from 'src/profiles/entities/profile.entity';
+import { Profile } from 'src/configuration/profiles/entities/profile.entity';
 import * as bcrypt from 'bcrypt';
 
 @Entity()
