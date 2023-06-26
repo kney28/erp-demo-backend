@@ -15,7 +15,7 @@ import { Municipality } from './entities/municipality.entity';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 @UseGuards(JwtAuthGuard)
-@Controller('municipalities')
+@Controller('configuration/municipalities')
 @ApiTags('Municipios')
 @ApiBearerAuth()
 export class MunicipalitiesController {
