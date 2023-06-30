@@ -1,13 +1,7 @@
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
-import { Profile } from 'src/profiles/entities/profile.entity';
-
-export enum optionPermissions {
-  ConfiguracionMaestrosConfiguracionGeneral = 1,
-  ConfiguracionMaestrosPerfiles = 2,
-  ConfiguracionMaestrosUsuarios = 3,
-  ConfiguracionMaestrosPaises = 4,
-}
+import { Profile } from 'src/configuration/profiles/entities/profile.entity';
+import { Erp_modules } from 'src/configuration/erp_moduless/entities/erp_modules.entity'
 
 @Entity()
 @Unique(['code'])
@@ -20,13 +14,10 @@ export class Permissions extends BaseEntity {
   })
   profile: Profile;
 
-  //The next column is ENUM, please complete the code necessary
-  @Column({
-    type: 'enum',
-    enum: optionPermissions,
-    default: optionPermissions.ConfiguracionMaestrosConfiguracionGeneral,
+  @ManyToOne(() => Erp_modules, (erp_modules) => erp_modules.permissions, {
+    eager: true,
   })
-  option: optionPermissions;
+  option: Erp_modules;
 
   @Column()
   add: boolean;
