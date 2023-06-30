@@ -15,11 +15,9 @@ import { AddressesModule } from './addresses/addresses.module';
 import { AnnualClosingModule } from './annual-closing/annualclosing.module';
 import { AuthModule } from './auth/auth.module';
 import { CategoriesCupsModule } from './categories-cups/categories-cups.module';
-import { CompaniesModule } from './companies/companies.module';
 import { ContactTypeModule } from './contactType/contactType.module';
 import { CostCenterModule } from './costCenter/costCenter.module';
 import { CountriesModule } from './countries/countries.module';
-import { DepartmentsModule } from './departments/departments.module';
 import { DetailCopaysAndFeesModule } from './detail-copays-and-fees/detailCopaysAndFees.module';
 import { DetailsAccountingSeatModule } from './detailsAccountingSeat/detailsAccountingSeat.module';
 import { GeneralAccounting } from './generalAccounting/entities/generalaccounting.entity';
@@ -29,11 +27,7 @@ import { HealthAdministratorsModule } from './health-administrators/healthadmini
 import { UserInterceptor } from './interceptors/user.interceptor';
 import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
 import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
-import { MunicipalitiesModule } from './municipalities/municipalities.module';
-import { NeighborhoodsModule } from './neighborhoods/neighborhoods.module';
 import { OccupationsModule } from './admissions/occupations/occupations.module';
-import { ProfilesPermissionsModule } from './profiles-permissions/profiles-permissions.module';
-import { ProfilesModule } from './profiles/profiles.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { RequirementsListsDetailsModule } from './requirements-lists-details/requirements-lists-details.module';
 import { RequirementsListsModule } from './requirements-lists/requirements-lists.module';
@@ -46,7 +40,6 @@ import { SubgroupsCupsModule } from './subgroups-cups/subgroups-cups.module';
 import { ThirdPartyAccountantsModule } from './third-party-accountants/third-party-accountants.module';
 import { ThirdPersonModule } from './third-person/third-person.module';
 import { TypesSeatsModule } from './types-seats/types-seats.module';
-import { UsersModule } from './users/users.module';
 
 import { CareservicesModule } from './billing/careservices/careservices.module';
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module';
@@ -75,6 +68,15 @@ import { RequirementslistsModule } from './admissions/requirementslists/requirem
 import { RequirementslistdetsModule } from './admissions/requirementslistdets/requirementslistdets.module';
 import { PatientsModule } from './admissions/patients/patients.module';
 
+// Configuracion
+import { Erp_modulessModule } from './configuration/erp_moduless/erp_moduless.module';
+import { ProfilesModule } from './configuration/profiles/profiles.module';
+import { UsersModule } from './users/users.module';
+import { DepartmentsModule } from './configuration/departments/departments.module';
+import { MunicipalitiesModule } from './configuration/municipalities/municipalities.module';
+import { NeighborhoodsModule } from './configuration/neighborhoods/neighborhoods.module';
+import { CompaniesModule } from './configuration/companies/companies.module';
+
 // Contratación
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
 import { EntitytemplatesModule } from './hiring/entitytemplates/entitytemplates.module';
@@ -84,6 +86,11 @@ import { SubgruposcupssModule } from './hiring/subgruposcupss/subgruposcupss.mod
 import { PercentageqxsModule } from './hiring/percentageqxs/percentageqxs.module';
 import { PercentajeqxdetsModule } from './hiring/percentajeqxdets/percentajeqxdets.module';
 import { HealthservicesModule } from './hiring/healthservices/healthservices.module';
+import { ParameterizationqxsModule } from './hiring/parameterizationqxs/parameterizationqxs.module';
+import { Parqxdetail1sModule } from './hiring/parqxdetail1s/parqxdetail1s.module';
+import { Parqxdetail2sModule } from './hiring/parqxdetail2s/parqxdetail2s.module';
+import { Parqxdetail3sModule } from './hiring/parqxdetail3s/parqxdetail3s.module';
+
 
 // Contable
 import { AcccongensModule } from './accounting/acccongens/acccongens.module';
@@ -169,6 +176,13 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
       global: true,
       middleware: { mount: true },
     }),
+    Erp_modulessModule,
+    ProfilesModule,
+    UsersModule,
+    DepartmentsModule,
+    MunicipalitiesModule,
+    NeighborhoodsModule,
+    CompaniesModule,
     AccountBalancesModule,
     AccountCatalogModule,
     AccountingSeatsModule,
@@ -177,11 +191,9 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     AnnualClosingModule,
     AuthModule,
     CategoriesCupsModule,
-    CompaniesModule,
     ContactTypeModule,
     CostCenterModule,
     CountriesModule,
-    DepartmentsModule,
     DetailsAccountingSeatModule,
     DetailCopaysAndFeesModule,
     GeneralAccounting,
@@ -190,11 +202,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     HealthAdministratorsModule,
     MonthlyClosureModule,
     MonthlyOpeningModule,
-    MunicipalitiesModule,
-    NeighborhoodsModule,
     OccupationsModule,
-    ProfilesModule,
-    ProfilesPermissionsModule,
     RegisterStatusModule,
     RequirementsListsDetailsModule,
     RequirementsListsModule,
@@ -208,10 +216,13 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     PercentageqxsModule,
     PercentajeqxdetsModule,
     HealthservicesModule,
+    ParameterizationqxsModule,
+    Parqxdetail1sModule,
+    Parqxdetail2sModule,
+    Parqxdetail3sModule,
     ThirdPartyAccountantsModule,
     ThirdPersonModule,
     TypesSeatsModule,
-    UsersModule,
     ValidityModule,
     CareservicesModule,
     DetailnumerationdiansModule,
