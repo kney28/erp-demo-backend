@@ -4,8 +4,13 @@ import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+
 import { ClsModule } from 'nestjs-cls';
 import { DataSource } from 'typeorm';
+
+import { ApisModule } from './apis/apis.module';
 
 import { AccountBalancesModule } from './account-balances/account-balances.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
@@ -155,6 +160,15 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'uploads/configuration'),
+      serveRoot: '/company-logo',
+      serveStaticOptions: {
+        setHeaders: (res: any, path: string, stat: any) => {
+          res.set('Cross-Origin-Resource-Policy', 'cross-origin')
+        }
+      }
+    }),
     ConfigModule.forRoot({
       isGlobal: true,
     }),
@@ -176,6 +190,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
       global: true,
       middleware: { mount: true },
     }),
+    ApisModule,
     Erp_modulessModule,
     ProfilesModule,
     UsersModule,
