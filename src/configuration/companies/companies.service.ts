@@ -1,12 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, PipeTransform, ArgumentMetadata } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
 import { Company } from './entities/company.entity';
+import { Observable } from 'rxjs';
 
 @Injectable()
-export class CompaniesService {
+export class CompaniesService implements PipeTransform {
+  transform(value: any, metadata: ArgumentMetadata) {
+    // "value" is an object containing the file's attributes and metadata
+    const oneKb = 1000;
+    return value.size < oneKb;
+  }
   constructor(
     @InjectRepository(Company)
     private companysRepository: Repository<Company>,
@@ -53,4 +59,11 @@ export class CompaniesService {
     });
     return await this.companysRepository.softRemove(company);
   }
+
+  /*
+  async findLogo(id: string): Observable<string> {
+    console.log(id);
+    return 'Logo.png';
+  }
+  */
 }
