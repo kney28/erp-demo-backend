@@ -50,7 +50,7 @@ export class User {
   deleted_at: Date;
 
   @BeforeInsert()
-  @BeforeUpdate()
+  // @BeforeUpdate()
   async hashPassword() {
     if (this.password) {
       const salt = await bcrypt.genSalt();
