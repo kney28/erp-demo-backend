@@ -19,7 +19,7 @@ export class CreateAccountCatalogDto {
   @IsNotEmpty({
     message: 'El campo código no puede estar vacio.',
   })
-  code: string;
+  code: number;
 
   @IsNotEmpty({
     message: 'El campo descripción no puede estar vacio.',
@@ -56,16 +56,16 @@ export class CreateAccountCatalogDto {
   @IsEnum(selectionCatalog)
   affectsCostCenters: selectionCatalog;
 
-  @IsNotEmpty({
+  /* @IsNotEmpty({
     message: 'El campo traslado terceros no puede estar vacio.',
   })
   @IsEnum(selectionCatalog)
-  transferThirdParties: selectionCatalog;
+  transferThirdParties: selectionCatalog; */
 
-  @ThirdPersonExist({
+  /* @ThirdPersonExist({
     message: 'El id del tercero, no existe.',
   })
-  thirdId: number;
+  thirdId: number; */
 
   @IsNotEmpty({
     message: 'El campo afecta retención no puede estar vacio.',

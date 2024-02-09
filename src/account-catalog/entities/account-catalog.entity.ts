@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { BeforeInsert, Column, Entity, Unique, OneToMany } from 'typeorm';
+import { Expose } from 'class-transformer';
+import { BeforeInsert, Column, Entity, Unique, OneToMany, ManyToOne } from 'typeorm';
 import { BaseEntity } from '../../base/baseEntity';
 import { Careservice } from 'src/billing/careservices/entities/careservice.entity';
 import { Headquarters } from 'src/admissions/headquarterss/entities/headquarters.entity';
@@ -11,7 +12,7 @@ import { Tsdiscon } from 'src/treasury/tsdiscons/entities/tsdiscon.entity';
 
 import { Tsnotcon } from 'src/treasury/tsnotcons/entities/tsnotcon.entity';
 import { Tsboxes } from 'src/treasury/tsboxess/entities/tsboxes.entity';
-
+import { ThirdPerson } from 'src/third-person/entities/third-person.entity';
 
 export enum levelCatalog {
   CLASS = 1,
@@ -60,12 +61,11 @@ export enum statusGlobal {
   ACTIVE = 1,
   INACTIVE = 2,
 }
-
 @Entity()
 @Unique(['code', 'deleted_at'])
 export class AccountCatalog extends BaseEntity {
   @Column()
-  code: string;
+  code: number;  
 
   @Column({ nullable: true })
   accountCatalogId: number;
@@ -78,6 +78,9 @@ export class AccountCatalog extends BaseEntity {
     enum: levelCatalog,
   })
   level: levelCatalog;
+
+  @Column({ nullable: true })
+  majorAccount: number;
 
   @Column({
     type: 'enum',
@@ -116,8 +119,8 @@ export class AccountCatalog extends BaseEntity {
   })
   transferThirdParties: selectionCatalog;
 
-  @Column({ nullable: true })
-  thirdId: number;
+  /* @Column({ nullable: true })
+  thirdId: number; */
 
   @Column({
     type: 'enum',
@@ -130,6 +133,11 @@ export class AccountCatalog extends BaseEntity {
     enum: statusGlobal,
   })
   status: statusGlobal;
+
+  @ManyToOne(() => ThirdPerson, (thirdPerson) => thirdPerson.accountCatalog, {
+		eager: true
+	})
+	thirdId: ThirdPerson;
 
   @OneToMany(() => Careservice, (careservice) => careservice.incomeaccount)
   csincomeaccounts: Careservice[];
@@ -194,6 +202,11 @@ export class AccountCatalog extends BaseEntity {
 
   @OneToMany(() => Tsboxes, (tsboxes) => tsboxes.idledacc) 
   acctsboxes: Tsboxes[];
+
+  @Expose()
+  get fullname(): string {
+    return `${this.thirdId.socialreason ?? ''} ${this.thirdId.firstname ?? ''} ${this.thirdId.secondname ?? ''} ${this.thirdId.firstsurname ?? ''} ${this.thirdId.secondsurname ?? ''}`;
+  }
 
   @BeforeInsert()
   encrypt(): void {

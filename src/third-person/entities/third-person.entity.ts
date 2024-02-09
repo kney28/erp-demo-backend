@@ -8,6 +8,7 @@ import { Tsbanks } from 'src/treasury/tsbankss/entities/tsbanks.entity';
 import { Healthadministrator } from 'src/admissions/healthadministrators/entities/healthadministrator.entity';
 import { Cxpproviders } from 'src/accounts-payable/cxpproviderss/entities/cxpproviders.entity';
 import { Patient } from 'src/admissions/patients/entities/patient.entity';
+import { AccountCatalog } from 'src/account-catalog/entities/account-catalog.entity';
 
 export enum ThirdPersonDocumentType {
   IDENTITYCARD = 1,
@@ -89,6 +90,9 @@ export class ThirdPerson extends BaseEntity {
 
   @OneToMany(() => Healthproviders, (healthProviders) => healthProviders.thirdPerson,)
 	healthProviders: Healthproviders[];
+
+  @OneToMany(() => AccountCatalog, (accountCatalog) => accountCatalog.thirdId,)
+	accountCatalog: AccountCatalog[];
 
   @OneToMany(() => Accbalmov, (accbalmov) => accbalmov.idthird)
   account: Accbalmov[];
