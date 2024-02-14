@@ -81,6 +81,7 @@ import { DepartmentsModule } from './configuration/departments/departments.modul
 import { MunicipalitiesModule } from './configuration/municipalities/municipalities.module';
 import { NeighborhoodsModule } from './configuration/neighborhoods/neighborhoods.module';
 import { CompaniesModule } from './configuration/companies/companies.module';
+import { ConsecutivosinvigenciasModule } from './configuration/consecutivosinvigencias/consecutivosinvigencias.module';
 
 // Contratación
 import { CategoriescupssModule } from './hiring/categoriescupss/categoriescupss.module';
@@ -198,6 +199,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     MunicipalitiesModule,
     NeighborhoodsModule,
     CompaniesModule,
+    ConsecutivosinvigenciasModule,
     AccountBalancesModule,
     AccountCatalogModule,
     AccountingSeatsModule,
