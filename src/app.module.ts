@@ -12,6 +12,8 @@ import { DataSource } from 'typeorm';
 
 import { ApisModule } from './apis/apis.module';
 
+import { GlobalFuntions } from './auth/global.function';
+
 import { AccountBalancesModule } from './account-balances/account-balances.module';
 import { AccountCatalogModule } from './account-catalog/account-catalog.module';
 import { AccountingSeatsModule } from './accountingSeats/accountingSeats.module';
@@ -319,6 +321,7 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
       provide: 'APP_INTERCEPTOR',
       useClass: UserInterceptor,
     },
+    GlobalFuntions,
   ],
 })
 export class AppModule {
