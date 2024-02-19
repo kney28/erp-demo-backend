@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { BaseEntity } from 'src/base/baseEntity';
 import { Column, Entity, Unique, ManyToOne } from 'typeorm';
 import { Profile } from 'src/configuration/profiles/entities/profile.entity';
