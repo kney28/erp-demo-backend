@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { ProfilesService } from './profiles.service';
 import { ProfilesController } from './profiles.controller';
@@ -7,6 +8,7 @@ import { Erp_modules } from 'src/configuration/erp_moduless/entities/erp_modules
 import { Permissions } from 'src/configuration/permissionss/entities/permissions.entity';
 import { ProfileLogs } from './entities/profilelogs.entity';
 import { ProfileSubscriber } from './entities/profile.subscriber';
+import { GlobalFuntions } from 'src/auth/global.function';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { ProfileSubscriber } from './entities/profile.subscriber';
     TypeOrmModule.forFeature([Permissions]),
   ],
   controllers: [ProfilesController],
-  providers: [ProfilesService, ProfileSubscriber],
+  providers: [ProfilesService, ProfileSubscriber, GlobalFuntions],
   exports: [ProfilesService],
 })
 export class ProfilesModule {}
