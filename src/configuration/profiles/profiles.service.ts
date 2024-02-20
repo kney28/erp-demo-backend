@@ -59,25 +59,29 @@ export class ProfilesService {
   }
 
   findAll(): Promise<Profile[]> {
-    if (this.permisos.Can('CONFIGURACION-MAESTRAS-PERFIL','query')) {
+    // if (this.permisos.Can('CONFIGURACION-MAESTRAS-PERFIL','query')) {
       return this.profilesRepository.find();
+    /*
     } else {
       throw new BadRequestException({
         message: 'El usuario no cuenta con el nivel de acceso necesario',
         error: 400
       });
     }
+    */
   }
 
   findOne(id: string): Promise<Profile> {
-    if (this.permisos.Can('CONFIGURACION-MAESTRAS-PERFIL','query')) {
+    // if (this.permisos.Can('CONFIGURACION-MAESTRAS-PERFIL','query')) {
       return this.profilesRepository.findOneBy({ id });
+    /*
     } else {
       throw new BadRequestException({
         message: 'El usuario no cuenta con el nivel de acceso necesario',
         errorCode: 400
       });
     }
+    */
   }
 
   async update(
