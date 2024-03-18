@@ -32,7 +32,7 @@ $ npm install
 
 <p>Deberás tener una base de datos PostgreSQL.</p>
 <p>Solo deberas modificar el archivo .env.example con la info de tu base de datos postgreSQL.</p>
-```ini
+```sh
   PORT = '3000'
   TYPE = 'postgres'
   HOST = '127.0.0.1'
