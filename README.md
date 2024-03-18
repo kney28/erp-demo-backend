@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://kney28.github.io/" target="blank"><img src="img/erp.png" width="200" alt="Login ERP" /></a>
+  <a href="https://kney28.github.io/" target="blank"><img src="img/erp.png" width="800" alt="Login ERP" /></a>
 </p>
 
   <p align="center">Backend contruido con <a href="https://nestjs.com/">Nest.</a></p>
@@ -20,7 +20,7 @@ Estaré subiendo nuevas funcionalidades constantemente.
 
 - **Gestión Financiera:** Administra aspectos financieros como facturación, cobros, pagos, seguros médicos y contabilidad general.
 
-> **Nota:** Recuerda clonar el repo del frontend. <a href="https://github.com/kney28/erp-demo-frontend">Go.</a>
+> **Nota:** recuerda clonar el repo del frontend. <a href="https://github.com/kney28/erp-demo-frontend">Go.</a>
 
 ## Instalación
 
@@ -31,8 +31,9 @@ $ npm install
 ## Configuración
 
 <p>Deberás tener una base de datos PostgreSQL.</p>
-<p>Solo deberas modificar el archivo .env.example con la info de tu base de datos postgreSQL.</p>
-```bash
+<p>Solo deberas modificar el archivo `.env.example` con la info de tu base de datos postgreSQL.</p>
+
+```ini
   PORT = '3000'
   TYPE = 'postgres'
   HOST = '127.0.0.1'
