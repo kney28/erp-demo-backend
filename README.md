@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://kney28.github.io/" target="blank"><img src="img/erp.png" width="600" alt="Login ERP" /></a>
+  <a href="https://kney28.github.io/" target="blank"><img src="img/erp.png" width="800" alt="Login ERP" /></a>
 </p>
 
   <p align="center">Backend contruido con <a href="https://nestjs.com/">Nest.</a></p>
