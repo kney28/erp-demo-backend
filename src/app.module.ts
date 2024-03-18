@@ -52,10 +52,10 @@ import { CareservicesModule } from './billing/careservices/careservices.module';
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module';
 import { NumerationdiansModule } from './billing/numerationdians/numerationdians.module';
 
-// import { FloorsModule } from './hospitalization/floors/floors.module';
-// import { LocationsModule } from './hospitalization/locations/locations.module';
-// import { BedsModule } from './hospitalization/beds/beds.module';
-// import { FeesModule } from './hospitalization/fees/fees.module';
+import { FloorsModule } from './hospitalization/floors/floors.module';
+import { LocationsModule } from './hospitalization/locations/locations.module';
+import { BedsModule } from './hospitalization/beds/beds.module';
+import { FeesModule } from './hospitalization/fees/fees.module';
 
 import { HolidayssModule } from './configuration/holidayss/holidayss.module';
 import { PermissionssModule } from './configuration/permissionss/permissionss.module';
@@ -246,10 +246,10 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     CareservicesModule,
     DetailnumerationdiansModule,
     NumerationdiansModule,
-    // BedsModule,
-    // FeesModule,
-    // FloorsModule,
-    // LocationsModule,
+    BedsModule,
+    FeesModule,
+    FloorsModule,
+    LocationsModule,
     HolidayssModule,
     HeadquarterssModule,
     HealthproviderssModule,

@@ -53,5 +53,5 @@ lerna-debug.log*
 /src/monthly-closure
 /src/monthly-opening
 /src/medical-appointments
-/src/hospitalization
+# /src/hospitalization
 /src/inventory
