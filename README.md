@@ -6,7 +6,7 @@
 
 ## Descripción
 
-Este es el backend de un sistema ERP (que aun se encuentra en construcción) diseñado específicamente para la gestión eficiente de hospitales y centros de atención médica. Proporciona una variedad de funcionalidades para optimizar las operaciones internas y mejorar la atención al paciente.
+Este es el backend de un sistema ERP (que aún se encuentra en construcción) diseñado específicamente para la gestión eficiente de hospitales y centros de atención médica. Proporciona una variedad de funcionalidades para optimizar las operaciones internas y mejorar la atención al paciente.
 
 Estaré subiendo nuevas funcionalidades constantemente.
 
