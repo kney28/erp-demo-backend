@@ -45,6 +45,8 @@ $ npm install
   SYNCHRONIZE = 'true'
 ```
 
+<p>Una vez modificado guárdalo como .env y listo.</p>
+
 ## Ejecutar la app
 
 ```bash
