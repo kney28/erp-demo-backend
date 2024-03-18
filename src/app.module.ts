@@ -32,8 +32,8 @@ import { GroundsDenialModule } from './grounds-denial/grounds-denial.module';
 import { GroupsCupsModule } from './hiring/groups-cups/groups-cups.module';
 import { HealthAdministratorsModule } from './health-administrators/healthadministrators.module';
 import { UserInterceptor } from './interceptors/user.interceptor';
-import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
-import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
+// import { MonthlyClosureModule } from './monthly-closure/monthlyclosure.module';
+// import { MonthlyOpeningModule } from './monthly-opening/monthlyopening.module';
 import { OccupationsModule } from './admissions/occupations/occupations.module';
 import { RegisterStatusModule } from './registerStatus/registerStatus.module';
 import { RequirementsListsDetailsModule } from './requirements-lists-details/requirements-lists-details.module';
@@ -52,10 +52,10 @@ import { CareservicesModule } from './billing/careservices/careservices.module';
 import { DetailnumerationdiansModule } from './billing/detailnumerationdians/detailnumerationdians.module';
 import { NumerationdiansModule } from './billing/numerationdians/numerationdians.module';
 
-import { FloorsModule } from './hospitalization/floors/floors.module';
-import { LocationsModule } from './hospitalization/locations/locations.module';
-import { BedsModule } from './hospitalization/beds/beds.module';
-import { FeesModule } from './hospitalization/fees/fees.module';
+// import { FloorsModule } from './hospitalization/floors/floors.module';
+// import { LocationsModule } from './hospitalization/locations/locations.module';
+// import { BedsModule } from './hospitalization/beds/beds.module';
+// import { FeesModule } from './hospitalization/fees/fees.module';
 
 import { HolidayssModule } from './configuration/holidayss/holidayss.module';
 import { PermissionssModule } from './configuration/permissionss/permissionss.module';
@@ -105,18 +105,18 @@ import { AcccongensModule } from './accounting/acccongens/acccongens.module';
 import { AccountingtermssModule } from './accounting/accountingtermss/accountingtermss.module';
 import { AcccostcenterssModule } from './accounting/acccostcenterss/acccostcenterss.module';
 import { AccbalmovsModule } from './accounting/accbalmovs/accbalmovs.module';
-import { AccentsubdetsModule } from './accounting/accentsubdets/accentsubdets.module';
+// import { AccentsubdetsModule } from './accounting/accentsubdets/accentsubdets.module';
 import { AccinicialrunsModule } from './accounting/accinicialruns/accinicialruns.module';
-import { AccountingentriesdetsModule } from './accounting/accountingentriesdets/accountingentriesdets.module';
-import { Accountingentries } from './accounting/accountingentriess/entities/accountingentries.entity';
-import { AccannclosModule } from './accounting/accannclos/accannclos.module';
-import { AccannualclosingentrysModule } from './accounting/accannualclosingentrys/accannualclosingentrys.module';
-import { AccmontopesModule } from './accounting/accmontopes/accmontopes.module'; 
-import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
-import { AccbeginningbalancessModule } from './accounting/accbeginningbalancess/accbeginningbalancess.module';
-import { AccbeginningbalancesdetsModule } from './accounting/accbeginningbalancesdets/accbeginningbalancesdets.module';
-import { Accbeginningbalancesdet2sModule } from './accounting/accbeginningbalancesdet2s/accbeginningbalancesdet2s.module';
-import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalancesdet3s/accbeginningbalancesdet3s.module';
+// import { AccountingentriesdetsModule } from './accounting/accountingentriesdets/accountingentriesdets.module';
+// import { Accountingentries } from './accounting/accountingentriess/entities/accountingentries.entity';
+// import { AccannclosModule } from './accounting/accannclos/accannclos.module';
+// import { AccannualclosingentrysModule } from './accounting/accannualclosingentrys/accannualclosingentrys.module';
+// import { AccmontopesModule } from './accounting/accmontopes/accmontopes.module'; 
+// import { AccmonclosModule } from './accounting/accmonclos/accmonclos.module';
+// import { AccbeginningbalancessModule } from './accounting/accbeginningbalancess/accbeginningbalancess.module';
+// import { AccbeginningbalancesdetsModule } from './accounting/accbeginningbalancesdets/accbeginningbalancesdets.module';
+// import { Accbeginningbalancesdet2sModule } from './accounting/accbeginningbalancesdet2s/accbeginningbalancesdet2s.module';
+// import { Accbeginningbalancesdet3sModule } from './accounting/accbeginningbalancesdet3s/accbeginningbalancesdet3s.module';
 
 //Historia Clinica
 import { HcdignosessModule } from './clinic-history/hcdignosess/hcdignosess.module';
@@ -143,15 +143,15 @@ import { CxpproviderssModule } from './accounts-payable/cxpproviderss/cxpprovide
 import { CxpcouconsModule } from './accounts-payable/cxpcoucons/cxpcoucons.module';
 
 // Citas medicas
-import { AppreacansModule } from './medical-appointments/appreacans/appreacans.module';
-import { AppofficessModule } from './medical-appointments/appofficess/appofficess.module';
+// import { AppreacansModule } from './medical-appointments/appreacans/appreacans.module';
+// import { AppofficessModule } from './medical-appointments/appofficess/appofficess.module';
 
 // Inventarios
-import { InvaccparsModule } from './inventory/invaccpars/invaccpars.module';
-import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.module';
-import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
-import { InvcumsModule } from './inventory/invcums/invcums.module';
-import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
+// import { InvaccparsModule } from './inventory/invaccpars/invaccpars.module';
+// import { InvmanufrolessModule } from './inventory/invmanufroless/invmanufroless.module';
+// import { InvunitsmeasModule } from './inventory/invunitsmeas/invunitsmeas.module';
+// import { InvcumsModule } from './inventory/invcums/invcums.module';
+// import { InvpharforsModule } from './inventory/invpharfors/invpharfors.module';
 
 //Tesoreria
 import { TsnotconsModule } from './treasury/tsnotcons/tsnotcons.module';
@@ -219,8 +219,8 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     GroundsDenialModule,
     GroupsCupsModule,
     HealthAdministratorsModule,
-    MonthlyClosureModule,
-    MonthlyOpeningModule,
+    // MonthlyClosureModule,
+    // MonthlyOpeningModule,
     OccupationsModule,
     RegisterStatusModule,
     RequirementsListsDetailsModule,
@@ -246,10 +246,10 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     CareservicesModule,
     DetailnumerationdiansModule,
     NumerationdiansModule,
-    BedsModule,
-    FeesModule,
-    FloorsModule,
-    LocationsModule,
+    // BedsModule,
+    // FeesModule,
+    // FloorsModule,
+    // LocationsModule,
     HolidayssModule,
     HeadquarterssModule,
     HealthproviderssModule,
@@ -285,25 +285,25 @@ import { TsdisconsModule } from './treasury/tsdiscons/tsdiscons.module';
     CxccouconsModule,
     CxpproviderssModule,
     CxpcouconsModule,
-    AppreacansModule,
-    AppofficessModule,
-    InvaccparsModule,
-    InvunitsmeasModule, 
-    InvmanufrolessModule,
-    InvcumsModule,
-    InvpharforsModule,
-    AccentsubdetsModule,
+    // AppreacansModule,
+    // AppofficessModule,
+    // InvaccparsModule,
+    // InvunitsmeasModule, 
+    // InvmanufrolessModule,
+    // InvcumsModule,
+    // InvpharforsModule,
+    // AccentsubdetsModule,
     AccinicialrunsModule,
-    AccountingentriesdetsModule,
-    Accountingentries,
-    AccannclosModule,
-    AccannualclosingentrysModule,
-    AccmontopesModule,
-    AccmonclosModule,
-    AccbeginningbalancessModule,
-    AccbeginningbalancesdetsModule,
-    Accbeginningbalancesdet2sModule,
-    Accbeginningbalancesdet3sModule,
+    // AccountingentriesdetsModule,
+    // Accountingentries,
+    // AccannclosModule,
+    // AccannualclosingentrysModule,
+    // AccmontopesModule,
+    // AccmonclosModule,
+    // AccbeginningbalancessModule,
+    // AccbeginningbalancesdetsModule,
+    // Accbeginningbalancesdet2sModule,
+    // Accbeginningbalancesdet3sModule,
     TsnotconsModule,
     TsboxessModule,
     TsbankssModule,

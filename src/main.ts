@@ -5,6 +5,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
 import { useContainer } from 'class-validator';
+import { UsersSeeder } from './users/users.seeder';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -25,6 +26,12 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
   app.useGlobalPipes(new ValidationPipe());
+
+  // Seeders
+  const usersSeeder = app.get(UsersSeeder)
+
+  await usersSeeder.seedDefaultUser()
+
   await app.listen(process.env.PORT);
 }
 bootstrap();

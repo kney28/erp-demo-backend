@@ -36,3 +36,22 @@ lerna-debug.log*
 
 # Env
 .env
+
+# modules
+/src/app.module-copy.ts
+/src/accounting/accbeginningbalancesdet2s
+/src/accounting/accbeginningbalancesdet3s
+/src/accounting/accbeginningbalancesdets
+/src/accounting/accbeginningbalancess
+/src/accounting/accountingentriess
+/src/accounting/accountingentriesdets
+/src/accounting/accentsubdets
+/src/accounting/accmonclos
+/src/accounting/accannualclosingentrys
+/src/accounting/accmontopes
+/src/accounting/accannclos
+/src/monthly-closure
+/src/monthly-opening
+/src/medical-appointments
+/src/hospitalization
+/src/inventory
